@@ -1,0 +1,587 @@
+/**
+ * Quranic Arabic Card Styles
+ *
+ * Uthmani script rendering with tajweed color coding, Islamic geometric
+ * borders, and elegant styling suitable for Quran memorization and study.
+ *
+ * Tajweed Color System (spec Section 2.6):
+ *
+ *   Rule                    Color       Hex
+ *   ─────────────────────   ─────────   ────────
+ *   Idgham                  Green       #22c55e
+ *   Ikhfa                   Blue        #3b82f6
+ *   Iqlab                   Purple      #8b5cf6
+ *   Izhar                   Orange      #f97316
+ *   Qalqalah                Red         #ef4444
+ *   Madd Natural            Cyan        #06b6d4
+ *   Madd Connected          Dark Cyan   #0891b2
+ *   Madd Separate           Teal        #0e7490
+ *   Ghunnah                 Fuchsia     #d946ef
+ *   Noon Saakinah           Amber       #f59e0b
+ *   Meem Saakinah           Emerald     #10b981
+ *   Laam Shamsiyyah         Rose        #e11d48
+ *   Laam Qamariyyah         Indigo      #6366f1
+ *
+ * These colors are used by the TajweedService in tajweed-system.ts and
+ * match the TAJWEED_COLORS constant exported from that module.
+ */
+
+/* -------------------------------------------------------------------------
+   Base Card Layout
+   ------------------------------------------------------------------------- */
+
+.card {
+  direction: rtl;
+  text-align: center;
+  font-family: 'KFGQPC Uthmanic Script HAFS', 'me_quran', 'Scheherazade New',
+               'Amiri Quran', 'Noto Naskh Arabic', serif;
+  font-size: 32px;
+  line-height: 2.2;
+  color: #1a1a2e;
+  background-color: #fefcf5;
+  padding: 40px 48px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------
+   Islamic Geometric Border
+   Using CSS borders and decorative pseudo-elements
+   ------------------------------------------------------------------------- */
+
+.card-frame {
+  border: 3px double #c5a55a;
+  border-radius: 4px;
+  padding: 32px 36px;
+  position: relative;
+  background-image:
+    linear-gradient(135deg, transparent 48%, #f5ecd7 48%, #f5ecd7 52%, transparent 52%),
+    linear-gradient(225deg, transparent 48%, #f5ecd7 48%, #f5ecd7 52%, transparent 52%);
+  background-size: 20px 20px;
+  background-position: top left, top right;
+  background-repeat: repeat-y;
+}
+
+.card-frame::before,
+.card-frame::after {
+  content: '\u2726  \u066D  \u2726';
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #c5a55a;
+  letter-spacing: 16px;
+}
+
+.card-frame::before {
+  margin-bottom: 20px;
+}
+
+.card-frame::after {
+  margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------
+   Ayah (Verse) Display
+   ------------------------------------------------------------------------- */
+
+.ayah {
+  font-size: 36px;
+  line-height: 2.4;
+  color: #16213e;
+  margin: 20px 0;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.ayah-large {
+  font-size: 44px;
+  line-height: 2.6;
+}
+
+/* Verse number marker (end of ayah number) */
+.ayah-number {
+  font-size: 20px;
+  color: #c5a55a;
+  font-weight: 700;
+  margin: 0 4px;
+  vertical-align: super;
+}
+
+/* Surah and verse reference */
+.surah-reference {
+  font-family: 'Amiri', serif;
+  font-size: 16px;
+  color: #8b7355;
+  text-align: center;
+  margin-top: 12px;
+  direction: ltr;
+}
+
+/* Bismillah styling */
+.bismillah {
+  font-size: 28px;
+  color: #c5a55a;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* -------------------------------------------------------------------------
+   Tajweed Color Coding — Complete Rule Set
+   Each tajweed rule is assigned a distinct, accessible color.
+   Colors match TAJWEED_COLORS in src/quran/tajweed-system.ts and follow
+   widely-used mushaf color conventions (Tajweed Quran / Medina Mushaf).
+   ------------------------------------------------------------------------- */
+
+/* --- Noon Saakinah / Tanween Rules ---------------------------------------- */
+
+/* Idgham (Merging/Assimilation) — Green
+   Noon saakinah/tanween merging into yarmaloon letters: ي ر م ل و ن */
+.tajweed-idgham {
+  color: #22c55e;
+  font-weight: inherit;
+}
+
+/* Idgham with ghunnah (merging with nasalization) — ي ن م و */
+.tajweed-idgham-ghunnah {
+  color: #22c55e;
+  text-decoration: underline;
+  text-decoration-color: #d946ef;
+  text-underline-offset: 4px;
+}
+
+/* Idgham without ghunnah (clean merging) — ر ل */
+.tajweed-idgham-no-ghunnah {
+  color: #22c55e;
+}
+
+/* Ikhfa (Concealment/Hiding) — Blue
+   Noon saakinah/tanween before 15 specific letters */
+.tajweed-ikhfa {
+  color: #3b82f6;
+  font-weight: inherit;
+}
+
+/* Ikhfa Shafawi (Lip Concealment — meem saakinah before ba) */
+.tajweed-ikhfa-shafawi {
+  color: #3b82f6;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}
+
+/* Iqlab (Conversion) — Purple
+   Noon saakinah/tanween before ba converts to meem sound */
+.tajweed-iqlab {
+  color: #8b5cf6;
+  font-weight: inherit;
+}
+
+/* Izhar (Clear Pronunciation) — Orange
+   Noon saakinah/tanween before throat letters: ء ه ع ح غ خ */
+.tajweed-izhar {
+  color: #f97316;
+  font-weight: inherit;
+}
+
+/* --- Qalqalah ------------------------------------------------------------ */
+
+/* Qalqalah (Echoing/Bouncing) — Red
+   Letters: ق ط ب ج د when saakin (have sukoon).
+   Qalqalah Kubra (major): at end of ayah / before a pause.
+   Qalqalah Sughra (minor): in the middle of a word. */
+.tajweed-qalqalah {
+  color: #ef4444;
+  font-weight: inherit;
+}
+
+/* --- Madd Rules ---------------------------------------------------------- */
+
+/* Madd Tabee'i (Natural Madd) — Cyan
+   Basic elongation of 2 counts: alif after fatha, waw after damma, ya after kasra */
+.tajweed-madd-natural {
+  color: #06b6d4;
+  font-weight: inherit;
+}
+
+/* Madd Muttasil (Connected/Obligatory Madd) — Dark Cyan
+   Madd letter followed by hamza in the same word — 4-5 counts */
+.tajweed-madd-connected {
+  color: #0891b2;
+  font-weight: inherit;
+  text-decoration: overline;
+  text-decoration-color: #0891b2;
+}
+
+/* Madd Munfasil (Separated/Permissible Madd) — Teal
+   Word ends with madd letter, next word starts with hamza — 4-5 counts */
+.tajweed-madd-separate {
+  color: #0e7490;
+  font-weight: inherit;
+}
+
+/* Legacy aliases for backward compatibility with existing templates */
+.tajweed-madd {
+  color: #06b6d4;
+  font-weight: inherit;
+}
+
+.tajweed-madd-lazim {
+  color: #06b6d4;
+  font-weight: 700;
+}
+
+.tajweed-madd-munfasil {
+  color: #0e7490;
+  font-style: normal;
+}
+
+.tajweed-madd-muttasil {
+  color: #0891b2;
+  text-decoration: overline;
+  text-decoration-color: #0891b2;
+}
+
+/* --- Ghunnah ------------------------------------------------------------- */
+
+/* Ghunnah (Nasalization) — Fuchsia
+   Nasal sound from the nose held for ~2 counts.
+   Occurs with noon/meem + shadda, and accompanies idgham/ikhfa. */
+.tajweed-ghunnah {
+  color: #d946ef;
+  font-weight: inherit;
+}
+
+/* --- Noon Saakinah (general marker) -------------------------------------- */
+
+/* Noon Saakinah — Amber
+   Noon letter at rest (with sukoon). Specific rule determined by following letter. */
+.tajweed-noon-saakinah {
+  color: #f59e0b;
+  font-weight: inherit;
+}
+
+/* --- Meem Saakinah ------------------------------------------------------- */
+
+/* Meem Saakinah — Emerald
+   Meem letter at rest. Rules: ikhfa shafawi (before ba), idgham shafawi
+   (before meem), izhar shafawi (before other letters). */
+.tajweed-meem-saakinah {
+  color: #10b981;
+  font-weight: inherit;
+}
+
+/* Idgham Shafawi (Lip Merging — meem saakinah before meem) */
+.tajweed-idgham-shafawi {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* --- Laam al-Ta'reef Rules ----------------------------------------------- */
+
+/* Laam Shamsiyyah (Sun Letters) — Rose
+   The laam of ال is silent before sun letters; the following letter doubles.
+   Sun letters: ت ث د ذ ر ز س ش ص ض ط ظ ل ن */
+.tajweed-laam-shamsiyyah {
+  color: #e11d48;
+  font-weight: inherit;
+}
+
+/* Laam Qamariyyah (Moon Letters) — Indigo
+   The laam of ال is pronounced clearly before moon letters.
+   Moon letters: ا ب ج ح خ ع غ ف ق ك م و ه ي */
+.tajweed-laam-qamariyyah {
+  color: #6366f1;
+  font-weight: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   Tajweed Legend
+   A small reference showing the color codes
+   ------------------------------------------------------------------------- */
+
+.tajweed-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+  direction: ltr;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.tajweed-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tajweed-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------
+   Translation
+   ------------------------------------------------------------------------- */
+
+.translation {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 17px;
+  color: #5a5a5a;
+  line-height: 1.7;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0d5c1;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+   Tafsir (Exegesis / Commentary)
+   ------------------------------------------------------------------------- */
+
+.tafsir-container {
+  background-color: #f5f0e6;
+  border: 1px solid #d4c5a9;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.9;
+}
+
+.tafsir-label {
+  font-size: 14px;
+  color: #8b7355;
+  font-weight: 700;
+  margin-bottom: 8px;
+  direction: rtl;
+}
+
+/* -------------------------------------------------------------------------
+   Cloze Deletions
+   ------------------------------------------------------------------------- */
+
+.cloze.cloze-blank {
+  color: #c5a55a;
+  font-weight: 700;
+  border-bottom: 2px dashed #c5a55a;
+  padding: 0 6px;
+}
+
+.cloze.cloze-active {
+  color: #dc3545;
+  font-weight: 700;
+  background-color: #fff0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.cloze.cloze-inactive {
+  color: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   Type-in Answer
+   ------------------------------------------------------------------------- */
+
+.type-answer-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.type-answer-input {
+  font-family: 'KFGQPC Uthmanic Script HAFS', 'Amiri Quran', serif;
+  font-size: 28px;
+  direction: rtl;
+  text-align: center;
+  padding: 12px 20px;
+  border: 2px solid #c5a55a;
+  border-radius: 6px;
+  width: 85%;
+  outline: none;
+  background-color: #fffdf5;
+  transition: border-color 0.2s;
+}
+
+.type-answer-input:focus {
+  border-color: #a08030;
+  box-shadow: 0 0 0 3px rgba(197, 165, 90, 0.2);
+}
+
+.type-answer-good { color: #198754; }
+.type-answer-bad { color: #dc3545; text-decoration: line-through; }
+.type-answer-missed { color: #dc3545; }
+
+/* -------------------------------------------------------------------------
+   Hint Toggle
+   ------------------------------------------------------------------------- */
+
+.hint-toggle {
+  color: #c5a55a;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  direction: ltr;
+}
+
+.hint-toggle:hover {
+  text-decoration: underline;
+}
+
+.hint-content {
+  padding: 12px 16px;
+  background-color: #f9f5ec;
+  border-radius: 6px;
+  margin-top: 8px;
+  border: 1px solid #e8dfc8;
+}
+
+/* -------------------------------------------------------------------------
+   TTS Button
+   ------------------------------------------------------------------------- */
+
+.tts-button {
+  background-color: #f9f5ec;
+  border: 2px solid #c5a55a;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.tts-button:hover {
+  background-color: #f0e8d5;
+}
+
+.tts-icon {
+  font-size: 20px;
+  color: #8b7355;
+}
+
+/* -------------------------------------------------------------------------
+   Tajweed Quiz Highlight
+   Neutral highlight used in the tajweed identification quiz before the
+   user answers; reveals the rule color only after answering.
+   ------------------------------------------------------------------------- */
+
+.tajweed-quiz-highlight {
+  background-color: #fef3c7;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border-bottom: 3px solid #f59e0b;
+}
+
+.tajweed-quiz-highlight.revealed {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+/* -------------------------------------------------------------------------
+   Ayah Word — individual word wrapper for cloze and vocabulary cards
+   ------------------------------------------------------------------------- */
+
+.ayah-word {
+  display: inline;
+  cursor: default;
+}
+
+.ayah-word:hover {
+  background-color: rgba(197, 165, 90, 0.1);
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------------
+   Sequential Memorization — Previous Ayah (dimmed context)
+   ------------------------------------------------------------------------- */
+
+.ayah-previous {
+  font-size: 28px;
+  line-height: 2.2;
+  color: #16213e;
+  opacity: 0.35;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.ayah-current {
+  font-size: 44px;
+  line-height: 2.6;
+  color: #16213e;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* -------------------------------------------------------------------------
+   Memorization Status Badges
+   ------------------------------------------------------------------------- */
+
+.memorization-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.memorization-badge-memorized {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.memorization-badge-in-progress {
+  background-color: #fef3c7;
+  color: #a16207;
+}
+
+.memorization-badge-not-started {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* -------------------------------------------------------------------------
+   Divider
+   ------------------------------------------------------------------------- */
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #c5a55a 20%,
+    #c5a55a 80%,
+    transparent
+  );
+  margin: 24px 0;
+}
+
+/* -------------------------------------------------------------------------
+   Prompt Text — instruction shown on card fronts
+   ------------------------------------------------------------------------- */
+
+.prompt {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: #8b7355;
+  font-style: italic;
+  text-align: center;
+  direction: ltr;
+  margin-top: 16px;
+}

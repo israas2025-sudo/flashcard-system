@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "src/api",
+    "src/auth",
+    "src/db",
+    "src/card-pipeline",
+    "src/card-types",
+    "src/cards",
+    "src/cross-language",
+    "src/decks",
+    "src/flags",
+    "src/gamification",
+    "src/import-export",
+    "src/marketplace",
+    "src/media",
+    "src/notes",
+    "src/offline",
+    "src/onboarding",
+    "src/pause",
+    "src/plugins",
+    "src/pronunciation",
+    "src/psychology",
+    "src/quran",
+    "src/scheduling",
+    "src/search",
+    "src/stats",
+    "src/study-modes",
+    "src/study-presets",
+    "src/sync",
+    "src/tags",
+    "src/templates",
+    "src/service-worker.ts"
+  ]
+}

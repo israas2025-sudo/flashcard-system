@@ -1,0 +1,300 @@
+/**
+ * Egyptian Arabic (Masri) Card Styles
+ *
+ * RTL layout with a casual, modern feel suitable for colloquial Egyptian
+ * Arabic study. Features transliteration styling (italic, smaller, below
+ * Arabic text) and a warm, approachable color palette.
+ */
+
+/* -------------------------------------------------------------------------
+   Base Card Layout
+   ------------------------------------------------------------------------- */
+
+.card {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Cairo', 'Noto Sans Arabic', 'Segoe UI', sans-serif;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #2d2d2d;
+  background-color: #fffbf0;
+  padding: 28px 36px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+/* -------------------------------------------------------------------------
+   Arabic Text — Colloquial / Masri
+   ------------------------------------------------------------------------- */
+
+.arabic-text {
+  font-size: 32px;
+  line-height: 1.9;
+  font-weight: 600;
+  color: #1b1b2f;
+  margin-bottom: 8px;
+}
+
+.arabic-text-large {
+  font-size: 42px;
+  line-height: 2.0;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Casual emphasis for slang or common expressions */
+.masri-slang {
+  color: #e17055;
+  font-weight: 700;
+}
+
+.masri-expression {
+  font-size: 28px;
+  color: #6c5ce7;
+  text-align: center;
+  padding: 12px;
+  background-color: #f3f0ff;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+/* -------------------------------------------------------------------------
+   Transliteration
+   Displayed below the Arabic in italic, smaller font, LTR
+   ------------------------------------------------------------------------- */
+
+.transliteration {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #888;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+.transliteration-inline {
+  direction: ltr;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #a0a0a0;
+  display: inline;
+  margin-right: 8px;
+}
+
+/* -------------------------------------------------------------------------
+   Translation
+   ------------------------------------------------------------------------- */
+
+.translation {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  color: #555;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px dashed #e0d5c1;
+}
+
+/* -------------------------------------------------------------------------
+   Dialect Comparison
+   For showing MSA vs Egyptian differences
+   ------------------------------------------------------------------------- */
+
+.dialect-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.dialect-column {
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.dialect-column-msa {
+  background-color: #f0f4f8;
+  border: 1px solid #d0dae7;
+}
+
+.dialect-column-masri {
+  background-color: #fff5e6;
+  border: 1px solid #f0d9a8;
+}
+
+.dialect-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  direction: ltr;
+  text-align: left;
+}
+
+.dialect-label-msa {
+  color: #5b7fa5;
+}
+
+.dialect-label-masri {
+  color: #d4851f;
+}
+
+/* -------------------------------------------------------------------------
+   Audio / Pronunciation
+   ------------------------------------------------------------------------- */
+
+.pronunciation-guide {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #666;
+  padding: 10px 14px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.pronunciation-note {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+   Cloze Deletions
+   ------------------------------------------------------------------------- */
+
+.cloze.cloze-blank {
+  color: #6c5ce7;
+  font-weight: 700;
+  border-bottom: 2px dashed #6c5ce7;
+  padding: 0 4px;
+}
+
+.cloze.cloze-active {
+  color: #e17055;
+  font-weight: 700;
+  background-color: #ffeee8;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.cloze.cloze-inactive {
+  color: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   Type-in Answer
+   ------------------------------------------------------------------------- */
+
+.type-answer-container {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.type-answer-input {
+  font-family: 'Cairo', sans-serif;
+  font-size: 24px;
+  direction: rtl;
+  text-align: right;
+  padding: 10px 16px;
+  border: 2px solid #d5c9b1;
+  border-radius: 10px;
+  width: 80%;
+  outline: none;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.type-answer-input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
+}
+
+.type-answer-good { color: #00b894; }
+.type-answer-bad { color: #e17055; text-decoration: line-through; }
+.type-answer-missed { color: #e17055; }
+
+/* -------------------------------------------------------------------------
+   Hint Toggle
+   ------------------------------------------------------------------------- */
+
+.hint-toggle {
+  color: #6c5ce7;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  direction: ltr;
+}
+
+.hint-toggle:hover {
+  text-decoration: underline;
+}
+
+.hint-content {
+  padding: 10px 14px;
+  background-color: #f3f0ff;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* -------------------------------------------------------------------------
+   TTS Button
+   ------------------------------------------------------------------------- */
+
+.tts-button {
+  background-color: #f3f0ff;
+  border: 2px solid #6c5ce7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+.tts-button:hover {
+  background-color: #e8e0ff;
+}
+
+.tts-icon {
+  font-size: 18px;
+}
+
+/* -------------------------------------------------------------------------
+   Tags / Chips
+   ------------------------------------------------------------------------- */
+
+.tag-chip {
+  display: inline-block;
+  direction: ltr;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background-color: #ffe8d6;
+  color: #b87333;
+  margin: 2px 4px;
+}
+
+/* -------------------------------------------------------------------------
+   Divider
+   ------------------------------------------------------------------------- */
+
+hr {
+  border: none;
+  border-top: 2px dashed #e0d5c1;
+  margin: 18px 0;
+}

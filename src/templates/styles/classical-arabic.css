@@ -1,0 +1,310 @@
+/**
+ * Classical Arabic Card Styles
+ *
+ * RTL layout with Amiri font, tashkeel (diacritical marks) highlighting,
+ * large Arabic text, and colored diacritics for fusha study.
+ */
+
+/* -------------------------------------------------------------------------
+   Base Card Layout
+   ------------------------------------------------------------------------- */
+
+.card {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+  font-size: 28px;
+  line-height: 1.9;
+  color: #1a1a2e;
+  background-color: #faf8f5;
+  padding: 32px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------
+   Arabic Text — Primary Content
+   ------------------------------------------------------------------------- */
+
+.arabic-text {
+  font-size: 36px;
+  line-height: 2.0;
+  font-weight: 400;
+  color: #16213e;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.arabic-text-large {
+  font-size: 48px;
+  line-height: 2.2;
+  text-align: center;
+  margin: 24px 0;
+}
+
+/* -------------------------------------------------------------------------
+   Tashkeel (Diacritical Marks) Highlighting
+   Arabic diacritics (U+064B - U+0652) are rendered in distinct colors
+   to help learners identify and differentiate vowel marks.
+   ------------------------------------------------------------------------- */
+
+/* Fathah (short 'a') — warm red */
+.tashkeel-fathah,
+.diacritic-fathah {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* Dammah (short 'u') — blue */
+.tashkeel-dammah,
+.diacritic-dammah {
+  color: #2980b9;
+  font-weight: 700;
+}
+
+/* Kasrah (short 'i') — green */
+.tashkeel-kasrah,
+.diacritic-kasrah {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* Tanween fathah (an) */
+.tashkeel-tanween-fathah {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+/* Tanween dammah (un) */
+.tashkeel-tanween-dammah {
+  color: #3498db;
+  font-weight: 700;
+}
+
+/* Tanween kasrah (in) */
+.tashkeel-tanween-kasrah {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+/* Sukoon (no vowel) — muted gray */
+.tashkeel-sukoon {
+  color: #7f8c8d;
+  font-weight: 700;
+}
+
+/* Shaddah (gemination) — purple */
+.tashkeel-shaddah {
+  color: #8e44ad;
+  font-weight: 700;
+}
+
+/* General diacritic highlight class */
+.diacritic-highlight {
+  position: relative;
+  color: #e67e22;
+}
+
+/* -------------------------------------------------------------------------
+   Root Letters & Morphology
+   ------------------------------------------------------------------------- */
+
+.root-letters {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 8px 0;
+}
+
+.wazn-pattern {
+  font-size: 26px;
+  color: #8e44ad;
+  text-align: center;
+  margin: 8px 0;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+   Translation & Transliteration
+   ------------------------------------------------------------------------- */
+
+.translation {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 18px;
+  color: #555;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.transliteration {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* -------------------------------------------------------------------------
+   I'rab (Grammatical Analysis)
+   ------------------------------------------------------------------------- */
+
+.irab-container {
+  background-color: #f0ece3;
+  border: 1px solid #d4c5a9;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.irab-label {
+  font-size: 14px;
+  color: #8b7355;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.irab-content {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+/* -------------------------------------------------------------------------
+   Example Sentences
+   ------------------------------------------------------------------------- */
+
+.example-sentence {
+  font-size: 24px;
+  line-height: 2.0;
+  color: #34495e;
+  padding: 12px 20px;
+  border-right: 4px solid #3498db;
+  margin: 16px 0;
+  background-color: #f8f9fa;
+}
+
+/* -------------------------------------------------------------------------
+   Cloze Deletions
+   ------------------------------------------------------------------------- */
+
+.cloze.cloze-blank {
+  color: #2980b9;
+  font-weight: 700;
+  border-bottom: 2px dashed #2980b9;
+  padding: 0 4px;
+}
+
+.cloze.cloze-active {
+  color: #c0392b;
+  font-weight: 700;
+  background-color: #fde8e8;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.cloze.cloze-inactive {
+  color: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   Type-in Answer
+   ------------------------------------------------------------------------- */
+
+.type-answer-container {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.type-answer-input {
+  font-family: 'Amiri', serif;
+  font-size: 28px;
+  direction: rtl;
+  text-align: right;
+  padding: 12px 16px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  width: 80%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.type-answer-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.type-answer-good { color: #27ae60; }
+.type-answer-bad { color: #e74c3c; text-decoration: line-through; }
+.type-answer-missed { color: #e74c3c; }
+
+/* -------------------------------------------------------------------------
+   Hint Toggle
+   ------------------------------------------------------------------------- */
+
+.hint-toggle {
+  color: #3498db;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  direction: ltr;
+}
+
+.hint-toggle:hover {
+  text-decoration: underline;
+}
+
+.hint-content {
+  padding: 12px 16px;
+  background-color: #eef6fc;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* -------------------------------------------------------------------------
+   TTS Button
+   ------------------------------------------------------------------------- */
+
+.tts-button {
+  background: none;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.tts-button:hover {
+  background-color: #eef6fc;
+}
+
+.tts-icon {
+  font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------
+   Divider
+   ------------------------------------------------------------------------- */
+
+hr {
+  border: none;
+  border-top: 1px solid #d5c9b1;
+  margin: 20px 0;
+}
