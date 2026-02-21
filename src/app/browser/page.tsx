@@ -127,7 +127,7 @@ export default function BrowserPage() {
   const handleClearSelection = () => setSelectedCards(new Set());
 
   return (
-    <div className="flex h-[calc(100vh-64px)] -m-6">
+    <div className="flex h-[calc(100vh-52px-64px)] -m-8">
       {/* Left sidebar - Filters */}
       <div className="w-64 border-r border-[var(--surface-3)] bg-[var(--surface-1)] flex flex-col overflow-hidden">
         {/* View mode toggle */}

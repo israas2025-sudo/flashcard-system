@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-// recharts Tooltip removed - not needed for custom calendar grid
+import { useUIStore } from "@/store/ui-store";
 
 interface DayData {
   date: string;
@@ -72,6 +72,8 @@ function formatDateForDisplay(dateStr: string): string {
 }
 
 export function StreakCalendar({ data, days = 365 }: StreakCalendarProps) {
+  const { darkMode } = useUIStore();
+
   const { grid, monthLabels, maxValue, totalDaysStudied, longestStreak, currentStreak } =
     useMemo(() => {
       // Build a lookup map from date string to value
@@ -170,6 +172,9 @@ export function StreakCalendar({ data, days = 365 }: StreakCalendarProps) {
       };
     }, [data, days]);
 
+  // Pick colors based on dark mode state (avoids dynamic Tailwind class construction)
+  const colors = darkMode ? INTENSITY_COLORS.dark : INTENSITY_COLORS.light;
+
   return (
     <div>
       {/* Stats summary */}
@@ -248,7 +253,7 @@ export function StreakCalendar({ data, days = 365 }: StreakCalendarProps) {
                   return (
                     <div
                       key={dayIndex}
-                      className={`w-[12px] h-[12px] rounded-[2px] transition-colors ${INTENSITY_COLORS.light[intensity]} dark:${INTENSITY_COLORS.dark[intensity]}`}
+                      className={`w-[12px] h-[12px] rounded-[2px] transition-colors ${colors[intensity]}`}
                       title={`${formatDateForDisplay(day.date)}: ${day.value} reviews`}
                     />
                   );
@@ -267,7 +272,7 @@ export function StreakCalendar({ data, days = 365 }: StreakCalendarProps) {
         {[0, 1, 2, 3, 4].map((level) => (
           <div
             key={level}
-            className={`w-[12px] h-[12px] rounded-[2px] ${INTENSITY_COLORS.light[level]}`}
+            className={`w-[12px] h-[12px] rounded-[2px] ${colors[level]}`}
           />
         ))}
         <span className="text-[10px] text-[var(--text-tertiary)] ml-1">

@@ -5,15 +5,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Flame,
-  Target,
   Zap,
-  TrendingUp,
-  BookOpen,
   ArrowRight,
 } from "lucide-react";
 import { LanguageCard } from "@/components/LanguageCard";
 import { StreakFlame } from "@/components/StreakFlame";
-import { PinnedPresets } from "@/app/components/PinnedPresets";
 
 // ---------------------------------------------------------------------------
 // Language data (static — card data is loaded only on the study page)
@@ -47,21 +43,10 @@ const languages = [
     reviewedToday: 18,
     accuracy: 94,
   },
-  {
-    id: "english",
-    name: "English",
-    color: "english" as const,
-    dueCount: 0,
-    totalCards: 0,
-    reviewedToday: 0,
-    accuracy: 0,
-    comingSoon: true,
-  },
 ];
 
-const activeLanguages = languages.filter((l) => !l.comingSoon);
-const totalDue = activeLanguages.reduce((sum, l) => sum + l.dueCount, 0);
-const totalCards = activeLanguages.reduce((sum, l) => sum + l.totalCards, 0);
+const totalDue = languages.reduce((sum, l) => sum + l.dueCount, 0);
+const totalCards = languages.reduce((sum, l) => sum + l.totalCards, 0);
 
 // ---------------------------------------------------------------------------
 // Greeting
@@ -144,11 +129,11 @@ function ProgressBarChart({
 }
 
 // ---------------------------------------------------------------------------
-// Dashboard Page
+// Dashboard Page — 5 Sections Only
 // ---------------------------------------------------------------------------
 
 export default function Dashboard() {
-  const totalReviewed = activeLanguages.reduce(
+  const totalReviewed = languages.reduce(
     (sum, l) => sum + l.reviewedToday,
     0
   );
@@ -161,19 +146,19 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6">
-      {/* Greeting Bar */}
+      {/* Section 1: Greeting Bar */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         className="flex items-center justify-between"
       >
         <div>
-          <h1 className="text-2xl font-semibold text-[var(--text-primary)]">
+          <h1 className="text-3xl font-semibold text-[var(--text-primary)]" style={{ letterSpacing: "-0.02em" }}>
             {getGreeting()}
           </h1>
           <p className="text-sm text-[var(--text-secondary)] mt-1">{today}</p>
         </div>
-        <div className="flex items-center gap-3 bg-[var(--surface-1)] rounded-xl px-4 py-2.5 border border-[var(--surface-3)]">
+        <div className="flex items-center gap-3 bg-[var(--surface-1)] rounded-lg px-4 py-2.5 border border-[var(--surface-3)] shadow-card">
           <StreakFlame days={5} />
           <div>
             <p className="text-lg font-bold text-[var(--text-primary)]">5</p>
@@ -182,49 +167,44 @@ export default function Dashboard() {
         </div>
       </motion.div>
 
-      {/* Study Now Button */}
+      {/* Section 2: Study Now CTA */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <Link href="/study/all">
-          <motion.button
-            whileHover={{ scale: 1.01, y: -1 }}
-            whileTap={{ scale: 0.99 }}
-            className="w-full bg-primary-500 text-white rounded-xl py-4 px-8 flex items-center gap-3 shadow-lg hover:shadow-xl transition-shadow"
+        <Link href="/study">
+          <motion.div
+            whileHover={{ scale: 1.005, y: -1 }}
+            whileTap={{ scale: 0.995 }}
+            className="w-full bg-primary-500 text-white rounded-xl py-5 px-6 flex items-center gap-4 cursor-pointer transition-shadow"
+            style={{
+              boxShadow: "0 1px 3px rgba(99,91,255,0.2), 0 4px 12px rgba(99,91,255,0.15)",
+            }}
           >
-            <Zap className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
             <div className="text-left flex-1">
               <p className="text-lg font-semibold">Study Now</p>
               <p className="text-sm text-white/70">
-                {totalDue} cards due across {activeLanguages.length}{" "}
-                languages &middot; {totalCards.toLocaleString()} total
-                cards
+                {totalDue} cards due across {languages.length}{" "}
+                languages &middot; {totalCards.toLocaleString()} total cards
               </p>
             </div>
             <ArrowRight className="w-5 h-5 text-white/60" />
-          </motion.button>
+          </motion.div>
         </Link>
       </motion.div>
 
-      {/* Pinned Study Presets */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15 }}
-      >
-        <PinnedPresets />
-      </motion.div>
-
-      {/* Language Cards Row */}
+      {/* Section 3: Your Languages */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-[13px] font-medium text-[var(--text-secondary)]">
+          <h2 className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wider">
             Your Languages
           </h2>
           <Link
@@ -234,7 +214,7 @@ export default function Dashboard() {
             Add language
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {languages.map((lang, i) => (
             <motion.div
               key={lang.id}
@@ -248,136 +228,49 @@ export default function Dashboard() {
         </div>
       </motion.div>
 
-      {/* Today's Progress */}
+      {/* Section 4: Today's Progress */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
-        className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-6"
+        className="bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-5 shadow-card"
       >
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-[13px] font-medium text-[var(--text-secondary)]">
+          <h2 className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wider">
             Today&apos;s Progress
           </h2>
           <span className="text-xs text-[var(--text-tertiary)]">
             {totalReviewed} of {totalDue} reviewed
           </span>
         </div>
-        <ProgressBarChart languages={activeLanguages} />
+        <ProgressBarChart languages={languages} />
       </motion.div>
 
-      {/* Quick Actions */}
+      {/* Section 5: Weekly Stats */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-4"
       >
-        <Link href="/study-presets">
+        {[
+          { label: "This Week", value: "247", sublabel: "cards reviewed" },
+          { label: "Accuracy", value: "91%", sublabel: "correct answers" },
+          { label: "Streak", value: "5", sublabel: "days" },
+          { label: "Quran", value: "86%", sublabel: "retention rate" },
+        ].map((stat, i) => (
           <motion.div
-            whileHover={{ y: -2 }}
-            className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 cursor-pointer hover:shadow-card-hover transition-all"
+            key={stat.label}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 + i * 0.05 }}
+            className="bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-4 shadow-card"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-950 flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-primary-500" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-[var(--text-primary)]">
-                Smart Study
-              </p>
-              <p className="text-xs text-[var(--text-tertiary)] mt-0.5">
-                Focused preset sessions
-              </p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-[var(--text-tertiary)]" />
+            <p className="text-xs text-[var(--text-tertiary)] font-medium">{stat.label}</p>
+            <p className="text-2xl font-bold text-[var(--text-primary)] mt-1">{stat.value}</p>
+            <p className="text-xs text-[var(--text-tertiary)] mt-0.5">{stat.sublabel}</p>
           </motion.div>
-        </Link>
-
-        <Link href="/browser">
-          <motion.div
-            whileHover={{ y: -2 }}
-            className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 cursor-pointer hover:shadow-card-hover transition-all"
-          >
-            <div className="w-10 h-10 rounded-lg bg-quran-50 dark:bg-quran-950 flex items-center justify-center">
-              <Target className="w-5 h-5 text-quran-500" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-[var(--text-primary)]">
-                Browse Cards
-              </p>
-              <p className="text-xs text-[var(--text-tertiary)] mt-0.5">
-                {totalCards.toLocaleString()} cards in library
-              </p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </motion.div>
-        </Link>
-
-        <Link href="/stats">
-          <motion.div
-            whileHover={{ y: -2 }}
-            className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 cursor-pointer hover:shadow-card-hover transition-all"
-          >
-            <div className="w-10 h-10 rounded-lg bg-arabic-50 dark:bg-arabic-950 flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-arabic-500" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-[var(--text-primary)]">
-                Statistics
-              </p>
-              <p className="text-xs text-[var(--text-tertiary)] mt-0.5">
-                Track your progress
-              </p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </motion.div>
-        </Link>
-      </motion.div>
-
-      {/* Bottom Stats Row */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.45 }}
-        className="grid grid-cols-1 sm:grid-cols-3 gap-4"
-      >
-        <div className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
-          <div className="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-950 flex items-center justify-center">
-            <Target className="w-6 h-6 text-primary-500" />
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-[var(--text-primary)]">
-              {totalCards.toLocaleString()}
-            </p>
-            <p className="text-xs text-[var(--text-tertiary)]">
-              total cards in library
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
-          <div className="w-10 h-10 rounded-lg bg-quran-50 dark:bg-quran-950 flex items-center justify-center">
-            <TrendingUp className="w-6 h-6 text-quran-500" />
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-[var(--text-primary)]">
-              {activeLanguages.length}
-            </p>
-            <p className="text-xs text-[var(--text-tertiary)]">
-              active languages
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 flex items-center gap-4 hover:-translate-y-0.5 transition-transform">
-          <div className="w-10 h-10 rounded-lg bg-arabic-50 dark:bg-arabic-950 flex items-center justify-center">
-            <Flame className="w-6 h-6 text-arabic-500" />
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-[var(--text-primary)]">5</p>
-            <p className="text-xs text-[var(--text-tertiary)]">day streak</p>
-          </div>
-        </div>
+        ))}
       </motion.div>
     </div>
   );

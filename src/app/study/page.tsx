@@ -23,8 +23,8 @@ const ACCENT_PATTERNS: { pattern: RegExp; color: string }[] = [
   { pattern: /spanish|dele|espanol/i, color: "#F97316" },
   { pattern: /egyptian/i, color: "#8B5CF6" },
   { pattern: /english/i, color: "#64748B" },
-  { pattern: /vocab|new|learn/i, color: "#6366F1" },
-  { pattern: /review|due/i, color: "#EF4444" },
+  { pattern: /vocab|new|learn/i, color: "#635BFF" },
+  { pattern: /review|due/i, color: "#DF1B41" },
   { pattern: /frequent|top/i, color: "#F43F5E" },
 ];
 
@@ -32,7 +32,7 @@ function getAccentColor(name: string): string {
   for (const { pattern, color } of ACCENT_PATTERNS) {
     if (pattern.test(name)) return color;
   }
-  return "#6366F1";
+  return "#635BFF";
 }
 
 const arabicTotal = arabicCards.length + quranAyahCards.length;
@@ -43,21 +43,18 @@ const languages = [
     name: "Arabic (MSA / Quran)",
     cardCount: arabicTotal,
     color: "#F59E0B",
-    bgClass: "bg-arabic-50 dark:bg-arabic-950/20",
   },
   {
     id: "egyptian",
     name: "Egyptian Arabic",
     cardCount: egyptianCards.length,
     color: "#8B5CF6",
-    bgClass: "bg-egyptian-50 dark:bg-egyptian-950/20",
   },
   {
     id: "spanish",
     name: "Spanish",
     cardCount: spanishCards.length,
     color: "#F97316",
-    bgClass: "bg-spanish-50 dark:bg-spanish-950/20",
   },
 ];
 
@@ -88,7 +85,7 @@ export default function StudyLauncher() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-2xl font-semibold text-[var(--text-primary)]">
+        <h1 className="text-3xl font-semibold text-[var(--text-primary)]" style={{ letterSpacing: "-0.02em" }}>
           Study
         </h1>
         <p className="text-sm text-[var(--text-secondary)] mt-1">
@@ -104,9 +101,12 @@ export default function StudyLauncher() {
       >
         <Link href="/study/all">
           <motion.div
-            whileHover={{ scale: 1.01, y: -1 }}
-            whileTap={{ scale: 0.99 }}
-            className="w-full bg-primary-500 text-white rounded-xl py-5 px-6 flex items-center gap-4 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            whileHover={{ scale: 1.005, y: -1 }}
+            whileTap={{ scale: 0.995 }}
+            className="w-full bg-primary-500 text-white rounded-xl py-5 px-6 flex items-center gap-4 cursor-pointer transition-shadow"
+            style={{
+              boxShadow: "0 1px 3px rgba(99,91,255,0.2), 0 4px 12px rgba(99,91,255,0.15)",
+            }}
           >
             <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center">
               <Play className="w-5 h-5 text-white fill-white" />
@@ -129,7 +129,7 @@ export default function StudyLauncher() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h2 className="text-[13px] font-medium text-[var(--text-secondary)] mb-4">
+        <h2 className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wider mb-4">
           Choose a language
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -142,9 +142,9 @@ export default function StudyLauncher() {
             >
               <Link href={`/study/${lang.id}`}>
                 <motion.div
-                  whileHover={{ y: -3, scale: 1.01 }}
+                  whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.99 }}
-                  className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 shadow-card hover:shadow-card-hover transition-shadow cursor-pointer"
+                  className="bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-5 shadow-card hover:shadow-card-hover transition-all duration-150 cursor-pointer"
                 >
                   <div className="flex items-center justify-between">
                     <div>
@@ -179,7 +179,7 @@ export default function StudyLauncher() {
         transition={{ delay: 0.3 }}
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-[13px] font-medium text-[var(--text-secondary)]">
+          <h2 className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wider">
             Saved Presets
           </h2>
           <Link
@@ -195,7 +195,7 @@ export default function StudyLauncher() {
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="h-[72px] rounded-xl bg-[var(--surface-2)] border border-[var(--surface-3)] animate-pulse"
+                className="h-[68px] rounded-lg bg-[var(--surface-2)] border border-[var(--surface-3)] shimmer"
               />
             ))}
           </div>
@@ -213,7 +213,7 @@ export default function StudyLauncher() {
                   <Link href={`/study/all?preset=${preset.id}`}>
                     <motion.div
                       whileHover={{ y: -2 }}
-                      className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-4 shadow-card hover:shadow-card-hover transition-all cursor-pointer flex items-center gap-3"
+                      className="bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-4 shadow-card hover:shadow-card-hover transition-all duration-150 cursor-pointer flex items-center gap-3"
                     >
                       <div
                         className="w-2.5 h-2.5 rounded-full flex-shrink-0"
@@ -248,7 +248,7 @@ export default function StudyLauncher() {
               <Link href="/study-presets">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="bg-[var(--surface-1)] rounded-xl border border-dashed border-[var(--surface-3)] p-4 cursor-pointer flex items-center gap-3 hover:border-[var(--text-tertiary)] transition-colors"
+                  className="bg-[var(--surface-1)] rounded-lg border border-dashed border-[var(--surface-3)] p-4 cursor-pointer flex items-center gap-3 hover:border-[var(--text-tertiary)] transition-colors"
                 >
                   <div className="w-2.5 h-2.5 rounded-full bg-[var(--surface-3)] flex-shrink-0" />
                   <div className="flex-1 min-w-0">

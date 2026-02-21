@@ -11,7 +11,6 @@ import {
   Search,
   BarChart3,
   Settings,
-  Sparkles,
   ChevronLeft,
   ChevronRight,
   Moon,
@@ -23,8 +22,7 @@ import { useUIStore } from "@/store/ui-store";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/study/all", label: "Study", icon: BookOpen },
-  { href: "/study-presets", label: "Smart Study", icon: Sparkles },
+  { href: "/study", label: "Study", icon: BookOpen },
   { href: "/browser", label: "Browser", icon: Search },
   { href: "/stats", label: "Statistics", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -37,12 +35,12 @@ function Sidebar() {
   return (
     <motion.aside
       initial={false}
-      animate={{ width: sidebarCollapsed ? 72 : 260 }}
-      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      animate={{ width: sidebarCollapsed ? 60 : 240 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
       className="fixed left-0 top-0 bottom-0 z-30 flex flex-col border-r border-[var(--surface-3)] bg-[var(--surface-1)]"
     >
       {/* Logo */}
-      <div className="flex items-center gap-3 px-5 h-16 border-b border-[var(--surface-3)]">
+      <div className="flex items-center gap-3 px-4 h-[52px] border-b border-[var(--surface-3)]">
         <div className="w-8 h-8 rounded-lg bg-primary-500 flex items-center justify-center flex-shrink-0">
           <span className="text-white font-bold text-sm" style={{ fontFamily: "'Amiri', serif" }}>ل</span>
         </div>
@@ -52,7 +50,7 @@ function Sidebar() {
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -8 }}
-              className="font-semibold text-[15px] text-[var(--text-primary)] whitespace-nowrap tracking-tight"
+              className="font-semibold text-base text-[var(--text-primary)] whitespace-nowrap"
             >
               Lughat<span className="relative">i<span className="absolute -top-0.5 left-0.5 text-primary-500 text-[8px]" style={{ fontFamily: "'Amiri', serif" }}>&#x644;</span></span>
             </motion.span>
@@ -61,21 +59,23 @@ function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto">
+      <nav className="flex-1 py-3 space-y-0.5 overflow-y-auto">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive =
-            pathname === item.href ||
-            (item.href !== "/" && pathname.startsWith(item.href));
+            item.href === "/"
+              ? pathname === "/"
+              : pathname === item.href ||
+                (item.href === "/study" && pathname.startsWith("/study") && !pathname.startsWith("/study-presets"));
 
           return (
             <Link key={item.href} href={item.href}>
               <div
                 className={`nav-item ${isActive ? "active" : ""} ${
-                  sidebarCollapsed ? "justify-center px-0" : ""
+                  sidebarCollapsed ? "justify-center !px-0 !mx-2" : ""
                 }`}
               >
-                <Icon className="w-5 h-5 flex-shrink-0" />
+                <Icon className="w-4 h-4 flex-shrink-0" style={{ opacity: isActive ? 1 : 0.8 }} />
                 <AnimatePresence>
                   {!sidebarCollapsed && (
                     <motion.span
@@ -97,7 +97,7 @@ function Sidebar() {
       {/* Collapse toggle */}
       <button
         onClick={toggleSidebar}
-        className="flex items-center justify-center h-12 border-t border-[var(--surface-3)] hover:bg-[var(--surface-2)] transition-colors"
+        className="flex items-center justify-center h-11 border-t border-[var(--surface-3)] hover:bg-[var(--surface-2)] transition-colors"
         aria-label={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
       >
         {sidebarCollapsed ? (
@@ -114,41 +114,47 @@ function TopBar() {
   const { darkMode, toggleDarkMode, sidebarCollapsed } = useUIStore();
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-20 h-14 flex items-center justify-between px-6 bg-[var(--surface-0)]/80 backdrop-blur-md border-b border-[var(--surface-3)]">
-      {/* Left side - cmd+K search hint */}
-      <div className="flex items-center gap-2" style={{ marginLeft: sidebarCollapsed ? 72 : 260, transition: 'margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1)' }}>
-        <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--surface-2)] hover:bg-[var(--surface-3)] transition-colors text-[var(--text-tertiary)]">
+    <header
+      className="fixed top-0 right-0 z-20 h-[52px] flex items-center justify-between px-6 bg-[var(--surface-1)] border-b border-[var(--surface-3)]"
+      style={{
+        left: sidebarCollapsed ? 60 : 240,
+        transition: "left 0.2s ease-in-out",
+      }}
+    >
+      {/* Left side - search hint */}
+      <div className="flex items-center gap-2">
+        <button className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-[var(--surface-2)] hover:bg-[var(--surface-3)] transition-colors text-[var(--text-tertiary)] border border-[var(--surface-3)]">
           <Search className="w-3.5 h-3.5" />
           <span className="text-xs">Search</span>
-          <kbd className="text-[10px] px-1 py-0.5 rounded bg-[var(--surface-3)] font-mono">⌘K</kbd>
+          <kbd className="text-[10px] px-1 py-0.5 rounded bg-[var(--surface-1)] font-mono border border-[var(--surface-3)]">⌘K</kbd>
         </button>
       </div>
 
       {/* Right side */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1">
         {/* Notifications */}
-        <button className="relative p-2 rounded-lg hover:bg-[var(--surface-2)] transition-colors">
-          <Bell className="w-[18px] h-[18px] text-[var(--text-secondary)]" />
+        <button className="relative p-2 rounded-md hover:bg-[var(--surface-2)] transition-colors">
+          <Bell className="w-4 h-4 text-[var(--text-secondary)]" />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-500" />
         </button>
 
         {/* Dark mode toggle */}
         <button
           onClick={toggleDarkMode}
-          className="p-2 rounded-lg hover:bg-[var(--surface-2)] transition-colors"
+          className="p-2 rounded-md hover:bg-[var(--surface-2)] transition-colors"
           aria-label="Toggle dark mode"
         >
           {darkMode ? (
-            <Sun className="w-[18px] h-[18px] text-[var(--text-secondary)]" />
+            <Sun className="w-4 h-4 text-[var(--text-secondary)]" />
           ) : (
-            <Moon className="w-[18px] h-[18px] text-[var(--text-secondary)]" />
+            <Moon className="w-4 h-4 text-[var(--text-secondary)]" />
           )}
         </button>
 
         {/* User menu */}
-        <button className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-[var(--surface-2)] transition-colors">
-          <div className="w-7 h-7 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
-            <User className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+        <button className="flex items-center gap-2 p-1.5 rounded-md hover:bg-[var(--surface-2)] transition-colors ml-1">
+          <div className="w-7 h-7 rounded-full bg-primary-50 dark:bg-primary-950 flex items-center justify-center">
+            <User className="w-3.5 h-3.5 text-primary-500" />
           </div>
         </button>
       </div>
@@ -178,8 +184,9 @@ export default function RootLayout({
   const { sidebarCollapsed } = useUIStore();
   const pathname = usePathname();
 
-  // Study pages get a full-screen immersive layout (no sidebar, no top bar)
-  const isStudyMode = pathname.startsWith("/study/") && pathname !== "/study-presets";
+  // Only actual study sessions get immersive mode (e.g. /study/all, /study/arabic)
+  // The /study launcher page keeps the sidebar
+  const isStudyMode = /^\/study\/[^/]+$/.test(pathname) && pathname !== "/study-presets";
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -188,10 +195,6 @@ export default function RootLayout({
         <meta
           name="description"
           content="Lughati — a multilingual spaced repetition flashcard system"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="font-sans">
@@ -203,16 +206,16 @@ export default function RootLayout({
               {children}
             </main>
           ) : (
-            <motion.main
-              initial={false}
-              animate={{
-                marginLeft: sidebarCollapsed ? 72 : 260,
+            <main
+              className="min-h-screen"
+              style={{
+                marginLeft: sidebarCollapsed ? 60 : 240,
+                paddingTop: 52,
+                transition: "margin-left 0.2s ease-in-out",
               }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="pt-14 min-h-screen"
             >
-              <div className="p-6 max-w-7xl mx-auto">{children}</div>
-            </motion.main>
+              <div className="p-8 max-w-[1200px] mx-auto">{children}</div>
+            </main>
           )}
         </DarkModeProvider>
       </body>

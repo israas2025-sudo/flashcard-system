@@ -34,19 +34,20 @@
 }
 
 /* ============================================
-   CSS Custom Properties
+   Stripe-Inspired CSS Custom Properties
    ============================================ */
 :root {
-  /* Surface colors - Light mode */
-  --surface-0: #ffffff;
-  --surface-1: #f8fafc;
-  --surface-2: #f1f5f9;
-  --surface-3: #e2e8f0;
+  /* Surface colors — Stripe light palette */
+  --surface-0: #F6F8FA;
+  --surface-1: #FFFFFF;
+  --surface-2: #F6F9FC;
+  --surface-3: #E3E8EE;
 
-  /* Text colors */
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary: #94a3b8;
+  /* Text colors — Stripe ink hierarchy */
+  --text-primary: #0A2540;
+  --text-secondary: #596773;
+  --text-tertiary: #8792A2;
+  --text-placeholder: #A3ACB9;
   --text-inverse: #ffffff;
 
   /* Language accent colors */
@@ -55,15 +56,15 @@
   --lang-spanish: #f97316;
   --lang-english: #64748b;
   --lang-egyptian: #8b5cf6;
-  --lang-primary: #6366f1;
+  --lang-primary: #635BFF;
 
   /* Rating colors */
-  --rating-again: #ef4444;
-  --rating-hard: #f59e0b;
-  --rating-good: #6366f1;
-  --rating-easy: #22c55e;
+  --rating-again: #DF1B41;
+  --rating-hard: #C77A0B;
+  --rating-good: #635BFF;
+  --rating-easy: #228403;
 
-  /* Spacing scale */
+  /* Spacing scale (4px base) */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -74,18 +75,18 @@
   --space-10: 40px;
   --space-12: 48px;
 
-  /* Border radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  /* Border radius — Stripe values */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
 
-  /* Shadows */
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08),
-    0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-elevated: 0 10px 30px rgba(0, 0, 0, 0.08),
-    0 4px 12px rgba(0, 0, 0, 0.04);
+  /* Shadows — exact Stripe shadow system */
+  --shadow-card: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 7px 14px 0 rgba(0, 0, 0, 0.07), 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 15px 35px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+  --shadow-button: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+  --shadow-focus: 0 0 0 3px rgba(99, 91, 255, 0.25);
 
   /* Transitions */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -93,21 +94,21 @@
 }
 
 .dark {
-  --surface-0: #0f172a;
-  --surface-1: #1e293b;
-  --surface-2: #334155;
-  --surface-3: #475569;
+  --surface-0: #0E1117;
+  --surface-1: #1C2128;
+  --surface-2: #242B34;
+  --surface-3: #2E3742;
 
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --text-inverse: #0f172a;
+  --text-primary: #E6EDF3;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --text-placeholder: #42505E;
+  --text-inverse: #0E1117;
 
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-elevated: 0 10px 30px rgba(0, 0, 0, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  --shadow-card-hover: 0 7px 14px 0 rgba(0, 0, 0, 0.25), 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  --shadow-elevated: 0 15px 35px 0 rgba(0, 0, 0, 0.35), 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  --shadow-button: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================
@@ -121,8 +122,8 @@
   }
 
   html {
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Ubuntu, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -132,11 +133,11 @@
     background-color: var(--surface-0);
     color: var(--text-primary);
     min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.15s ease, color 0.15s ease;
   }
 
   ::selection {
-    background-color: #6366f1;
+    background-color: #635BFF;
     color: white;
   }
 
@@ -166,20 +167,20 @@
 @layer components {
   /* Glass morphism */
   .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--surface-3);
   }
 
   .dark .glass {
-    background: rgba(30, 41, 59, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(28, 33, 40, 0.85);
+    border: 1px solid var(--surface-3);
   }
 
-  /* Animated gradient button */
+  /* Animated gradient button — Stripe blurple */
   .btn-gradient {
-    background: linear-gradient(135deg, #6366f1, #818cf8, #6366f1);
+    background: linear-gradient(135deg, #635BFF, #7A73FF, #635BFF);
     background-size: 200% 200%;
     animation: gradientShift 3s ease infinite;
   }
@@ -225,24 +226,24 @@
     color: var(--lang-quran);
   }
 
-  /* Shimmer effect */
+  /* Shimmer effect — Stripe skeleton */
   .shimmer {
     background: linear-gradient(
       90deg,
-      transparent 25%,
-      rgba(255, 255, 255, 0.3) 50%,
-      transparent 75%
+      #F0F2F5 25%,
+      #E3E8EE 50%,
+      #F0F2F5 75%
     );
     background-size: 200% 100%;
-    animation: shimmer 2s linear infinite;
+    animation: shimmer 1.5s ease-in-out infinite;
   }
 
   .dark .shimmer {
     background: linear-gradient(
       90deg,
-      transparent 25%,
-      rgba(255, 255, 255, 0.08) 50%,
-      transparent 75%
+      var(--surface-2) 25%,
+      var(--surface-3) 50%,
+      var(--surface-2) 75%
     );
     background-size: 200% 100%;
   }
@@ -252,7 +253,7 @@
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Focus ring */
+  /* Focus ring — Stripe blurple */
   .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
@@ -261,22 +262,31 @@
     @apply focus:ring-offset-surface-0;
   }
 
-  /* Sidebar nav item */
+  /* Sidebar nav item — Stripe dashboard style */
   .nav-item {
-    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-150;
-    @apply text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-indigo-50;
+    @apply flex items-center gap-2.5 px-4 py-1.5 rounded-md text-sm font-medium transition-all duration-100;
+    color: var(--text-secondary);
+    margin: 1px 8px;
   }
 
-  .dark .nav-item {
-    @apply hover:bg-indigo-950/30;
+  .nav-item:hover {
+    background-color: var(--surface-2);
+    color: var(--text-primary);
+  }
+
+  .dark .nav-item:hover {
+    background-color: var(--surface-2);
   }
 
   .nav-item.active {
-    @apply text-primary-600 bg-primary-50;
+    background-color: #F5F4FF;
+    color: #635BFF;
+    font-weight: 600;
   }
 
   .dark .nav-item.active {
-    @apply text-primary-400 bg-primary-950;
+    background-color: rgba(99, 91, 255, 0.12);
+    color: #7A73FF;
   }
 }
 

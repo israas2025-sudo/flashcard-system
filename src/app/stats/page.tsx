@@ -394,7 +394,7 @@ export default function StatsPage() {
       {/* Page Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-semibold text-[var(--text-primary)]">
+          <h1 className="text-xl font-semibold text-[var(--text-primary)]" style={{ letterSpacing: "-0.02em" }}>
             Statistics
           </h1>
           <p className="text-sm text-[var(--text-tertiary)] mt-0.5">
@@ -406,7 +406,7 @@ export default function StatsPage() {
       {/* Controls Bar: Time Period Tabs + Language Filter */}
       <div className="flex items-center justify-between gap-4 flex-wrap">
         {/* Time Period Tabs */}
-        <div className="flex items-center bg-[var(--surface-1)] border border-[var(--surface-3)] rounded-xl p-1 gap-0.5">
+        <div className="flex items-center bg-[var(--surface-1)] border border-[var(--surface-3)] rounded-lg p-1 gap-0.5">
           {TIME_PERIODS.map((period) => (
             <button
               key={period.key}

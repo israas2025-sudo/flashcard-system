@@ -10,28 +10,28 @@ const config: Config = {
   theme: {
     fontSize: {
       xs: ["13px", { lineHeight: "18px" }],
-      sm: ["15px", { lineHeight: "22px" }],
+      sm: ["14px", { lineHeight: "20px" }],
       base: ["15px", { lineHeight: "24px" }],
-      lg: ["20px", { lineHeight: "28px" }],
-      xl: ["20px", { lineHeight: "30px" }],
-      "2xl": ["28px", { lineHeight: "36px" }],
-      "3xl": ["36px", { lineHeight: "44px" }],
-      "4xl": ["48px", { lineHeight: "56px" }],
+      lg: ["16px", { lineHeight: "24px" }],
+      xl: ["20px", { lineHeight: "28px" }],
+      "2xl": ["24px", { lineHeight: "32px" }],
+      "3xl": ["30px", { lineHeight: "38px" }],
+      "4xl": ["36px", { lineHeight: "44px" }],
     },
     extend: {
       colors: {
         primary: {
-          50: "#EEF2FF",
-          100: "#E0E7FF",
-          200: "#C7D2FE",
-          300: "#A5B4FC",
-          400: "#818CF8",
-          500: "#6366F1",
-          600: "#4F46E5",
-          700: "#4338CA",
-          800: "#3730A3",
-          900: "#312E81",
-          950: "#1E1B4B",
+          50: "#F5F4FF",
+          100: "#EEEDFF",
+          200: "#D4D2FF",
+          300: "#B5B1FF",
+          400: "#9B95FF",
+          500: "#635BFF",
+          600: "#5851EB",
+          700: "#4D45D6",
+          800: "#3D37B0",
+          900: "#312D8F",
+          950: "#1E1B55",
         },
         arabic: {
           50: "#FFFBEB",
@@ -44,6 +44,7 @@ const config: Config = {
           700: "#B45309",
           800: "#92400E",
           900: "#78350F",
+          950: "#451A03",
         },
         quran: {
           50: "#F0FDFA",
@@ -56,6 +57,7 @@ const config: Config = {
           700: "#0F766E",
           800: "#115E59",
           900: "#134E4A",
+          950: "#042F2E",
         },
         spanish: {
           50: "#FFF7ED",
@@ -68,6 +70,7 @@ const config: Config = {
           700: "#C2410C",
           800: "#9A3412",
           900: "#7C2D12",
+          950: "#431407",
         },
         english: {
           50: "#F8FAFC",
@@ -80,6 +83,7 @@ const config: Config = {
           700: "#334155",
           800: "#1E293B",
           900: "#0F172A",
+          950: "#020617",
         },
         egyptian: {
           50: "#F5F3FF",
@@ -92,6 +96,7 @@ const config: Config = {
           700: "#6D28D9",
           800: "#5B21B6",
           900: "#4C1D95",
+          950: "#2E1065",
         },
         surface: {
           0: "var(--surface-0)",
@@ -119,27 +124,30 @@ const config: Config = {
         "32": "128px",
       },
       borderRadius: {
-        sm: "6px",
-        DEFAULT: "8px",
-        md: "10px",
-        lg: "14px",
-        xl: "20px",
-        "2xl": "24px",
+        sm: "4px",
+        DEFAULT: "6px",
+        md: "6px",
+        lg: "8px",
+        xl: "12px",
+        "2xl": "16px",
       },
       boxShadow: {
-        card: "0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06)",
+        card: "0 2px 5px 0 rgba(0,0,0,0.05), 0 1px 1px 0 rgba(0,0,0,0.03)",
         "card-hover":
-          "0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)",
+          "0 7px 14px 0 rgba(0,0,0,0.07), 0 3px 6px 0 rgba(0,0,0,0.05)",
         elevated:
-          "0 10px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)",
-        glow: "0 0 20px rgba(99, 102, 241, 0.3)",
+          "0 15px 35px 0 rgba(0,0,0,0.1), 0 5px 15px 0 rgba(0,0,0,0.06)",
+        button:
+          "0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 1px 0 rgba(0,0,0,0.04)",
+        glow: "0 0 20px rgba(99, 91, 255, 0.3)",
+        focus: "0 0 0 3px rgba(99, 91, 255, 0.25)",
       },
       animation: {
         "flame-flicker": "flicker 1.5s ease-in-out infinite alternate",
         "fade-in": "fadeIn 0.3s ease-out",
         "slide-up": "slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
         "scale-in": "scaleIn 0.2s ease-out",
-        shimmer: "shimmer 2s linear infinite",
+        shimmer: "shimmer 1.5s ease-in-out infinite",
         "progress-fill": "progressFill 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
       },
       keyframes: {
@@ -170,9 +178,17 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Ubuntu",
+          "sans-serif",
+        ],
         arabic: ["Amiri", "KFGQPC", "serif"],
-        mono: ["JetBrains Mono", "Fira Code", "monospace"],
+        mono: ["SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "monospace"],
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",

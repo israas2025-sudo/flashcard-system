@@ -1302,7 +1302,7 @@ function MoreTab() {
 
 export default function SettingsPage() {
   const [activeSection, setActiveSection] = useState<SectionId>("profile");
-  const [settings, setSettings] = useState<AllSettings>(defaultSettings);
+  const [settings, setSettings] = useState<AllSettings>(() => defaultSettings());
   const [hydrated, setHydrated] = useState(false);
 
   // Load settings from localStorage on mount

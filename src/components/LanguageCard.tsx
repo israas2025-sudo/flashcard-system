@@ -20,48 +20,48 @@ interface LanguageCardProps {
   language: LanguageInfo;
 }
 
-const colorMap: Record<string, { dot: string; ring: string; text: string; bg: string; accent: string }> = {
+const colorMap: Record<string, { dot: string; ring: string; text: string; accent: string; border: string }> = {
   arabic: {
     dot: "bg-arabic-500",
     ring: "stroke-arabic-500",
     text: "text-arabic-600 dark:text-arabic-400",
-    bg: "bg-arabic-50 dark:bg-arabic-950/20",
     accent: "#F59E0B",
+    border: "border-l-arabic-500",
   },
   quran: {
     dot: "bg-quran-500",
     ring: "stroke-quran-500",
     text: "text-quran-600 dark:text-quran-400",
-    bg: "bg-quran-50 dark:bg-quran-950/20",
     accent: "#14B8A6",
+    border: "border-l-quran-500",
   },
   spanish: {
     dot: "bg-spanish-500",
     ring: "stroke-spanish-500",
     text: "text-spanish-600 dark:text-spanish-400",
-    bg: "bg-spanish-50 dark:bg-spanish-950/20",
     accent: "#F97316",
+    border: "border-l-spanish-500",
   },
   egyptian: {
     dot: "bg-egyptian-500",
     ring: "stroke-egyptian-500",
     text: "text-egyptian-600 dark:text-egyptian-400",
-    bg: "bg-egyptian-50 dark:bg-egyptian-950/20",
     accent: "#8B5CF6",
+    border: "border-l-egyptian-500",
   },
   english: {
     dot: "bg-english-500",
     ring: "stroke-english-500",
     text: "text-english-600 dark:text-english-400",
-    bg: "bg-english-50 dark:bg-english-950/20",
     accent: "#64748B",
+    border: "border-l-english-500",
   },
 };
 
 function CircularProgress({
   percentage,
   colorClass,
-  size = 52,
+  size = 48,
   strokeWidth = 3,
 }: {
   percentage: number;
@@ -75,7 +75,6 @@ function CircularProgress({
 
   return (
     <svg width={size} height={size} className="transform -rotate-90">
-      {/* Background circle */}
       <circle
         cx={size / 2}
         cy={size / 2}
@@ -85,7 +84,6 @@ function CircularProgress({
         strokeWidth={strokeWidth}
         className="text-[var(--surface-3)]"
       />
-      {/* Progress arc */}
       <motion.circle
         cx={size / 2}
         cy={size / 2}
@@ -114,14 +112,14 @@ export function LanguageCard({ language }: LanguageCardProps) {
 
   const cardContent = (
     <motion.div
-      whileHover={language.comingSoon ? undefined : { y: -3, scale: 1.01 }}
+      whileHover={language.comingSoon ? undefined : { y: -2 }}
       whileTap={language.comingSoon ? undefined : { scale: 0.99 }}
-      className={`bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-4 shadow-card hover:shadow-card-hover transition-shadow relative ${language.comingSoon ? "opacity-60 cursor-default" : "cursor-pointer"}`}
+      className={`bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-4 shadow-card hover:shadow-card-hover transition-all duration-150 relative border-l-[3px] ${colors.border} ${language.comingSoon ? "opacity-60 cursor-default" : "cursor-pointer"}`}
     >
       {/* Coming Soon overlay */}
       {language.comingSoon && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 rounded-xl">
-          <Lock className="w-6 h-6 text-[var(--text-tertiary)] mb-1" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 rounded-lg">
+          <Lock className="w-5 h-5 text-[var(--text-tertiary)] mb-1" />
           <span className="text-xs font-medium text-[var(--text-tertiary)]">Coming Soon</span>
         </div>
       )}
@@ -129,7 +127,7 @@ export function LanguageCard({ language }: LanguageCardProps) {
       {/* Header row */}
       <div className={`flex items-center justify-between mb-3 ${language.comingSoon ? "opacity-40" : ""}`}>
         <div className="flex items-center gap-2">
-          <div className={`w-2.5 h-2.5 rounded-full ${colors.dot}`} />
+          <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
           <span className="text-sm font-medium text-[var(--text-primary)]">
             {language.name}
           </span>
@@ -142,7 +140,7 @@ export function LanguageCard({ language }: LanguageCardProps) {
           <CircularProgress
             percentage={progressPercent}
             colorClass={colors.ring}
-            size={52}
+            size={48}
             strokeWidth={3}
           />
           <div className="absolute inset-0 flex items-center justify-center">
