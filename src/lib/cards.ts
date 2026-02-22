@@ -258,6 +258,12 @@ function transformQuranCards(raw: QuranRawCard[]): StudyCard[] {
       if (c.theme) noteParts.push(c.theme);
       if (c.tajweed_notes) noteParts.push(`Tajweed: ${c.tajweed_notes}`);
 
+      // Compute Mishary Al-Afasy audio URL
+      const surahStr = String(c.surah_number).padStart(3, "0");
+      const ayahStr = String(c.ayah_number).padStart(3, "0");
+      const audioUrl = (c as any).audioUrl ||
+        `https://everyayah.com/data/Alafasy_128kbps/${surahStr}${ayahStr}.mp3`;
+
       return {
         id: `qr-${c.id}`,
         front: c.ayah_text,
@@ -269,6 +275,7 @@ function transformQuranCards(raw: QuranRawCard[]): StudyCard[] {
         noteType: "quran-ayah",
         surahNumber: c.surah_number,
         ayahNumber: c.ayah_number,
+        audioUrl,
         exampleSentence: vocabStr || undefined,
         exampleTranslation: "Key vocabulary",
         notes: noteParts.join(". "),

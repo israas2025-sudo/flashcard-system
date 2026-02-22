@@ -1,18 +1,11 @@
 // @ts-nocheck
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  BarChart3,
-  Clock,
-  TrendingUp,
-  PieChart as PieChartIcon,
   Activity,
-  Timer,
-  Target,
   Globe,
-  Flame,
   ChevronDown,
 } from "lucide-react";
 import {
@@ -284,7 +277,7 @@ function AccuracyChart({ data }: { data: { date: string; value: number }[] }) {
 }
 
 // ---------------------------------------------------------------------------
-// Chart Card with gradient left border and inner glow
+// Chart Card
 // ---------------------------------------------------------------------------
 
 function ChartCard({
@@ -339,6 +332,49 @@ function ChartCard({
 }
 
 // ---------------------------------------------------------------------------
+// Animated helpers
+// ---------------------------------------------------------------------------
+
+function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const [display, setDisplay] = useState(0);
+  const ref = useRef(value);
+  ref.current = value;
+  useEffect(() => {
+    const duration = 1400;
+    const start = performance.now();
+    let raf: number;
+    const step = (now: number) => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setDisplay(Math.round(eased * ref.current));
+      if (t < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [value]);
+  return <>{display.toLocaleString()}{suffix}</>;
+}
+
+function FloatingAccentDots() {
+  return (
+    <div className="relative h-6 overflow-hidden my-1 pointer-events-none">
+      {[
+        { color: "#635BFF", x: "10%", size: 4, dur: 3 },
+        { color: "#FF0080", x: "30%", size: 3, dur: 3.5 },
+        { color: "#00D4FF", x: "50%", size: 5, dur: 4 },
+        { color: "#FFB800", x: "70%", size: 3.5, dur: 3.2 },
+        { color: "#14B8A6", x: "88%", size: 4, dur: 3.8 },
+      ].map((p, i) => (
+        <motion.div key={i} className="absolute rounded-full"
+          style={{ width: p.size, height: p.size, background: p.color, left: p.x, top: "50%" }}
+          animate={{ y: [0, -8, 0], opacity: [0.2, 0.55, 0.2], scale: [1, 1.4, 1] }}
+          transition={{ duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }} />
+      ))}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Main Page
 // ---------------------------------------------------------------------------
 
@@ -367,11 +403,50 @@ export default function StatsPage() {
   const totalTimePeriod = timePerDay.reduce((s, d) => s + d.value, 0);
   const avgTimePeriod = timePerDay.length > 0 ? Math.round(totalTimePeriod / timePerDay.length) : 0;
 
+  /* ---- Mini Animated Visualizations for metric tiles ---- */
+  const StatBarChart = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      {[10, 16, 22, 13, 24].map((h, idx) => (
+        <motion.rect key={idx} x={idx * 4.8} width="3.5" rx="1" fill={`rgba(255,255,255,${0.4 + idx * 0.12})`}
+          initial={{ height: 0, y: 24 }} animate={{ height: h, y: 24 - h }}
+          transition={{ duration: 0.8, delay: 0.3 + idx * 0.1, ease: [0.165, 0.84, 0.44, 1] }} />
+      ))}
+    </svg>
+  );
+  const StatSparkline = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <motion.path d="M1 18 L4 13 L8 16 L12 7 L16 11 L20 4 L24 8" fill="none" stroke="white" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }} />
+    </svg>
+  );
+  const StatRing = ({ pct }: { pct: number }) => {
+    const r = 9; const c = 2 * Math.PI * r;
+    return (
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r={r} stroke="rgba(255,255,255,0.2)" strokeWidth="2.5" fill="none" />
+        <motion.circle cx="12" cy="12" r={r} stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"
+          strokeDasharray={c} initial={{ strokeDashoffset: c }} animate={{ strokeDashoffset: c * (1 - pct / 100) }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }} transform="rotate(-90 12 12)" />
+      </svg>
+    );
+  };
+  const StatCardStack = () => (
+    <div className="relative" style={{ width: 24, height: 24 }}>
+      <motion.div className="absolute rounded" style={{ width: 13, height: 16, background: "rgba(255,255,255,0.3)", border: "1px solid rgba(255,255,255,0.15)", top: 4, left: 0 }}
+        animate={{ rotate: [-10, -5, -10] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
+      <motion.div className="absolute rounded" style={{ width: 13, height: 16, background: "rgba(255,255,255,0.6)", border: "1px solid rgba(255,255,255,0.25)", top: 2, left: 5 }}
+        animate={{ y: [0, -1.5, 0] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }} />
+      <motion.div className="absolute rounded" style={{ width: 13, height: 16, background: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.3)", top: 0, left: 10 }}
+        animate={{ rotate: [4, 8, 4] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
+    </div>
+  );
+
   const metricTiles = [
-    { label: "Total Reviews", value: totalReviewsPeriod.toLocaleString(), icon: BarChart3, color: "#635BFF" },
-    { label: "Avg Per Day", value: avgPerDay.toString(), icon: TrendingUp, color: "#F59E0B" },
-    { label: "Total Time", value: `${Math.round(totalTimePeriod)} min`, icon: Clock, color: "#14B8A6" },
-    { label: "Avg Time/Day", value: `${avgTimePeriod} min`, icon: Timer, color: "#F97316" },
+    { label: "Total Reviews", numValue: totalReviewsPeriod, suffix: "", visual: <StatBarChart />, color: "#635BFF" },
+    { label: "Avg Per Day", numValue: avgPerDay, suffix: "", visual: <StatSparkline />, color: "#F59E0B" },
+    { label: "Total Time", numValue: Math.round(totalTimePeriod), suffix: " min", visual: <StatRing pct={65} />, color: "#14B8A6" },
+    { label: "Avg Time/Day", numValue: avgTimePeriod, suffix: " min", visual: <StatCardStack />, color: "#F97316" },
   ];
 
   const chartEntries: {
@@ -459,7 +534,7 @@ export default function StatsPage() {
 
   return (
     <div>
-      {/* Page title */}
+      {/* Page title with animated gradient */}
       <div className="flex items-center gap-3 mb-1.5">
         <h1
           className="text-[32px] font-bold page-header-gradient"
@@ -468,10 +543,10 @@ export default function StatsPage() {
           Statistics
         </h1>
         <motion.div
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ repeat: Infinity, duration: 2 }}
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 3 }}
         >
-          <Activity className="w-5 h-5" style={{ color: "#635BFF" }} />
+          <Activity className="w-5 h-5" style={{ color: "#FF0080" }} />
         </motion.div>
       </div>
       <p className="text-[14px] text-[var(--text-tertiary)] mb-8">
@@ -499,7 +574,7 @@ export default function StatsPage() {
                 fontWeight: activePeriod === period.key ? 700 : 500,
                 color: activePeriod === period.key ? "white" : "var(--text-tertiary)",
                 background: activePeriod === period.key
-                  ? "linear-gradient(135deg, #635BFF, #7C3AED)"
+                  ? "linear-gradient(135deg, #635BFF, #FF0080)"
                   : "transparent",
                 boxShadow: activePeriod === period.key
                   ? "0 4px 14px rgba(99,91,255,0.35)"
@@ -530,7 +605,6 @@ export default function StatsPage() {
           <AnimatePresence>
             {languageDropdownOpen && (
               <>
-                {/* Backdrop to close dropdown */}
                 <div
                   className="fixed inset-0 z-40"
                   onClick={() => setLanguageDropdownOpen(false)}
@@ -571,11 +645,9 @@ export default function StatsPage() {
         </div>
       </div>
 
-      {/* Summary metrics */}
+      {/* Summary metrics — floating tiles */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-        {metricTiles.map((stat, i) => {
-          const Icon = stat.icon;
-          return (
+        {metricTiles.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 16 }}
@@ -588,6 +660,7 @@ export default function StatsPage() {
                   "--accent-color": stat.color,
                   "--accent-end": stat.color,
                   "--glow-color": `${stat.color}15`,
+                  animationDelay: `${-i * 2}s`,
                 } as React.CSSProperties}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
@@ -597,13 +670,13 @@ export default function StatsPage() {
               >
                 <div className="flex items-center gap-2.5 mb-3">
                   <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    className="w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{
                       background: `linear-gradient(135deg, ${stat.color}, ${stat.color}cc)`,
                       boxShadow: `0 4px 14px ${stat.color}30`,
                     }}
                   >
-                    <Icon className="w-4.5 h-4.5 text-white" />
+                    {stat.visual}
                   </div>
                   <p className="text-[13px] text-[var(--text-tertiary)] font-medium">
                     {stat.label}
@@ -613,12 +686,11 @@ export default function StatsPage() {
                   className="text-[30px] font-bold text-[var(--text-primary)]"
                   style={{ letterSpacing: "-0.02em", fontVariantNumeric: "tabular-nums" }}
                 >
-                  {stat.value}
+                  <AnimatedNumber value={stat.numValue} suffix={stat.suffix} />
                 </p>
               </div>
             </motion.div>
-          );
-        })}
+          ))}
       </div>
 
       {/* Section Divider */}
@@ -626,18 +698,20 @@ export default function StatsPage() {
         <div
           className="h-px w-full"
           style={{
-            background: "linear-gradient(90deg, transparent, var(--surface-3) 20%, var(--surface-3) 80%, transparent)",
+            background: "linear-gradient(90deg, transparent, rgba(99,91,255,0.3), rgba(255,0,128,0.2), transparent)",
           }}
         />
+        <FloatingAccentDots />
       </div>
 
-      {/* Chart grid with staggered entrance */}
+      {/* Chart grid */}
       {mounted && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {chartEntries.map((chart, i) => (
             <motion.div
               key={chart.key}
-              className={chart.className || ""}
+              className={`${chart.className || ""} breathe-gentle`}
+              style={{ animationDelay: `${-i * 1.5}s` }}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + i * 0.06, duration: 0.5 }}

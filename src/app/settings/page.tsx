@@ -28,13 +28,14 @@ import {
   AlertTriangle,
   Check,
   Type,
+  Sparkles,
 } from "lucide-react";
 
 // =============================================================================
 // localStorage helpers
 // =============================================================================
 
-const STORAGE_KEY = "lughati-settings";
+const STORAGE_KEY = "zaytuna-settings";
 
 interface AllSettings {
   profile: ProfileData;
@@ -171,7 +172,7 @@ function Toggle({
         ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
       `}
       style={checked ? {
-        background: "linear-gradient(135deg, #635BFF, #7C3AED)",
+        background: "linear-gradient(135deg, #635BFF, #FF0080)",
         boxShadow: "0 2px 8px rgba(99,91,255,0.3)",
       } : {
         background: "var(--surface-3)",
@@ -206,6 +207,7 @@ interface SectionConfig {
   label: string;
   icon: React.ReactNode;
   description: string;
+  accent: string;
 }
 
 const SECTIONS: SectionConfig[] = [
@@ -214,36 +216,42 @@ const SECTIONS: SectionConfig[] = [
     label: "Profile",
     icon: <User className="w-4 h-4" />,
     description: "Name, email, and account info",
+    accent: "#635BFF",
   },
   {
     id: "study",
     label: "Study",
     icon: <BookOpen className="w-4 h-4" />,
     description: "Daily goals, session timer, FSRS",
+    accent: "#FF0080",
   },
   {
     id: "languages",
     label: "Languages",
     icon: <Globe className="w-4 h-4" />,
     description: "Language tracks, tashkeel, transliteration",
+    accent: "#F59E0B",
   },
   {
     id: "appearance",
     label: "Appearance",
     icon: <Palette className="w-4 h-4" />,
     description: "Theme, font size, animations",
+    accent: "#14B8A6",
   },
   {
     id: "sound",
     label: "Sound",
     icon: <Volume2 className="w-4 h-4" />,
     description: "Volume and sound effect toggles",
+    accent: "#8B5CF6",
   },
   {
     id: "more",
     label: "More",
     icon: <Settings className="w-4 h-4" />,
     description: "Export, import, reset, about",
+    accent: "#F97316",
   },
 ];
 
@@ -282,7 +290,13 @@ function ProfileTab({
       {/* Avatar */}
       <div className="flex items-center gap-5">
         <div className="relative">
-          <div className="w-20 h-20 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center overflow-hidden">
+          <div
+            className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, rgba(99,91,255,0.15), rgba(255,0,128,0.1))",
+              border: "2px solid rgba(99,91,255,0.2)",
+            }}
+          >
             <User className="w-8 h-8 text-primary-600 dark:text-primary-400" />
           </div>
           <button
@@ -341,7 +355,7 @@ function ProfileTab({
         type="button"
         onClick={handleSave}
         className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
-        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
+        style={{ background: "linear-gradient(135deg, #635BFF, #FF0080)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -396,7 +410,6 @@ function StudyTab({
       </div>
 
       <div className="space-y-5">
-        {/* Daily Goal */}
         <div>
           <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">
             Daily Goal (total cards)
@@ -417,7 +430,6 @@ function StudyTab({
           </div>
         </div>
 
-        {/* New Cards Per Day */}
         <div>
           <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">
             New Cards Per Day
@@ -438,7 +450,6 @@ function StudyTab({
           </div>
         </div>
 
-        {/* Session Timer */}
         <div>
           <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">
             Session Timer
@@ -464,7 +475,6 @@ function StudyTab({
           </div>
         </div>
 
-        {/* Scheduling Algorithm */}
         <div>
           <label className="block text-xs font-medium text-[var(--text-secondary)] mb-2">
             Scheduling Algorithm
@@ -512,7 +522,6 @@ function StudyTab({
           </div>
         </div>
 
-        {/* Desired Retention */}
         <div>
           <div className="flex items-center justify-between mb-2">
             <label className="text-xs font-medium text-[var(--text-secondary)]">
@@ -542,7 +551,6 @@ function StudyTab({
           </div>
         </div>
 
-        {/* FSRS Weights */}
         {state.algorithm === "fsrs" && (
           <div>
             <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">
@@ -567,7 +575,7 @@ function StudyTab({
         type="button"
         onClick={handleSave}
         className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
-        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
+        style={{ background: "linear-gradient(135deg, #635BFF, #FF0080)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -593,6 +601,7 @@ interface LanguageItem {
   key: keyof Pick<LanguagesData, "arabicMSA" | "egyptianArabic" | "spanish">;
   name: string;
   description: string;
+  accent: string;
 }
 
 const LANGUAGE_ITEMS: LanguageItem[] = [
@@ -600,16 +609,19 @@ const LANGUAGE_ITEMS: LanguageItem[] = [
     key: "arabicMSA",
     name: "Arabic (MSA / Quran)",
     description: "Modern Standard Arabic and Quranic vocabulary",
+    accent: "#F59E0B",
   },
   {
     key: "egyptianArabic",
     name: "Egyptian Arabic",
     description: "Colloquial Egyptian dialect",
+    accent: "#8B5CF6",
   },
   {
     key: "spanish",
     name: "Spanish",
     description: "Latin American and Castilian Spanish",
+    accent: "#F97316",
   },
 ];
 
@@ -645,7 +657,6 @@ function LanguagesTab({
         </p>
       </div>
 
-      {/* Language toggles */}
       <div className="space-y-3">
         <label className="block text-xs font-medium text-[var(--text-secondary)]">
           Active Languages
@@ -661,6 +672,7 @@ function LanguagesTab({
                   : "border-[var(--surface-3)] bg-[var(--surface-1)] opacity-60"
               }
             `}
+            style={state[lang.key] ? { borderLeft: `3px solid ${lang.accent}` } : undefined}
           >
             <div>
               <p className="text-xs font-medium text-[var(--text-primary)]">
@@ -678,7 +690,6 @@ function LanguagesTab({
         ))}
       </div>
 
-      {/* Arabic display options */}
       <div className="space-y-4">
         <label className="block text-xs font-medium text-[var(--text-secondary)]">
           Arabic Display Options
@@ -725,7 +736,7 @@ function LanguagesTab({
         type="button"
         onClick={handleSave}
         className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
-        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
+        style={{ background: "linear-gradient(135deg, #635BFF, #FF0080)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -787,7 +798,6 @@ function AppearanceTab({
         </p>
       </div>
 
-      {/* Theme */}
       <div>
         <label className="block text-xs font-medium text-[var(--text-secondary)] mb-2">
           Theme
@@ -828,7 +838,6 @@ function AppearanceTab({
         </div>
       </div>
 
-      {/* Font Size */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="text-xs font-medium text-[var(--text-secondary)] flex items-center gap-1.5">
@@ -857,7 +866,6 @@ function AppearanceTab({
         </div>
       </div>
 
-      {/* Card Animation Speed */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <label className="text-xs font-medium text-[var(--text-secondary)]">
@@ -888,7 +896,6 @@ function AppearanceTab({
         </div>
       </div>
 
-      {/* Reduce Motion */}
       <div className="flex items-center justify-between py-2">
         <div className="flex items-center gap-3">
           <Eye className="w-4 h-4 text-[var(--text-tertiary)]" />
@@ -911,7 +918,7 @@ function AppearanceTab({
         type="button"
         onClick={handleSave}
         className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
-        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
+        style={{ background: "linear-gradient(135deg, #635BFF, #FF0080)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -977,10 +984,6 @@ function SoundTab({
     onUpdate(next);
   };
 
-  const allSoundsEnabled = SOUND_TOGGLE_ITEMS.every(
-    (item) => state[item.key]
-  );
-
   return (
     <div className="space-y-6">
       <div>
@@ -993,7 +996,6 @@ function SoundTab({
         </p>
       </div>
 
-      {/* Master Volume */}
       <div className="p-4 rounded-xl bg-[var(--surface-0)] border border-[var(--surface-3)]">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
@@ -1024,7 +1026,6 @@ function SoundTab({
         </div>
       </div>
 
-      {/* Individual Sound Toggles */}
       <div
         className={
           state.masterVolume === 0
@@ -1087,7 +1088,7 @@ function MoreTab() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `lughati-export-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `zaytuna-export-${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -1111,7 +1112,6 @@ function MoreTab() {
       try {
         const text = await file.text();
         const parsed = JSON.parse(text);
-        // Merge with defaults so any missing keys get filled in
         const merged = { ...defaultSettings(), ...parsed };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
         setImportStatus("done");
@@ -1144,7 +1144,6 @@ function MoreTab() {
         </p>
       </div>
 
-      {/* Export */}
       <div className="space-y-3">
         <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
           Export Data
@@ -1181,14 +1180,12 @@ function MoreTab() {
 
       <div className="border-t border-[var(--surface-3)]" />
 
-      {/* Import */}
       <div className="space-y-3">
         <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
           Import Data
         </h4>
         <p className="text-[10px] text-[var(--text-tertiary)]">
-          Restore settings from a previously exported JSON file. This will
-          overwrite your current settings.
+          Restore settings from a previously exported JSON file.
         </p>
         <button
           type="button"
@@ -1219,14 +1216,12 @@ function MoreTab() {
 
       <div className="border-t border-[var(--surface-3)]" />
 
-      {/* Reset Progress — Danger Zone */}
       <div className="space-y-3 p-4 rounded-xl" style={{ border: "1px solid rgba(223,27,65,0.2)", background: "rgba(223,27,65,0.03)" }}>
         <h4 className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider">
           Danger Zone
         </h4>
         <p className="text-[10px] text-[var(--text-tertiary)]">
-          Clear all saved settings and return to defaults. This cannot be
-          undone.
+          Clear all saved settings and return to defaults. This cannot be undone.
         </p>
         {confirmReset ? (
           <div className="flex items-center gap-3">
@@ -1264,17 +1259,16 @@ function MoreTab() {
 
       <div className="border-t border-[var(--surface-3)]" />
 
-      {/* About */}
       <div className="space-y-3">
         <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
-          About Lughati
+          About Zaytuna
         </h4>
 
         <div className="space-y-2 text-xs">
           <div className="flex items-center justify-between">
             <span className="text-[var(--text-secondary)]">App</span>
             <span className="text-[var(--text-primary)] font-medium">
-              Lughati
+              Zaytuna
             </span>
           </div>
           <div className="flex items-center justify-between">
@@ -1294,10 +1288,10 @@ function MoreTab() {
         <div className="flex items-start gap-2 p-3 rounded-lg bg-[var(--surface-0)] border border-[var(--surface-3)]">
           <Info className="w-3.5 h-3.5 text-[var(--text-tertiary)] mt-0.5 flex-shrink-0" />
           <p className="text-[10px] text-[var(--text-tertiary)] leading-relaxed">
-            Lughati is a multilingual spaced repetition flashcard system built
+            Zaytuna is a multilingual spaced repetition flashcard system built
             with Next.js, React, TypeScript, Tailwind CSS, and the FSRS-5
-            algorithm. Designed for learners studying Arabic, Spanish, and
-            more.
+            algorithm. Designed for learners studying Arabic, Quran, Spanish,
+            and more.
           </p>
         </div>
       </div>
@@ -1314,13 +1308,11 @@ export default function SettingsPage() {
   const [settings, setSettings] = useState<AllSettings>(() => defaultSettings());
   const [hydrated, setHydrated] = useState(false);
 
-  // Load settings from localStorage on mount
   useEffect(() => {
     setSettings(loadSettings());
     setHydrated(true);
   }, []);
 
-  // Persist to localStorage whenever settings change (after hydration)
   useEffect(() => {
     if (hydrated) {
       saveSettings(settings);
@@ -1398,7 +1390,7 @@ export default function SettingsPage() {
 
   return (
     <div>
-      {/* Page Header */}
+      {/* Page Header with animated gradient */}
       <div className="flex items-center gap-3 mb-1">
         <h1
           className="text-[28px] font-bold page-header-gradient"
@@ -1407,23 +1399,38 @@ export default function SettingsPage() {
           Settings
         </h1>
         <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
+          animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >
-          <Settings className="w-5 h-5" style={{ color: "#635BFF" }} />
+          <Sparkles className="w-5 h-5" style={{ color: "#FF0080" }} />
         </motion.div>
       </div>
-      <p className="text-[13px] text-[var(--text-tertiary)] mt-1 mb-8">
-        Manage your Lughati account, study preferences, and application
+      <p className="text-[13px] text-[var(--text-tertiary)] mt-1 mb-2">
+        Manage your Zaytuna account, study preferences, and application
         configuration.
       </p>
+      {/* Animated divider */}
+      <div className="mb-6">
+        <div className="h-px w-full" style={{ background: "linear-gradient(90deg, transparent, rgba(99,91,255,0.3), rgba(255,0,128,0.2), transparent)" }} />
+        <div className="relative h-5 overflow-hidden pointer-events-none">
+          {[
+            { color: "#635BFF", x: "15%", size: 3.5, dur: 3 },
+            { color: "#FF0080", x: "40%", size: 3, dur: 3.5 },
+            { color: "#14B8A6", x: "65%", size: 4, dur: 4 },
+            { color: "#FFB800", x: "85%", size: 3, dur: 3.2 },
+          ].map((p, i) => (
+            <motion.div key={i} className="absolute rounded-full"
+              style={{ width: p.size, height: p.size, background: p.color, left: p.x, top: "50%" }}
+              animate={{ y: [0, -6, 0], opacity: [0.2, 0.5, 0.2], scale: [1, 1.3, 1] }}
+              transition={{ duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }} />
+          ))}
+        </div>
+      </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
-        {/* Sidebar Navigation */}
+        {/* Sidebar Navigation with colored accents */}
         <nav className="lg:w-64 flex-shrink-0">
-          <div
-            className="glass-card overflow-hidden"
-          >
+          <div className="glass-card overflow-hidden">
             {SECTIONS.map((section, index) => {
               const isActive = activeSection === section.id;
 
@@ -1436,24 +1443,34 @@ export default function SettingsPage() {
                     w-full flex items-center gap-3 px-4 py-3.5 text-left transition-all duration-200
                     ${
                       isActive
-                        ? "border-l-[3px] border-l-[#635BFF]"
+                        ? "border-l-[3px]"
                         : "hover:bg-[var(--surface-2)] border-l-[3px] border-l-transparent"
                     }
                     ${index > 0 ? "border-t border-[var(--glass-border)]" : ""}
                   `}
                   style={isActive ? {
-                    background: "linear-gradient(90deg, rgba(99,91,255,0.12), transparent)",
+                    borderLeftColor: section.accent,
+                    background: `linear-gradient(90deg, ${section.accent}15, transparent)`,
                   } : undefined}
                 >
-                  <div
+                  <motion.div
                     className="flex-shrink-0"
                     style={isActive ? {
-                      color: "#635BFF",
-                      filter: "drop-shadow(0 0 4px rgba(99,91,255,0.4))",
+                      color: section.accent,
+                      filter: `drop-shadow(0 0 6px ${section.accent})`,
                     } : { color: "var(--text-tertiary)" }}
+                    animate={isActive ? {
+                      scale: [1, 1.15, 1],
+                      rotate: [0, 5, -5, 0],
+                    } : { scale: 1, rotate: 0 }}
+                    transition={isActive ? {
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    } : { duration: 0.2 }}
                   >
                     {section.icon}
-                  </div>
+                  </motion.div>
                   <div className="min-w-0">
                     <p
                       className={`text-[13px] font-medium truncate ${

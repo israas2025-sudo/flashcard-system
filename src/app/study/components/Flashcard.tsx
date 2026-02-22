@@ -93,6 +93,7 @@ export function Flashcard({
   const { playSound } = useSound();
   const voicesRef = useRef<SpeechSynthesisVoice[]>([]);
   const recitationRef = useRef<HTMLAudioElement | null>(null);
+  const speakAudioRef = useRef<HTMLAudioElement | null>(null);
   const hasAutoPlayed = useRef(false);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -114,8 +115,17 @@ export function Flashcard({
   const speakText = useCallback(
     (text: string) => {
       if (audioUrl) {
+        // Stop any previous speak audio
+        if (speakAudioRef.current) {
+          speakAudioRef.current.pause();
+          speakAudioRef.current = null;
+        }
         const audio = new Audio(audioUrl);
-        audio.play().catch(() => {});
+        speakAudioRef.current = audio; // Store ref to prevent GC
+        audio.play().catch((err) => {
+          console.warn("Audio playback failed:", err.message, audioUrl);
+        });
+        playSound("tick");
         return;
       }
 
@@ -156,7 +166,9 @@ export function Flashcard({
     const url = `https://everyayah.com/data/Alafasy_128kbps/${surahStr}${ayahStr}.mp3`;
     const audio = new Audio(url);
     recitationRef.current = audio;
-    audio.play().catch(() => {});
+    audio.play().catch((err) => {
+      console.warn("Recitation autoplay blocked:", err.message);
+    });
   }, [surahNumber, ayahNumber]);
 
   useEffect(() => {
@@ -191,6 +203,10 @@ export function Flashcard({
         recitationRef.current.pause();
         recitationRef.current = null;
       }
+      if (speakAudioRef.current) {
+        speakAudioRef.current.pause();
+        speakAudioRef.current = null;
+      }
     };
   }, []);
 
@@ -198,9 +214,14 @@ export function Flashcard({
     e.stopPropagation();
     if (!surahNumber || !ayahNumber) return;
 
+    // Stop any existing playback
     if (recitationRef.current) {
       recitationRef.current.pause();
       recitationRef.current = null;
+    }
+    if (speakAudioRef.current) {
+      speakAudioRef.current.pause();
+      speakAudioRef.current = null;
     }
 
     const surahStr = String(surahNumber).padStart(3, "0");
@@ -209,7 +230,9 @@ export function Flashcard({
 
     const audio = new Audio(url);
     recitationRef.current = audio;
-    audio.play().catch(() => {});
+    audio.play().catch((err) => {
+      console.warn("Recitation playback failed:", err.message, url);
+    });
     playSound("tick");
   }, [surahNumber, ayahNumber, playSound]);
 

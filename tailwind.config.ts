@@ -155,6 +155,9 @@ const config: Config = {
         shimmer: "shimmer 1.5s ease-in-out infinite",
         "progress-fill": "progressFill 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
         "glow-pulse": "glowPulse 2s ease-in-out infinite alternate",
+        float: "gentleFloat 7s ease-in-out infinite",
+        breathe: "breathe 5s ease-in-out infinite",
+        orbit: "orbit1 4s linear infinite",
       },
       keyframes: {
         flicker: {
@@ -185,6 +188,18 @@ const config: Config = {
         glowPulse: {
           "0%": { boxShadow: "0 0 10px rgba(99, 91, 255, 0.15)" },
           "100%": { boxShadow: "0 0 25px rgba(99, 91, 255, 0.3)" },
+        },
+        gentleFloat: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        breathe: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.012)" },
+        },
+        orbit1: {
+          "0%": { transform: "rotate(0deg) translateX(24px) rotate(0deg)" },
+          "100%": { transform: "rotate(360deg) translateX(24px) rotate(-360deg)" },
         },
       },
       fontFamily: {

@@ -182,7 +182,7 @@ export const builtInPresets: StudyPreset[] = [
 // localStorage helpers
 // ---------------------------------------------------------------------------
 
-const STORAGE_KEY = "lughati-study-presets";
+const STORAGE_KEY = "zaytuna-study-presets";
 
 export function loadPresetsFromStorage(): StudyPreset[] {
   if (typeof window === "undefined") return [];

@@ -12,6 +12,7 @@ import { useStudyStore } from "@/store/study-store";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allStudyCards, type StudyCard } from "@/lib/cards";
 import { findPresetById, filterCardsByPreset, type StudyPreset } from "@/lib/presets";
+import { getCardsForTopic } from "@/lib/topics";
 
 const allCards = allStudyCards;
 
@@ -21,6 +22,7 @@ export default function StudyPage() {
   const searchParams = useSearchParams();
   const deckId = params.deckId as string;
   const presetId = searchParams.get("preset");
+  const topicId = searchParams.get("topic");
 
   const {
     currentIndex,
@@ -42,11 +44,17 @@ export default function StudyPage() {
     return findPresetById(presetId);
   }, [presetId]);
 
-  // Filter cards by the selected language/deck OR by preset
+  // Filter cards by the selected language/deck, preset, or topic
   const cards = useMemo(() => {
     // If a valid preset is active, use preset-based filtering
     if (activePreset) {
       return filterCardsByPreset(allCards, activePreset);
+    }
+
+    // If a topic is specified, filter by topic
+    if (topicId) {
+      const topicCards = getCardsForTopic(deckId, topicId, allCards);
+      if (topicCards.length > 0) return topicCards;
     }
 
     // Otherwise fall back to deck-based filtering
@@ -57,13 +65,13 @@ export default function StudyPage() {
     if (deckId === "arabic-msa-only") {
       return allCards.filter((c) => c.language === "arabic" && c.subtab === "msa");
     }
-    if (deckId === "arabic-quran-only") {
+    if (deckId === "arabic-quran-only" || deckId === "quran") {
       return allCards.filter((c) => c.language === "arabic" && c.subtab === "quran");
     }
     return allCards.filter(
       (c) => c.language === deckId || c.deck.toLowerCase().startsWith(deckId.toLowerCase())
     );
-  }, [deckId, activePreset]);
+  }, [deckId, activePreset, topicId]);
 
   // Subtab state for Arabic (MSA / Quran) — only when not using a preset
   const [subtab, setSubtab] = useState<"all" | "msa" | "quran">("all");

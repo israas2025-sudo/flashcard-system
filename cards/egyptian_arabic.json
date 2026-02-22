@@ -22521,5 +22521,7859 @@
       "social",
       "emotions"
     ]
+  },
+  {
+    "front": "إزيك",
+    "back": "How are you?",
+    "transliteration": "izzayak",
+    "fusha_equivalent": "كَيْفَ حَالُكَ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إزيك يا أحمد؟",
+    "example_en": "How are you, Ahmed?",
+    "difficulty": "beginner",
+    "frequency_rank": 2,
+    "sort_position": 2,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1002"
+  },
+  {
+    "front": "شكراً",
+    "back": "Thank you",
+    "transliteration": "shukran",
+    "fusha_equivalent": "شُكْرًا",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "شكراً على المساعدة",
+    "example_en": "Thank you for the help",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1006"
+  },
+  {
+    "front": "إتفضل",
+    "back": "Here you go",
+    "transliteration": "etfadhal",
+    "fusha_equivalent": "تَفَضَّلْ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إتفضل الشاي",
+    "example_en": "Here you go, the tea",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1009"
+  },
+  {
+    "front": "مشكرين",
+    "back": "Grateful",
+    "transliteration": "mishkireen",
+    "fusha_equivalent": "مُمْتَنّ",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا مشكرين على العزومة",
+    "example_en": "I am grateful for the invitation",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1010"
+  },
+  {
+    "front": "آسف",
+    "back": "Sorry",
+    "transliteration": "aasif",
+    "fusha_equivalent": "آسِف",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "آسف على التأخير",
+    "example_en": "Sorry for being late",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1012"
+  },
+  {
+    "front": "إسمك إيه؟",
+    "back": "What is your name?",
+    "transliteration": "ismak eh?",
+    "fusha_equivalent": "مَا اسْمُكَ؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إسمك إيه يا أختي؟",
+    "example_en": "What is your name, sister?",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1013"
+  },
+  {
+    "front": "معلش",
+    "back": "Never mind",
+    "transliteration": "maʿlesh",
+    "fusha_equivalent": "لَا بَأْسَ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "معلش، حصل خير",
+    "example_en": "Never mind, it's all good",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1014"
+  },
+  {
+    "front": "بسرعة",
+    "back": "Quickly",
+    "transliteration": "bisuraʿa",
+    "fusha_equivalent": "بِسُرْعَةٍ",
+    "part_of_speech": "adverb",
+    "usage_context": "informal",
+    "example_eg": "عايزك تيجي بسرعة",
+    "example_en": "I want you to come quickly",
+    "difficulty": "intermediate",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1015"
+  },
+  {
+    "front": "فهمت",
+    "back": "I understood",
+    "transliteration": "fahimt",
+    "fusha_equivalent": "فَهِمْتُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "آه، فهمت قصدك",
+    "example_en": "Oh, I understood your point",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1016"
+  },
+  {
+    "front": "متشكر",
+    "back": "Thankful",
+    "transliteration": "metshaker",
+    "fusha_equivalent": "مُمْتَنّ",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا متشكر جدًا",
+    "example_en": "I am very thankful",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1020"
+  },
+  {
+    "front": "بالسلامة",
+    "back": "With safety",
+    "transliteration": "bilsalama",
+    "fusha_equivalent": "بِالسَّلَامَةِ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "سافر بالسلامة",
+    "example_en": "Travel safely",
+    "difficulty": "intermediate",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1022"
+  },
+  {
+    "front": "رايح",
+    "back": "Going",
+    "transliteration": "rayeh",
+    "fusha_equivalent": "ذَاهِب",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا رايح الشغل",
+    "example_en": "I am going to work",
+    "difficulty": "intermediate",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1029"
+  },
+  {
+    "front": "جاية",
+    "back": "Coming (feminine)",
+    "transliteration": "gaya",
+    "fusha_equivalent": "آتِيَة",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا جاية حالاً",
+    "example_en": "I am coming right now",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:greetings"
+    ],
+    "topic_tags": [
+      "greetings"
+    ],
+    "id": "eg-1030"
+  },
+  {
+    "front": "أكل",
+    "back": "food",
+    "transliteration": "akl",
+    "fusha_equivalent": "طَعَام",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأكل ده لذيذ",
+    "example_en": "This food is delicious",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1033"
+  },
+  {
+    "front": "عيش",
+    "back": "bread",
+    "transliteration": "3eesh",
+    "fusha_equivalent": "خُبْز",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عايز عيش مع الفطار",
+    "example_en": "I want bread with breakfast",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1036"
+  },
+  {
+    "front": "تسلِق",
+    "back": "to boil",
+    "transliteration": "tisliq",
+    "fusha_equivalent": "يَسْلُق",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هسلِق البيض",
+    "example_en": "I will boil the eggs",
+    "difficulty": "intermediate",
+    "frequency_rank": 55,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1041"
+  },
+  {
+    "front": "يقطع",
+    "back": "to cut",
+    "transliteration": "yi'aṭṭa'",
+    "fusha_equivalent": "يَقْطَع",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هقطع الخضار",
+    "example_en": "I will cut the vegetables",
+    "difficulty": "intermediate",
+    "frequency_rank": 60,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1042"
+  },
+  {
+    "front": "يقلي",
+    "back": "to fry",
+    "transliteration": "yi'li",
+    "fusha_equivalent": "يَقْلِي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هقلي البطاطس",
+    "example_en": "I will fry the potatoes",
+    "difficulty": "intermediate",
+    "frequency_rank": 65,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1043"
+  },
+  {
+    "front": "يطبخ",
+    "back": "to cook",
+    "transliteration": "yiṭbukh",
+    "fusha_equivalent": "يَطْبُخ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هطبخ الغدا",
+    "example_en": "I will cook lunch",
+    "difficulty": "intermediate",
+    "frequency_rank": 70,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1044"
+  },
+  {
+    "front": "يشوي",
+    "back": "to grill",
+    "transliteration": "yishwi",
+    "fusha_equivalent": "يَشْوِي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هشوي اللحمة",
+    "example_en": "I will grill the meat",
+    "difficulty": "intermediate",
+    "frequency_rank": 75,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1045"
+  },
+  {
+    "front": "حلو",
+    "back": "sweet",
+    "transliteration": "ḥilw",
+    "fusha_equivalent": "حُلْو",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الكيك ده حلو",
+    "example_en": "This cake is sweet",
+    "difficulty": "intermediate",
+    "frequency_rank": 85,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1047"
+  },
+  {
+    "front": "حدق",
+    "back": "salty",
+    "transliteration": "ḥāda'",
+    "fusha_equivalent": "مَالِح",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجبنة حدقة",
+    "example_en": "The cheese is salty",
+    "difficulty": "intermediate",
+    "frequency_rank": 90,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1048"
+  },
+  {
+    "front": "المطبخ",
+    "back": "the kitchen",
+    "transliteration": "el-maṭbakh",
+    "fusha_equivalent": "المَطْبَخ",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأكل في المطبخ",
+    "example_en": "The food is in the kitchen",
+    "difficulty": "intermediate",
+    "frequency_rank": 95,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1049"
+  },
+  {
+    "front": "تحضير",
+    "back": "preparation",
+    "transliteration": "taḥḍīr",
+    "fusha_equivalent": "تَحْضِير",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "تحضير الأكل مهم",
+    "example_en": "Food preparation is important",
+    "difficulty": "intermediate",
+    "frequency_rank": 100,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1050"
+  },
+  {
+    "front": "مكونات",
+    "back": "ingredients",
+    "transliteration": "mukawwināt",
+    "fusha_equivalent": "مُكَوِّنَات",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "ايه مكونات الطبخة دي؟",
+    "example_en": "What are the ingredients of this dish?",
+    "difficulty": "intermediate",
+    "frequency_rank": 105,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1051"
+  },
+  {
+    "front": "طعم",
+    "back": "taste",
+    "transliteration": "ṭaʿm",
+    "fusha_equivalent": "طَعْم",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأكل ده طعمه حلو",
+    "example_en": "This food tastes good",
+    "difficulty": "intermediate",
+    "frequency_rank": 110,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1052"
+  },
+  {
+    "front": "طبق",
+    "back": "plate/dish",
+    "transliteration": "ṭabaq",
+    "fusha_equivalent": "طَبَق",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الطبق ده فاضي",
+    "example_en": "This plate is empty",
+    "difficulty": "intermediate",
+    "frequency_rank": 115,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1053"
+  },
+  {
+    "front": "تتبيلة",
+    "back": "marinade",
+    "transliteration": "tatbīla",
+    "fusha_equivalent": "تَتْبِيلَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "اللحمة محتاجة تتبيلة",
+    "example_en": "The meat needs a marinade",
+    "difficulty": "advanced",
+    "frequency_rank": 120,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1054"
+  },
+  {
+    "front": "مشمش",
+    "back": "apricot",
+    "transliteration": "mishmish",
+    "fusha_equivalent": "مِشْمِش",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الولد بيحب المشمش",
+    "example_en": "The boy likes apricots",
+    "difficulty": "advanced",
+    "frequency_rank": 125,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1055"
+  },
+  {
+    "front": "صفة",
+    "back": "recipe",
+    "transliteration": "ṣifa",
+    "fusha_equivalent": "وَصْفَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الوصفة دي سهلة",
+    "example_en": "This recipe is easy",
+    "difficulty": "advanced",
+    "frequency_rank": 130,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1056"
+  },
+  {
+    "front": "يخلط",
+    "back": "to mix",
+    "transliteration": "yikhliṭ",
+    "fusha_equivalent": "يَخْلِط",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هخلط المكونات",
+    "example_en": "I will mix the ingredients",
+    "difficulty": "advanced",
+    "frequency_rank": 135,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1057"
+  },
+  {
+    "front": "ينقي",
+    "back": "to select",
+    "transliteration": "yin'a",
+    "fusha_equivalent": "يَخْتَار",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هينقي الطماطم",
+    "example_en": "He will select the tomatoes",
+    "difficulty": "advanced",
+    "frequency_rank": 140,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1058"
+  },
+  {
+    "front": "على النار",
+    "back": "on the stove",
+    "transliteration": "'ala el-nār",
+    "fusha_equivalent": "عَلَى النَّار",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "حطيت الشوربة على النار",
+    "example_en": "I put the soup on the stove",
+    "difficulty": "advanced",
+    "frequency_rank": 145,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1059"
+  },
+  {
+    "front": "بالهنا والشِفا",
+    "back": "Bon appétit",
+    "transliteration": "bilhana wa el-shifa",
+    "fusha_equivalent": "بِالصِحَة وَالعَافِيَة",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "اتفضل الأكل، بالهنا والشِفا",
+    "example_en": "Enjoy the food, bon appétit",
+    "difficulty": "advanced",
+    "frequency_rank": 150,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:food"
+    ],
+    "topic_tags": [
+      "food"
+    ],
+    "id": "eg-1060"
+  },
+  {
+    "front": "كرسي",
+    "back": "Chair",
+    "transliteration": "kursi",
+    "fusha_equivalent": "كُرْسِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الكرسي مريح",
+    "example_en": "The chair is comfortable",
+    "difficulty": "beginner",
+    "frequency_rank": 2,
+    "sort_position": 2,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1062"
+  },
+  {
+    "front": "تليفزيون",
+    "back": "Television",
+    "transliteration": "tilevizyun",
+    "fusha_equivalent": "تِلِفِزْيُون",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "بتفرج على التليفزيون",
+    "example_en": "I'm watching television",
+    "difficulty": "beginner",
+    "frequency_rank": 3,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1063"
+  },
+  {
+    "front": "طربيزة",
+    "back": "Table",
+    "transliteration": "tarabeeza",
+    "fusha_equivalent": "طَاوِلَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الطربيزة في المطبخ",
+    "example_en": "The table is in the kitchen",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1065"
+  },
+  {
+    "front": "دولاب",
+    "back": "Wardrobe",
+    "transliteration": "doolab",
+    "fusha_equivalent": "دُولَاب",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الدولاب مليان هدوم",
+    "example_en": "The wardrobe is full of clothes",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1066"
+  },
+  {
+    "front": "شباك",
+    "back": "Window",
+    "transliteration": "shibbak",
+    "fusha_equivalent": "شُبَّاك",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الشباك مفتوح",
+    "example_en": "The window is open",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1067"
+  },
+  {
+    "front": "كنبة",
+    "back": "Sofa",
+    "transliteration": "kanaba",
+    "fusha_equivalent": "أَرِيكَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الكنبة مريحة",
+    "example_en": "The sofa is comfortable",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1069"
+  },
+  {
+    "front": "سقف",
+    "back": "Ceiling",
+    "transliteration": "sa’af",
+    "fusha_equivalent": "سَقْف",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "السقف عالي",
+    "example_en": "The ceiling is high",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1070"
+  },
+  {
+    "front": "مطبخ",
+    "back": "Kitchen",
+    "transliteration": "matbakh",
+    "fusha_equivalent": "مَطْبَخ",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أنا بطبخ في المطبخ",
+    "example_en": "I am cooking in the kitchen",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1071"
+  },
+  {
+    "front": "نظف",
+    "back": "To clean",
+    "transliteration": "naddaf",
+    "fusha_equivalent": "نَظَّفَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا هنظف الأوضة",
+    "example_en": "I will clean the room",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1072"
+  },
+  {
+    "front": "رتب",
+    "back": "To arrange",
+    "transliteration": "rattab",
+    "fusha_equivalent": "رَتَّبَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "لازم أرتب الدولاب",
+    "example_en": "I need to arrange the wardrobe",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1073"
+  },
+  {
+    "front": "اغسل",
+    "back": "To wash",
+    "transliteration": "ighsil",
+    "fusha_equivalent": "غَسَلَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هاغسل المواعين",
+    "example_en": "I will wash the dishes",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1074"
+  },
+  {
+    "front": "سكن",
+    "back": "To live",
+    "transliteration": "sakan",
+    "fusha_equivalent": "سَكَنَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "بسكن في القاهرة",
+    "example_en": "I live in Cairo",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1075"
+  },
+  {
+    "front": "غرفة",
+    "back": "Room",
+    "transliteration": "orfa",
+    "fusha_equivalent": "غُرْفَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأوضة دي واسعة",
+    "example_en": "This room is spacious",
+    "difficulty": "beginner",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1079"
+  },
+  {
+    "front": "نضارة",
+    "back": "Glasses",
+    "transliteration": "naddara",
+    "fusha_equivalent": "نَظَّارَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "فين النضارة بتاعتي؟",
+    "example_en": "Where are my glasses?",
+    "difficulty": "beginner",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1080"
+  },
+  {
+    "front": "مرايا",
+    "back": "Mirror",
+    "transliteration": "miraya",
+    "fusha_equivalent": "مِرْآة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "المرايا في الأوضة",
+    "example_en": "The mirror is in the room",
+    "difficulty": "beginner",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1082"
+  },
+  {
+    "front": "سجادة",
+    "back": "Carpet",
+    "transliteration": "sijada",
+    "fusha_equivalent": "سَجَّادَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "السجادة جديدة",
+    "example_en": "The carpet is new",
+    "difficulty": "beginner",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1083"
+  },
+  {
+    "front": "حمام",
+    "back": "Bathroom",
+    "transliteration": "ḥammam",
+    "fusha_equivalent": "حَمَّام",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الحمام نظيف",
+    "example_en": "The bathroom is clean",
+    "difficulty": "beginner",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1085"
+  },
+  {
+    "front": "صغير",
+    "back": "Small",
+    "transliteration": "sughayyar",
+    "fusha_equivalent": "صَغِير",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الأوضة صغيرة",
+    "example_en": "The room is small",
+    "difficulty": "beginner",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:home"
+    ],
+    "topic_tags": [
+      "home"
+    ],
+    "id": "eg-1089"
+  },
+  {
+    "front": "أب",
+    "back": "Father",
+    "transliteration": "ab",
+    "fusha_equivalent": "أَب",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أبويا بيشتغل في الشركة",
+    "example_en": "My father works at the company",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1091"
+  },
+  {
+    "front": "أم",
+    "back": "Mother",
+    "transliteration": "umm",
+    "fusha_equivalent": "أُمّ",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أمي بتحب الطبيخ",
+    "example_en": "My mother loves cooking",
+    "difficulty": "beginner",
+    "frequency_rank": 2,
+    "sort_position": 2,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1092"
+  },
+  {
+    "front": "أخت",
+    "back": "Sister",
+    "transliteration": "okht",
+    "fusha_equivalent": "أُخْت",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أختي بتدرس في الجامعة",
+    "example_en": "My sister is studying at the university",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1094"
+  },
+  {
+    "front": "جد",
+    "back": "Grandfather",
+    "transliteration": "gidd",
+    "fusha_equivalent": "جَدّ",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "جدي بيحب يقرأ الجرائد",
+    "example_en": "My grandfather loves to read newspapers",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1095"
+  },
+  {
+    "front": "جدة",
+    "back": "Grandmother",
+    "transliteration": "gadda",
+    "fusha_equivalent": "جَدّة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "جدتي بتحب تحكي حكايات",
+    "example_en": "My grandmother loves to tell stories",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1096"
+  },
+  {
+    "front": "عيلة",
+    "back": "Family",
+    "transliteration": "3eela",
+    "fusha_equivalent": "عَائِلَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "العيلة بتاعتي كبيرة",
+    "example_en": "My family is big",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1099"
+  },
+  {
+    "front": "قريب",
+    "back": "Relative",
+    "transliteration": "areeb",
+    "fusha_equivalent": "قَرِيب",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عندي قريب في البلد",
+    "example_en": "I have a relative in the village",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1100"
+  },
+  {
+    "front": "اتكلم",
+    "back": "Talk",
+    "transliteration": "itkallim",
+    "fusha_equivalent": "تَكَلَّمَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "اتكلمت مع جدتي النهاردة",
+    "example_en": "I talked with my grandmother today",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1102"
+  },
+  {
+    "front": "حب",
+    "back": "Love",
+    "transliteration": "hebb",
+    "fusha_equivalent": "حَبّ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "بحب عيلتي قوي",
+    "example_en": "I love my family very much",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1104"
+  },
+  {
+    "front": "سعيد",
+    "back": "Happy",
+    "transliteration": "sa3eed",
+    "fusha_equivalent": "سَعِيد",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا سعيد بعيلتي",
+    "example_en": "I am happy with my family",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1108"
+  },
+  {
+    "front": "قريب",
+    "back": "Close",
+    "transliteration": "areeb",
+    "fusha_equivalent": "قَرِيب",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "إحنا قريبين من بعض",
+    "example_en": "We are close to each other",
+    "difficulty": "beginner",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1111"
+  },
+  {
+    "front": "يوم العيلة",
+    "back": "Family day",
+    "transliteration": "yom el-3eela",
+    "fusha_equivalent": "يَوْم العَائِلَة",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "السبت هو يوم العيلة",
+    "example_en": "Saturday is family day",
+    "difficulty": "beginner",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1112"
+  },
+  {
+    "front": "إزاي العيلة؟",
+    "back": "How's the family?",
+    "transliteration": "izzay el-3eela?",
+    "fusha_equivalent": "كَيْفَ حَال العَائِلَة؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إزاي العيلة؟ كلهم كويسين؟",
+    "example_en": "How's the family? Are they all well?",
+    "difficulty": "beginner",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1113"
+  },
+  {
+    "front": "أحبك",
+    "back": "I love you",
+    "transliteration": "ahibbak",
+    "fusha_equivalent": "أُحِبُّك",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "أحبك يا ماما",
+    "example_en": "I love you, mom",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1114"
+  },
+  {
+    "front": "كلنا مع بعض",
+    "back": "We are all together",
+    "transliteration": "kullina ma3 ba3d",
+    "fusha_equivalent": "كُلُّنَا مَع بَعْض",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "كلنا مع بعض في الرحلة",
+    "example_en": "We are all together on the trip",
+    "difficulty": "beginner",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1115"
+  },
+  {
+    "front": "بيت العيلة",
+    "back": "Family house",
+    "transliteration": "beet el-3eela",
+    "fusha_equivalent": "بَيْت العَائِلَة",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "بنروح بيت العيلة كل جمعة",
+    "example_en": "We go to the family house every Friday",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1116"
+  },
+  {
+    "front": "طيب",
+    "back": "Good",
+    "transliteration": "tayyib",
+    "fusha_equivalent": "طَيِّب",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أبويا راجل طيب",
+    "example_en": "My father is a good man",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1117"
+  },
+  {
+    "front": "سند",
+    "back": "Support",
+    "transliteration": "sanad",
+    "fusha_equivalent": "سَنَدَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "بنسند بعض في العيلة",
+    "example_en": "We support each other in the family",
+    "difficulty": "beginner",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1119"
+  },
+  {
+    "front": "اتجمع",
+    "back": "Gather",
+    "transliteration": "itgama3",
+    "fusha_equivalent": "تَجَمَّعَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "اتجمعنا في بيت العيلة",
+    "example_en": "We gathered at the family house",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:family"
+    ],
+    "topic_tags": [
+      "family"
+    ],
+    "id": "eg-1120"
+  },
+  {
+    "front": "ظهر",
+    "back": "Back",
+    "transliteration": "ḍahr",
+    "fusha_equivalent": "ظَهْر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "ظهري واجعني",
+    "example_en": "My back hurts.",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:body"
+    ],
+    "topic_tags": [
+      "body"
+    ],
+    "id": "eg-1128"
+  },
+  {
+    "front": "وش",
+    "back": "Face",
+    "transliteration": "wesh",
+    "fusha_equivalent": "وَجْه",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "وشي محروق من الشمس",
+    "example_en": "My face is sunburned.",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:body"
+    ],
+    "topic_tags": [
+      "body"
+    ],
+    "id": "eg-1129"
+  },
+  {
+    "front": "سن",
+    "back": "Tooth",
+    "transliteration": "sinn",
+    "fusha_equivalent": "سِنّ",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "سني مكسور",
+    "example_en": "My tooth is broken.",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:body"
+    ],
+    "topic_tags": [
+      "body"
+    ],
+    "id": "eg-1130"
+  },
+  {
+    "front": "بياكل",
+    "back": "Eating",
+    "transliteration": "beyaakol",
+    "fusha_equivalent": "يَأْكُل",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيأكل كتير",
+    "example_en": "He eats a lot.",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1131"
+  },
+  {
+    "front": "يشرب",
+    "back": "Drink",
+    "transliteration": "yeshrab",
+    "fusha_equivalent": "يَشْرَب",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيشرب ميه كتير",
+    "example_en": "He drinks a lot of water.",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1132"
+  },
+  {
+    "front": "ينام",
+    "back": "Sleep",
+    "transliteration": "yenaam",
+    "fusha_equivalent": "يَنَام",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "لازم أنام بدري",
+    "example_en": "I need to sleep early.",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1133"
+  },
+  {
+    "front": "يستريح",
+    "back": "Rest",
+    "transliteration": "yestareeḥ",
+    "fusha_equivalent": "يَسْتَرِيح",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "لازم تستريح شوية",
+    "example_en": "You need to rest a bit.",
+    "difficulty": "beginner",
+    "frequency_rank": 19,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1134"
+  },
+  {
+    "front": "يسخن",
+    "back": "Fever",
+    "transliteration": "yiskhan",
+    "fusha_equivalent": "يَحْمَى",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو سخن شوية",
+    "example_en": "He has a slight fever.",
+    "difficulty": "beginner",
+    "frequency_rank": 20,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1135"
+  },
+  {
+    "front": "يتعب",
+    "back": "Get tired",
+    "transliteration": "yit3ab",
+    "fusha_equivalent": "يَتْعَب",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيتعب بسرعة",
+    "example_en": "He gets tired quickly.",
+    "difficulty": "intermediate",
+    "frequency_rank": 21,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1136"
+  },
+  {
+    "front": "يخف",
+    "back": "Recover",
+    "transliteration": "yikhaf",
+    "fusha_equivalent": "يَتَعَافَى",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "يارب يخف بسرعة",
+    "example_en": "I hope he recovers quickly.",
+    "difficulty": "intermediate",
+    "frequency_rank": 22,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1137"
+  },
+  {
+    "front": "يضحك",
+    "back": "Laugh",
+    "transliteration": "yeḍḥak",
+    "fusha_equivalent": "يَضْحَك",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيضحك كتير",
+    "example_en": "He laughs a lot.",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1138"
+  },
+  {
+    "front": "قوي",
+    "back": "Strong",
+    "transliteration": "qawi",
+    "fusha_equivalent": "قَوِيّ",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "هو قوي جدا",
+    "example_en": "He is very strong.",
+    "difficulty": "intermediate",
+    "frequency_rank": 27,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:body"
+    ],
+    "topic_tags": [
+      "body"
+    ],
+    "id": "eg-1142"
+  },
+  {
+    "front": "ضعيف",
+    "back": "Weak",
+    "transliteration": "ḍa3if",
+    "fusha_equivalent": "ضَعِيف",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "هو ضعيف شوية",
+    "example_en": "He is a bit weak.",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:body"
+    ],
+    "topic_tags": [
+      "body"
+    ],
+    "id": "eg-1143"
+  },
+  {
+    "front": "خذ دواء",
+    "back": "Take medicine",
+    "transliteration": "khod dawaa",
+    "fusha_equivalent": "خُذْ دَوَاء",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "لازم تاخد دواء",
+    "example_en": "You need to take medicine.",
+    "difficulty": "intermediate",
+    "frequency_rank": 29,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1144"
+  },
+  {
+    "front": "روح للدكتور",
+    "back": "Go to the doctor",
+    "transliteration": "rooh lel doktor",
+    "fusha_equivalent": "اذْهَب إِلَى الطَّبِيب",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "لازم تروح للدكتور",
+    "example_en": "You need to go to the doctor.",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1145"
+  },
+  {
+    "front": "حساسية",
+    "back": "Allergy",
+    "transliteration": "ḥasaaseyya",
+    "fusha_equivalent": "حَسَاسِيَّة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عندي حساسية من الغبار",
+    "example_en": "I have an allergy to dust.",
+    "difficulty": "intermediate",
+    "frequency_rank": 32,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1147"
+  },
+  {
+    "front": "فيتامين",
+    "back": "Vitamin",
+    "transliteration": "vitamiin",
+    "fusha_equivalent": "فِيتَامِين",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "لازم تاخد فيتامينات",
+    "example_en": "You need to take vitamins.",
+    "difficulty": "intermediate",
+    "frequency_rank": 33,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1148"
+  },
+  {
+    "front": "أعصاب",
+    "back": "Nerves",
+    "transliteration": "a3ṣaab",
+    "fusha_equivalent": "أَعْصَاب",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أعصابي تعبانة",
+    "example_en": "My nerves are tired.",
+    "difficulty": "intermediate",
+    "frequency_rank": 34,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1149"
+  },
+  {
+    "front": "يرتاح",
+    "back": "Relax",
+    "transliteration": "yirtaah",
+    "fusha_equivalent": "يَسْتَرِيح",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "حاول ترتاح شوية",
+    "example_en": "Try to relax a bit.",
+    "difficulty": "intermediate",
+    "frequency_rank": 35,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:health"
+    ],
+    "topic_tags": [
+      "health"
+    ],
+    "id": "eg-1150"
+  },
+  {
+    "front": "مدرس",
+    "back": "Teacher (male)",
+    "transliteration": "mudarris",
+    "fusha_equivalent": "مُدَرِّس",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "المدرس بيشرح الدرس.",
+    "example_en": "The teacher is explaining the lesson.",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1154"
+  },
+  {
+    "front": "طالبة",
+    "back": "Student (female)",
+    "transliteration": "taaliba",
+    "fusha_equivalent": "طَالِبَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الطالبة بتذاكر للامتحان.",
+    "example_en": "The student is studying for the exam.",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1157"
+  },
+  {
+    "front": "فصل",
+    "back": "Classroom",
+    "transliteration": "faSl",
+    "fusha_equivalent": "فَصْل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الفصل مليان طلاب.",
+    "example_en": "The classroom is full of students.",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1158"
+  },
+  {
+    "front": "أكتب",
+    "back": "Write",
+    "transliteration": "uktub",
+    "fusha_equivalent": "اُكْتُب",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "اكتب اسمك على الورقة.",
+    "example_en": "Write your name on the paper.",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1161"
+  },
+  {
+    "front": "اقرأ",
+    "back": "Read",
+    "transliteration": "iqra'",
+    "fusha_equivalent": "اِقْرَأ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "اقرأ الدرس بصوت عالي.",
+    "example_en": "Read the lesson aloud.",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1162"
+  },
+  {
+    "front": "ذاكر",
+    "back": "Study",
+    "transliteration": "zaakir",
+    "fusha_equivalent": "ذَاكِر",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "ذاكر كويس للامتحان.",
+    "example_en": "Study well for the exam.",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1163"
+  },
+  {
+    "front": "اتعلم",
+    "back": "Learn",
+    "transliteration": "it3allim",
+    "fusha_equivalent": "اِتَعَلَّم",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "حاول تتعلم حاجة جديدة.",
+    "example_en": "Try to learn something new.",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1164"
+  },
+  {
+    "front": "افهم",
+    "back": "Understand",
+    "transliteration": "ifham",
+    "fusha_equivalent": "اِفْهَم",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "افهم السؤال كويس قبل ما تجاوب.",
+    "example_en": "Understand the question well before answering.",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1165"
+  },
+  {
+    "front": "تجاوب",
+    "back": "Answer",
+    "transliteration": "tigaawib",
+    "fusha_equivalent": "تُجَاوِب",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "تجاوب على كل الأسئلة.",
+    "example_en": "Answer all the questions.",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1166"
+  },
+  {
+    "front": "اسأل",
+    "back": "Ask",
+    "transliteration": "is'al",
+    "fusha_equivalent": "اِسْأَل",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "اسأل المدرس لو مش فاهم حاجة.",
+    "example_en": "Ask the teacher if you don't understand something.",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1167"
+  },
+  {
+    "front": "امتحن",
+    "back": "Examine",
+    "transliteration": "imtaHan",
+    "fusha_equivalent": "اِمْتَحَن",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "المدرس امتحن الطلاب في الدرس.",
+    "example_en": "The teacher examined the students on the lesson.",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1168"
+  },
+  {
+    "front": "ذكي",
+    "back": "Smart",
+    "transliteration": "dhaki",
+    "fusha_equivalent": "ذَكِيّ",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الولد ده ذكي جدًا.",
+    "example_en": "This boy is very smart.",
+    "difficulty": "beginner",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1172"
+  },
+  {
+    "front": "إيه ده؟",
+    "back": "What is this?",
+    "transliteration": "eh dah?",
+    "fusha_equivalent": "مَا هَذَا؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إيه ده؟ ده كتاب جديد.",
+    "example_en": "What is this? This is a new book.",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1174"
+  },
+  {
+    "front": "فين الكتاب؟",
+    "back": "Where is the book?",
+    "transliteration": "fein el-kitaab?",
+    "fusha_equivalent": "أَيْنَ الكِتَاب؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "فين الكتاب اللي كنت بقرأ فيه؟",
+    "example_en": "Where is the book I was reading?",
+    "difficulty": "beginner",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1175"
+  },
+  {
+    "front": "أنت فاهم؟",
+    "back": "Do you understand?",
+    "transliteration": "enta faahim?",
+    "fusha_equivalent": "هَلْ تَفْهَم؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "أنت فاهم الدرس ده؟",
+    "example_en": "Do you understand this lesson?",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1176"
+  },
+  {
+    "front": "عايز مساعدة؟",
+    "back": "Do you need help?",
+    "transliteration": "'aayez musa'ada?",
+    "fusha_equivalent": "هَلْ تَحْتَاجُ مُسَاعَدَة؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "عايز مساعدة في الواجب؟",
+    "example_en": "Do you need help with the homework?",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1177"
+  },
+  {
+    "front": "ممكن تشرحلي؟",
+    "back": "Can you explain to me?",
+    "transliteration": "mumkin tishrahli?",
+    "fusha_equivalent": "هَلْ يُمْكِنُكَ أَنْ تَشْرَحَ لِي؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "ممكن تشرحلي المسألة دي؟",
+    "example_en": "Can you explain this problem to me?",
+    "difficulty": "beginner",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1178"
+  },
+  {
+    "front": "مكتبة",
+    "back": "Library",
+    "transliteration": "maktaba",
+    "fusha_equivalent": "مَكْتَبَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "هروح المكتبة أجيب كتاب.",
+    "example_en": "I will go to the library to get a book.",
+    "difficulty": "intermediate",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1179"
+  },
+  {
+    "front": "قلم",
+    "back": "Pen",
+    "transliteration": "qalam",
+    "fusha_equivalent": "قَلَم",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "ممكن تقرضني قلمك؟",
+    "example_en": "Can you lend me your pen?",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:education"
+    ],
+    "topic_tags": [
+      "education"
+    ],
+    "id": "eg-1180"
+  },
+  {
+    "front": "باص",
+    "back": "Bus",
+    "transliteration": "bas",
+    "fusha_equivalent": "حافلة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الباص وصل دلوقتي",
+    "example_en": "The bus has arrived now",
+    "difficulty": "beginner",
+    "frequency_rank": 20,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:transportation"
+    ],
+    "topic_tags": [
+      "transportation"
+    ],
+    "id": "eg-1183"
+  },
+  {
+    "front": "طيارة",
+    "back": "Airplane",
+    "transliteration": "tayara",
+    "fusha_equivalent": "طائرة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الطيارة هتقلع الساعة 8",
+    "example_en": "The airplane will take off at 8",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:transportation"
+    ],
+    "topic_tags": [
+      "transportation"
+    ],
+    "id": "eg-1185"
+  },
+  {
+    "front": "محطة",
+    "back": "Station",
+    "transliteration": "mahatta",
+    "fusha_equivalent": "محطة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "فين المحطة القريبة؟",
+    "example_en": "Where is the nearest station?",
+    "difficulty": "beginner",
+    "frequency_rank": 40,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:transportation"
+    ],
+    "topic_tags": [
+      "transportation"
+    ],
+    "id": "eg-1187"
+  },
+  {
+    "front": "سفر",
+    "back": "Travel",
+    "transliteration": "safar",
+    "fusha_equivalent": "سفر",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "بحب السفر كتير",
+    "example_en": "I love traveling a lot",
+    "difficulty": "beginner",
+    "frequency_rank": 55,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1190"
+  },
+  {
+    "front": "استنى",
+    "back": "Wait",
+    "transliteration": "istanna",
+    "fusha_equivalent": "اِنْتَظَرَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "استنى هنا شوية",
+    "example_en": "Wait here for a while",
+    "difficulty": "beginner",
+    "frequency_rank": 70,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1193"
+  },
+  {
+    "front": "حجز",
+    "back": "Booked",
+    "transliteration": "haggaz",
+    "fusha_equivalent": "حَجَزَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "حجزت فندق في القاهرة",
+    "example_en": "I booked a hotel in Cairo",
+    "difficulty": "beginner",
+    "frequency_rank": 80,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1195"
+  },
+  {
+    "front": "عدى",
+    "back": "Passed",
+    "transliteration": "adda",
+    "fusha_equivalent": "مَرَّ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "عديت من الشارع بسهولة",
+    "example_en": "I passed the street easily",
+    "difficulty": "beginner",
+    "frequency_rank": 90,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1197"
+  },
+  {
+    "front": "متأخر",
+    "back": "Late",
+    "transliteration": "mit'akher",
+    "fusha_equivalent": "متأخر",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "القطر متأخر شوية",
+    "example_en": "The train is a bit late",
+    "difficulty": "beginner",
+    "frequency_rank": 115,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:transportation"
+    ],
+    "topic_tags": [
+      "transportation"
+    ],
+    "id": "eg-1202"
+  },
+  {
+    "front": "إزاي",
+    "back": "How",
+    "transliteration": "izzay",
+    "fusha_equivalent": "كَيْفَ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إزاي أروح المطار؟",
+    "example_en": "How do I get to the airport?",
+    "difficulty": "beginner",
+    "frequency_rank": 125,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1204"
+  },
+  {
+    "front": "كام",
+    "back": "How much",
+    "transliteration": "kam",
+    "fusha_equivalent": "كَمْ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "التذكرة بكام؟",
+    "example_en": "How much is the ticket?",
+    "difficulty": "beginner",
+    "frequency_rank": 130,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1205"
+  },
+  {
+    "front": "دليل سياحي",
+    "back": "Tour guide",
+    "transliteration": "daleel siyaahi",
+    "fusha_equivalent": "دليل سياحي",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الدليل السياحي عرفنا على كل الأماكن",
+    "example_en": "The tour guide showed us all the places",
+    "difficulty": "intermediate",
+    "frequency_rank": 155,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:travel"
+    ],
+    "topic_tags": [
+      "travel"
+    ],
+    "id": "eg-1210"
+  },
+  {
+    "front": "موظف",
+    "back": "employee",
+    "transliteration": "mwaazzaf",
+    "fusha_equivalent": "موظف",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الموظف الجديد هيبدأ الشغل بكرة",
+    "example_en": "The new employee will start work tomorrow",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1215"
+  },
+  {
+    "front": "مكافأة",
+    "back": "bonus",
+    "transliteration": "mukaafa'a",
+    "fusha_equivalent": "مكافأة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الشركة هتدي الموظفين مكافأة",
+    "example_en": "The company will give the employees a bonus",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1218"
+  },
+  {
+    "front": "مقابلة",
+    "back": "interview",
+    "transliteration": "muqabala",
+    "fusha_equivalent": "مقابلة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "عندي مقابلة شغل الأسبوع الجاي",
+    "example_en": "I have a job interview next week",
+    "difficulty": "intermediate",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1221"
+  },
+  {
+    "front": "مدير مالي",
+    "back": "financial manager",
+    "transliteration": "mudeer maaly",
+    "fusha_equivalent": "مدير مالي",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "هو بيدور على مدير مالي للشركة",
+    "example_en": "He is looking for a financial manager for the company",
+    "difficulty": "intermediate",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1224"
+  },
+  {
+    "front": "ينظم",
+    "back": "to organize",
+    "transliteration": "yenazzem",
+    "fusha_equivalent": "ينظم",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هو بينظم الأوراق في المكتب",
+    "example_en": "He is organizing the papers in the office",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1226"
+  },
+  {
+    "front": "يشتغل",
+    "back": "to work",
+    "transliteration": "yeshtaghal",
+    "fusha_equivalent": "يعمل",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيشتغل في الشركة دي من زمان",
+    "example_en": "He has been working at this company for a long time",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1227"
+  },
+  {
+    "front": "يختار",
+    "back": "to choose",
+    "transliteration": "yekhtar",
+    "fusha_equivalent": "يختار",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيختار الوظيفة اللي تعجبه",
+    "example_en": "He chooses the job he likes",
+    "difficulty": "intermediate",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1229"
+  },
+  {
+    "front": "يقرر",
+    "back": "to decide",
+    "transliteration": "yaqarer",
+    "fusha_equivalent": "يقرر",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هو قرر يسيب الشغل",
+    "example_en": "He decided to leave the job",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1230"
+  },
+  {
+    "front": "يعلم",
+    "back": "to teach",
+    "transliteration": "ya3allem",
+    "fusha_equivalent": "يعلم",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هي بتعلم الأطفال في المدرسة",
+    "example_en": "She teaches the children at school",
+    "difficulty": "intermediate",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1232"
+  },
+  {
+    "front": "ينجح",
+    "back": "to succeed",
+    "transliteration": "yengah",
+    "fusha_equivalent": "ينجح",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو نجح في مشروعه الجديد",
+    "example_en": "He succeeded in his new project",
+    "difficulty": "intermediate",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1235"
+  },
+  {
+    "front": "يتقدم",
+    "back": "to apply",
+    "transliteration": "yetqaddem",
+    "fusha_equivalent": "يتقدم",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هو تقدم للوظيفة الجديدة",
+    "example_en": "He applied for the new job",
+    "difficulty": "advanced",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1237"
+  },
+  {
+    "front": "إدارة",
+    "back": "management",
+    "transliteration": "idaara",
+    "fusha_equivalent": "إدارة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "إدارة الشركة قررت تزيد المرتبات",
+    "example_en": "The company's management decided to increase salaries",
+    "difficulty": "advanced",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1238"
+  },
+  {
+    "front": "فريق العمل",
+    "back": "team",
+    "transliteration": "fareeq el-3amal",
+    "fusha_equivalent": "فريق العمل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "فريق العمل بتاعنا متعاون جداً",
+    "example_en": "Our team is very cooperative",
+    "difficulty": "advanced",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1239"
+  },
+  {
+    "front": "يتواصل",
+    "back": "to communicate",
+    "transliteration": "yetwasal",
+    "fusha_equivalent": "يتواصل",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هو بيتواصل مع العملاء بشكل ممتاز",
+    "example_en": "He communicates with the clients excellently",
+    "difficulty": "advanced",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:work"
+    ],
+    "topic_tags": [
+      "work"
+    ],
+    "id": "eg-1240"
+  },
+  {
+    "front": "شجر",
+    "back": "Trees",
+    "transliteration": "shagar",
+    "fusha_equivalent": "أشجار",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الشجر في الحديقة كبير",
+    "example_en": "The trees in the garden are big",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1241"
+  },
+  {
+    "front": "نهر",
+    "back": "River",
+    "transliteration": "nahr",
+    "fusha_equivalent": "نهر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "النيل هو أطول نهر في العالم",
+    "example_en": "The Nile is the longest river in the world",
+    "difficulty": "beginner",
+    "frequency_rank": 3,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1243"
+  },
+  {
+    "front": "سماء",
+    "back": "Sky",
+    "transliteration": "samaa'",
+    "fusha_equivalent": "سماء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "السماء صافية النهاردة",
+    "example_en": "The sky is clear today",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1244"
+  },
+  {
+    "front": "قمر",
+    "back": "Moon",
+    "transliteration": "amar",
+    "fusha_equivalent": "قمر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "القمر بيضوي في الليل",
+    "example_en": "The moon glows at night",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1246"
+  },
+  {
+    "front": "حيوان",
+    "back": "Animal",
+    "transliteration": "Hayawaan",
+    "fusha_equivalent": "حيوان",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الحيوان ده ودود",
+    "example_en": "This animal is friendly",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1247"
+  },
+  {
+    "front": "نبات",
+    "back": "Plant",
+    "transliteration": "nabaat",
+    "fusha_equivalent": "نبات",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "النبات ده محتاج ميّة",
+    "example_en": "This plant needs water",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1248"
+  },
+  {
+    "front": "طير",
+    "back": "Bird",
+    "transliteration": "Tayr",
+    "fusha_equivalent": "طائر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الطير بيغني في الصبح",
+    "example_en": "The bird sings in the morning",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1249"
+  },
+  {
+    "front": "زهرة",
+    "back": "Flower",
+    "transliteration": "zahra",
+    "fusha_equivalent": "زهرة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الزهرة دي ريحتها حلوة",
+    "example_en": "This flower smells nice",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1250"
+  },
+  {
+    "front": "صحرا",
+    "back": "Desert",
+    "transliteration": "SaHra",
+    "fusha_equivalent": "صحراء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الصحرا واسعة جداً",
+    "example_en": "The desert is very vast",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1251"
+  },
+  {
+    "front": "يمشي",
+    "back": "Walk",
+    "transliteration": "yimshi",
+    "fusha_equivalent": "يمشي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا بحب أمشي في الطبيعة",
+    "example_en": "I like to walk in nature",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1252"
+  },
+  {
+    "front": "يسبح",
+    "back": "Swim",
+    "transliteration": "yisbaH",
+    "fusha_equivalent": "يسبح",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا بس بحب أسبح في البحر",
+    "example_en": "I only love to swim in the sea",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1253"
+  },
+  {
+    "front": "يطير",
+    "back": "Fly",
+    "transliteration": "yiTeer",
+    "fusha_equivalent": "يطير",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "العصفور بيطير فوق الشجرة",
+    "example_en": "The sparrow flies above the tree",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1254"
+  },
+  {
+    "front": "يزرع",
+    "back": "Plant",
+    "transliteration": "yizra'",
+    "fusha_equivalent": "يزرع",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أبي بيزرع ورد في الجنينة",
+    "example_en": "My father plants flowers in the garden",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1255"
+  },
+  {
+    "front": "يعيش",
+    "back": "Live",
+    "transliteration": "yi'eesh",
+    "fusha_equivalent": "يعيش",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الحيوان ده بيعيش في الغابة",
+    "example_en": "This animal lives in the forest",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1256"
+  },
+  {
+    "front": "يجري",
+    "back": "Run",
+    "transliteration": "yigri",
+    "fusha_equivalent": "يجري",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الكلب بيجري بسرعة",
+    "example_en": "The dog runs quickly",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1257"
+  },
+  {
+    "front": "يأكل",
+    "back": "Eat",
+    "transliteration": "yaakul",
+    "fusha_equivalent": "يأكل",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الأرنب بيأكل الجزر",
+    "example_en": "The rabbit eats carrots",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1258"
+  },
+  {
+    "front": "هادئ",
+    "back": "Calm",
+    "transliteration": "haadi'",
+    "fusha_equivalent": "هادئ",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "البحر هادئ النهاردة",
+    "example_en": "The sea is calm today",
+    "difficulty": "beginner",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1261"
+  },
+  {
+    "front": "بارد",
+    "back": "Cold",
+    "transliteration": "baarid",
+    "fusha_equivalent": "بارد",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجو بارد في الشتاء",
+    "example_en": "The weather is cold in winter",
+    "difficulty": "beginner",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1263"
+  },
+  {
+    "front": "حار",
+    "back": "Hot",
+    "transliteration": "Haar",
+    "fusha_equivalent": "حار",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجو حار في الصيف",
+    "example_en": "The weather is hot in summer",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1264"
+  },
+  {
+    "front": "يوم حلو",
+    "back": "Nice day",
+    "transliteration": "yom helu",
+    "fusha_equivalent": "يوم جميل",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "النهاردة كان يوم حلو",
+    "example_en": "Today was a nice day",
+    "difficulty": "beginner",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1265"
+  },
+  {
+    "front": "جو جميل",
+    "back": "Beautiful weather",
+    "transliteration": "gaw gamiil",
+    "fusha_equivalent": "طقس جميل",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "الجو جميل النهاردة",
+    "example_en": "The weather is beautiful today",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1266"
+  },
+  {
+    "front": "حيوان أليف",
+    "back": "Pet",
+    "transliteration": "Hayawaan aleef",
+    "fusha_equivalent": "حيوان أليف",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "عندي قطة كحيوان أليف",
+    "example_en": "I have a cat as a pet",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:animals"
+    ],
+    "topic_tags": [
+      "animals"
+    ],
+    "id": "eg-1267"
+  },
+  {
+    "front": "الفضاء الخارجي",
+    "back": "Outer space",
+    "transliteration": "el-fadaa' el-khariji",
+    "fusha_equivalent": "الفضاء الخارجي",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "ناسا بتدرس الفضاء الخارجي",
+    "example_en": "NASA studies outer space",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1268"
+  },
+  {
+    "front": "الغابة المطيرة",
+    "back": "Rainforest",
+    "transliteration": "el-ghaba el-matiera",
+    "fusha_equivalent": "الغابة المطيرة",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "الغابة المطيرة مليانة حياة برية",
+    "example_en": "The rainforest is full of wildlife",
+    "difficulty": "intermediate",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1269"
+  },
+  {
+    "front": "مياه الشرب",
+    "back": "Drinking water",
+    "transliteration": "maya el-shorb",
+    "fusha_equivalent": "مياه الشرب",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "مياه الشرب ضرورية للحياة",
+    "example_en": "Drinking water is essential for life",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:nature"
+    ],
+    "topic_tags": [
+      "nature"
+    ],
+    "id": "eg-1270"
+  },
+  {
+    "front": "جو",
+    "back": "weather",
+    "transliteration": "gaw",
+    "fusha_equivalent": "طَقْس",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الجو حر النهاردة",
+    "example_en": "The weather is hot today",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1271"
+  },
+  {
+    "front": "ريح",
+    "back": "wind",
+    "transliteration": "reeh",
+    "fusha_equivalent": "رِيَاح",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الريح قوية النهاردة",
+    "example_en": "The wind is strong today",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1274"
+  },
+  {
+    "front": "تلج",
+    "back": "snow",
+    "transliteration": "talj",
+    "fusha_equivalent": "ثَلْج",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "مش دايمًا نشوف تلج في مصر",
+    "example_en": "We don't always see snow in Egypt",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1275"
+  },
+  {
+    "front": "ساخن",
+    "back": "hot",
+    "transliteration": "saakhen",
+    "fusha_equivalent": "حَارّ",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الجو النهاردة ساخن",
+    "example_en": "The weather is hot today",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1276"
+  },
+  {
+    "front": "برد",
+    "back": "cold",
+    "transliteration": "bard",
+    "fusha_equivalent": "بَارِد",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجو برد قوي",
+    "example_en": "The weather is very cold",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1277"
+  },
+  {
+    "front": "غيم",
+    "back": "cloud",
+    "transliteration": "gheem",
+    "fusha_equivalent": "غَيْم",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "السماء مليانة غيم",
+    "example_en": "The sky is full of clouds",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1278"
+  },
+  {
+    "front": "شتي",
+    "back": "winter",
+    "transliteration": "sheta",
+    "fusha_equivalent": "شِتَاء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "بحب الشتاء عشان المطر",
+    "example_en": "I love winter because of the rain",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1281"
+  },
+  {
+    "front": "مشمس",
+    "back": "sunny",
+    "transliteration": "mushmis",
+    "fusha_equivalent": "مُشْمِس",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الجو مشمس النهاردة",
+    "example_en": "It's sunny today",
+    "difficulty": "intermediate",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1284"
+  },
+  {
+    "front": "ممطر",
+    "back": "rainy",
+    "transliteration": "mumtir",
+    "fusha_equivalent": "مُمْطِر",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الجو ممطر النهاردة",
+    "example_en": "It's rainy today",
+    "difficulty": "intermediate",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1285"
+  },
+  {
+    "front": "مغيم",
+    "back": "cloudy",
+    "transliteration": "mughayim",
+    "fusha_equivalent": "غَائِم",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجو مغيم شوية",
+    "example_en": "It's a bit cloudy",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1286"
+  },
+  {
+    "front": "عاصف",
+    "back": "windy",
+    "transliteration": "3aasif",
+    "fusha_equivalent": "عَاصِف",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الجو عاصف النهاردة",
+    "example_en": "It's windy today",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1287"
+  },
+  {
+    "front": "بردان",
+    "back": "feeling cold",
+    "transliteration": "bardaan",
+    "fusha_equivalent": "شَعَرَ بِالْبَرْد",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا بردان قوي",
+    "example_en": "I'm feeling very cold",
+    "difficulty": "intermediate",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1288"
+  },
+  {
+    "front": "حران",
+    "back": "feeling hot",
+    "transliteration": "harraan",
+    "fusha_equivalent": "شَعَرَ بِالْحَر",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا حران النهاردة",
+    "example_en": "I'm feeling hot today",
+    "difficulty": "intermediate",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1289"
+  },
+  {
+    "front": "تمطر",
+    "back": "to rain",
+    "transliteration": "timtir",
+    "fusha_equivalent": "تُمْطِرُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هتمطر بكرة",
+    "example_en": "It will rain tomorrow",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1290"
+  },
+  {
+    "front": "تشتي",
+    "back": "to rain (informal)",
+    "transliteration": "tishty",
+    "fusha_equivalent": "تُمْطِرُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الدنيا بتشتي",
+    "example_en": "It's raining",
+    "difficulty": "intermediate",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1291"
+  },
+  {
+    "front": "تسقع",
+    "back": "to get cold",
+    "transliteration": "tisa'3",
+    "fusha_equivalent": "تَبْرُدُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الجو بيسقع بالليل",
+    "example_en": "The weather gets cold at night",
+    "difficulty": "intermediate",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1292"
+  },
+  {
+    "front": "تحر",
+    "back": "to get hot",
+    "transliteration": "tihr",
+    "fusha_equivalent": "تَحْرُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الجو بيحر الصبح",
+    "example_en": "The weather gets hot in the morning",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1293"
+  },
+  {
+    "front": "تنور",
+    "back": "to shine (sun)",
+    "transliteration": "tnawwar",
+    "fusha_equivalent": "تُشْرِقُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الشمس بتنور الصبح بدري",
+    "example_en": "The sun shines early in the morning",
+    "difficulty": "intermediate",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1294"
+  },
+  {
+    "front": "يظلم",
+    "back": "to get dark",
+    "transliteration": "yiẓlam",
+    "fusha_equivalent": "يُظْلِمُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الدنيا بتظلم بدري في الشتاء",
+    "example_en": "It gets dark early in winter",
+    "difficulty": "intermediate",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1295"
+  },
+  {
+    "front": "تهب",
+    "back": "to blow (wind)",
+    "transliteration": "tahub",
+    "fusha_equivalent": "تَهُبُّ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "الريح هبت فجأة",
+    "example_en": "The wind blew suddenly",
+    "difficulty": "intermediate",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1296"
+  },
+  {
+    "front": "تقلب",
+    "back": "to change (weather)",
+    "transliteration": "ta'lab",
+    "fusha_equivalent": "تَتَغَيَّرُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الجو بيقلب بسرعة في الخريف",
+    "example_en": "The weather changes quickly in autumn",
+    "difficulty": "intermediate",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1297"
+  },
+  {
+    "front": "الدنيا حر",
+    "back": "It's hot",
+    "transliteration": "ed-dunya harr",
+    "fusha_equivalent": "إِنَّهُ حَارّ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "الدنيا حر قوي النهاردة",
+    "example_en": "It's very hot today",
+    "difficulty": "beginner",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1298"
+  },
+  {
+    "front": "الدنيا برد",
+    "back": "It's cold",
+    "transliteration": "ed-dunya bard",
+    "fusha_equivalent": "إِنَّهُ بَارِد",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "الدنيا برد قوي بالليل",
+    "example_en": "It's very cold at night",
+    "difficulty": "beginner",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1299"
+  },
+  {
+    "front": "الدنيا مغيمة",
+    "back": "It's cloudy",
+    "transliteration": "ed-dunya mughayma",
+    "fusha_equivalent": "إِنَّهُ غَائِم",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "الدنيا مغيمة النهاردة",
+    "example_en": "It's cloudy today",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:weather"
+    ],
+    "topic_tags": [
+      "weather"
+    ],
+    "id": "eg-1300"
+  },
+  {
+    "front": "تيشيرت",
+    "back": "T-shirt",
+    "transliteration": "tisheeret",
+    "fusha_equivalent": "قَمِيص قُصَيْر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "التيشيرت ده مريح.",
+    "example_en": "This T-shirt is comfortable.",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1305"
+  },
+  {
+    "front": "جاكيت",
+    "back": "Jacket",
+    "transliteration": "jaket",
+    "fusha_equivalent": "سُتْرَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الجاكيت ده دافي.",
+    "example_en": "This jacket is warm.",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1306"
+  },
+  {
+    "front": "نظارة",
+    "back": "Glasses",
+    "transliteration": "naḍḍara",
+    "fusha_equivalent": "نَظَّارَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "النظارة دي جديدة.",
+    "example_en": "These glasses are new.",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1308"
+  },
+  {
+    "front": "قبعة",
+    "back": "Hat",
+    "transliteration": "qubba'a",
+    "fusha_equivalent": "قُبَّعَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "القبعة دي حلوة.",
+    "example_en": "This hat is nice.",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1309"
+  },
+  {
+    "front": "كوتشي",
+    "back": "Sneakers",
+    "transliteration": "kootshi",
+    "fusha_equivalent": "حِذَاء رِيَاضِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الكوتشي ده مريح.",
+    "example_en": "These sneakers are comfortable.",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1310"
+  },
+  {
+    "front": "يلبس",
+    "back": "To wear",
+    "transliteration": "yelbes",
+    "fusha_equivalent": "يَلْبَس",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيلبس هدوم شيك.",
+    "example_en": "He wears stylish clothes.",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1311"
+  },
+  {
+    "front": "يقلع",
+    "back": "To take off",
+    "transliteration": "ye'la'",
+    "fusha_equivalent": "يَخْلَع",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو قلع الجاكيت.",
+    "example_en": "He took off the jacket.",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1312"
+  },
+  {
+    "front": "يغسل",
+    "back": "To wash",
+    "transliteration": "yeghsel",
+    "fusha_equivalent": "يَغْسِل",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هي بتغسل الهدوم.",
+    "example_en": "She is washing the clothes.",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1313"
+  },
+  {
+    "front": "يشتري",
+    "back": "To buy",
+    "transliteration": "yeshtiri",
+    "fusha_equivalent": "يَشْتَرِي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو هيشتري قميص جديد.",
+    "example_en": "He will buy a new shirt.",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1314"
+  },
+  {
+    "front": "يكوي",
+    "back": "To iron",
+    "transliteration": "yekwi",
+    "fusha_equivalent": "يَكْوِي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هي بتكوي الهدوم.",
+    "example_en": "She is ironing the clothes.",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1315"
+  },
+  {
+    "front": "يتبدل",
+    "back": "To change (clothes)",
+    "transliteration": "yetbaddel",
+    "fusha_equivalent": "يُغَيِّر",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو هيتبدل قبل ما يخرج.",
+    "example_en": "He will change before going out.",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1317"
+  },
+  {
+    "front": "ديق",
+    "back": "Tight",
+    "transliteration": "dayye'",
+    "fusha_equivalent": "ضَيِّق",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الجاكيت ده ديق شوية.",
+    "example_en": "This jacket is a bit tight.",
+    "difficulty": "intermediate",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1319"
+  },
+  {
+    "front": "شيك",
+    "back": "Stylish",
+    "transliteration": "sheek",
+    "fusha_equivalent": "أَنِيق",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "البدلة دي شيك جداً.",
+    "example_en": "This suit is very stylish.",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1320"
+  },
+  {
+    "front": "إيه رأيك في",
+    "back": "What do you think about",
+    "transliteration": "eih ra'yak fi",
+    "fusha_equivalent": "ما رَأْيُكَ في",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إيه رأيك في القميص ده؟",
+    "example_en": "What do you think about this shirt?",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1323"
+  },
+  {
+    "front": "شوف",
+    "back": "Look",
+    "transliteration": "shoof",
+    "fusha_equivalent": "اُنْظُر",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "شوف الجزمة دي جميلة.",
+    "example_en": "Look, these shoes are beautiful.",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1324"
+  },
+  {
+    "front": "ده حلو عليك",
+    "back": "This looks good on you",
+    "transliteration": "da ḥelw 'aleik",
+    "fusha_equivalent": "هَذَا جَمِيل عَلَيْكَ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "الجواكيت دي حلوة عليك.",
+    "example_en": "These jackets look good on you.",
+    "difficulty": "intermediate",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1325"
+  },
+  {
+    "front": "عايز حاجة تانية؟",
+    "back": "Do you want anything else?",
+    "transliteration": "'aayez ḥaga tanyah?",
+    "fusha_equivalent": "هَل تُرِيد شَيْء آخَر؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "عايز حاجة تانية من المحل؟",
+    "example_en": "Do you want anything else from the shop?",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1326"
+  },
+  {
+    "front": "مقاسك إيه؟",
+    "back": "What is your size?",
+    "transliteration": "ma'asak eih?",
+    "fusha_equivalent": "مَا مَقَاسُكَ؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "مقاسك إيه في القمصان؟",
+    "example_en": "What is your size in shirts?",
+    "difficulty": "intermediate",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1327"
+  },
+  {
+    "front": "مقاس",
+    "back": "Size",
+    "transliteration": "ma'as",
+    "fusha_equivalent": "مَقَاس",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "مقاس الجزمة دي مش مناسب.",
+    "example_en": "The size of these shoes is not suitable.",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1328"
+  },
+  {
+    "front": "ترزي",
+    "back": "Tailor",
+    "transliteration": "tarzi",
+    "fusha_equivalent": "خَيَّاط",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الترزي ممكن يعدل البنطلون ده.",
+    "example_en": "The tailor can adjust these pants.",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:clothing"
+    ],
+    "topic_tags": [
+      "clothing"
+    ],
+    "id": "eg-1330"
+  },
+  {
+    "front": "مشتريات",
+    "back": "purchases",
+    "transliteration": "mushtarayaat",
+    "fusha_equivalent": "مُشْتَرَيَات",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "خلصت المشتريات بتاعتي",
+    "example_en": "I finished my purchases",
+    "difficulty": "intermediate",
+    "frequency_rank": 40,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1336"
+  },
+  {
+    "front": "اشتري",
+    "back": "to buy",
+    "transliteration": "ashtari",
+    "fusha_equivalent": "أَشْتَرِي",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "عايز أشتري هدية",
+    "example_en": "I want to buy a gift",
+    "difficulty": "beginner",
+    "frequency_rank": 35,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1337"
+  },
+  {
+    "front": "قماش",
+    "back": "fabric",
+    "transliteration": "qomash",
+    "fusha_equivalent": "قُماش",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "القماش ده ناعم",
+    "example_en": "This fabric is soft",
+    "difficulty": "intermediate",
+    "frequency_rank": 50,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1338"
+  },
+  {
+    "front": "بضاعة",
+    "back": "goods",
+    "transliteration": "biDaa'a",
+    "fusha_equivalent": "بِضَاعَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "وصلت البضاعة الجديدة",
+    "example_en": "The new goods have arrived",
+    "difficulty": "intermediate",
+    "frequency_rank": 80,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1345"
+  },
+  {
+    "front": "بيع",
+    "back": "to sell",
+    "transliteration": "bee'",
+    "fusha_equivalent": "بَيْع",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "عايز أبيع العربية بتاعتي",
+    "example_en": "I want to sell my car",
+    "difficulty": "intermediate",
+    "frequency_rank": 85,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1346"
+  },
+  {
+    "front": "بائع",
+    "back": "seller",
+    "transliteration": "baa'i'",
+    "fusha_equivalent": "بَائِع",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "البائع كان لطيف",
+    "example_en": "The seller was nice",
+    "difficulty": "intermediate",
+    "frequency_rank": 100,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1349"
+  },
+  {
+    "front": "كيّف",
+    "back": "to adjust",
+    "transliteration": "kayif",
+    "fusha_equivalent": "كَيَّفَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "عايز أكيّف المقاس",
+    "example_en": "I want to adjust the size",
+    "difficulty": "advanced",
+    "frequency_rank": 105,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1350"
+  },
+  {
+    "front": "تغيير",
+    "back": "to change",
+    "transliteration": "taghyeer",
+    "fusha_equivalent": "تَغْيِير",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "ممكن تغيير المنتج؟",
+    "example_en": "Can I change the product?",
+    "difficulty": "intermediate",
+    "frequency_rank": 110,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1351"
+  },
+  {
+    "front": "خدمة عملاء",
+    "back": "customer service",
+    "transliteration": "khidmat 'umalaa'",
+    "fusha_equivalent": "خِدْمَةُ العُمَلَاء",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "خدمة العملاء هنا ممتازة",
+    "example_en": "The customer service here is excellent",
+    "difficulty": "advanced",
+    "frequency_rank": 115,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1352"
+  },
+  {
+    "front": "مقارنة",
+    "back": "comparison",
+    "transliteration": "muqarana",
+    "fusha_equivalent": "مُقَارَنَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "عملت مقارنة بين الأسعار",
+    "example_en": "I made a comparison between the prices",
+    "difficulty": "advanced",
+    "frequency_rank": 120,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1353"
+  },
+  {
+    "front": "مفاصلة",
+    "back": "bargaining",
+    "transliteration": "mofaSla",
+    "fusha_equivalent": "مُفَاصَلَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "بفاصل في السعر",
+    "example_en": "I'm bargaining on the price",
+    "difficulty": "advanced",
+    "frequency_rank": 125,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1354"
+  },
+  {
+    "front": "توصيل",
+    "back": "delivery",
+    "transliteration": "tawseel",
+    "fusha_equivalent": "تَوْصِيل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "عايز توصيل للبيت",
+    "example_en": "I want home delivery",
+    "difficulty": "intermediate",
+    "frequency_rank": 130,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1355"
+  },
+  {
+    "front": "مقاسات",
+    "back": "sizes",
+    "transliteration": "maqasaat",
+    "fusha_equivalent": "مَقَاسَات",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عندك مقاسات مختلفة؟",
+    "example_en": "Do you have different sizes?",
+    "difficulty": "intermediate",
+    "frequency_rank": 135,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1356"
+  },
+  {
+    "front": "عرض خاص",
+    "back": "special offer",
+    "transliteration": "ard khaas",
+    "fusha_equivalent": "عَرْض خَاص",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "فيه عرض خاص دلوقتي",
+    "example_en": "There's a special offer now",
+    "difficulty": "advanced",
+    "frequency_rank": 140,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1357"
+  },
+  {
+    "front": "ضمان",
+    "back": "warranty",
+    "transliteration": "Damaan",
+    "fusha_equivalent": "ضَمَان",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "المنتج ده ليه ضمان سنة",
+    "example_en": "This product has a one-year warranty",
+    "difficulty": "advanced",
+    "frequency_rank": 145,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1358"
+  },
+  {
+    "front": "رجوع",
+    "back": "return",
+    "transliteration": "rogoo'",
+    "fusha_equivalent": "رُجُوع",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "سياسة الرجوع متاحة لمدة أسبوعين",
+    "example_en": "The return policy is available for two weeks",
+    "difficulty": "advanced",
+    "frequency_rank": 150,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1359"
+  },
+  {
+    "front": "استبدال",
+    "back": "exchange",
+    "transliteration": "istibdaal",
+    "fusha_equivalent": "اِسْتِبْدَال",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "ممكن استبدال المنتج؟",
+    "example_en": "Can I exchange the product?",
+    "difficulty": "advanced",
+    "frequency_rank": 155,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:shopping"
+    ],
+    "topic_tags": [
+      "shopping"
+    ],
+    "id": "eg-1360"
+  },
+  {
+    "front": "ستة",
+    "back": "six",
+    "transliteration": "sitta",
+    "fusha_equivalent": "ستة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عنده ستة كراسي",
+    "example_en": "He has six chairs.",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1366"
+  },
+  {
+    "front": "يعد",
+    "back": "to count",
+    "transliteration": "ye'edd",
+    "fusha_equivalent": "يَعُدّ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيعد الفلوس",
+    "example_en": "He is counting the money.",
+    "difficulty": "intermediate",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1371"
+  },
+  {
+    "front": "يزيد",
+    "back": "to increase",
+    "transliteration": "yazeed",
+    "fusha_equivalent": "يَزِيد",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "العدد بيزيد كل يوم",
+    "example_en": "The number increases every day.",
+    "difficulty": "intermediate",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1372"
+  },
+  {
+    "front": "ينقص",
+    "back": "to decrease",
+    "transliteration": "yen'oss",
+    "fusha_equivalent": "يَنْقُص",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "العدد بينقص",
+    "example_en": "The number is decreasing.",
+    "difficulty": "intermediate",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1373"
+  },
+  {
+    "front": "يجمع",
+    "back": "to add",
+    "transliteration": "yegma'",
+    "fusha_equivalent": "يَجْمَع",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيجمع الأرقام",
+    "example_en": "He is adding the numbers.",
+    "difficulty": "intermediate",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1374"
+  },
+  {
+    "front": "يضرب",
+    "back": "to multiply",
+    "transliteration": "yedrab",
+    "fusha_equivalent": "يَضْرِب",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيضرب الأرقام",
+    "example_en": "He is multiplying the numbers.",
+    "difficulty": "intermediate",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1375"
+  },
+  {
+    "front": "يطرح",
+    "back": "to subtract",
+    "transliteration": "yetraH",
+    "fusha_equivalent": "يَطْرَح",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيطرح الأرقام",
+    "example_en": "He is subtracting the numbers.",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1376"
+  },
+  {
+    "front": "يقسم",
+    "back": "to divide",
+    "transliteration": "ye'esem",
+    "fusha_equivalent": "يَقْسِم",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيقسم الأرقام",
+    "example_en": "He is dividing the numbers.",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1377"
+  },
+  {
+    "front": "شوية",
+    "back": "a few",
+    "transliteration": "shwayya",
+    "fusha_equivalent": "قَلِيل",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "في شوية ناس",
+    "example_en": "There are a few people.",
+    "difficulty": "beginner",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1382"
+  },
+  {
+    "front": "قد إيه",
+    "back": "how much",
+    "transliteration": "add eih",
+    "fusha_equivalent": "كَمْ",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "قد إيه سعره؟",
+    "example_en": "How much is it?",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1384"
+  },
+  {
+    "front": "أكتر",
+    "back": "more",
+    "transliteration": "aktar",
+    "fusha_equivalent": "أَكْثَر",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "عايز أكتر شوية",
+    "example_en": "I want a bit more.",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1386"
+  },
+  {
+    "front": "أقل",
+    "back": "less",
+    "transliteration": "a'all",
+    "fusha_equivalent": "أَقَل",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "عايز أقل شوية",
+    "example_en": "I want a bit less.",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1387"
+  },
+  {
+    "front": "مرة",
+    "back": "time (instance)",
+    "transliteration": "marra",
+    "fusha_equivalent": "مَرَّة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "شفت الفيلم ده مرة",
+    "example_en": "I watched this movie once.",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1388"
+  },
+  {
+    "front": "أعداد",
+    "back": "numbers",
+    "transliteration": "a'adaad",
+    "fusha_equivalent": "أَعْدَاد",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الأعداد الكبيرة محتاجة حساب دقيق",
+    "example_en": "Large numbers require precise calculation.",
+    "difficulty": "advanced",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1389"
+  },
+  {
+    "front": "رقم",
+    "back": "number",
+    "transliteration": "raqam",
+    "fusha_equivalent": "رَقَم",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "ده رقم تليفوني",
+    "example_en": "This is my phone number.",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:numbers"
+    ],
+    "topic_tags": [
+      "numbers"
+    ],
+    "id": "eg-1390"
+  },
+  {
+    "front": "ثانية",
+    "back": "second",
+    "transliteration": "thaneya",
+    "fusha_equivalent": "ثَانِيَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "القطار هيوصل بعد ثواني",
+    "example_en": "The train will arrive in seconds",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1397"
+  },
+  {
+    "front": "بُكرة",
+    "back": "tomorrow",
+    "transliteration": "bokra",
+    "fusha_equivalent": "غَدًا",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عندي امتحان بُكرة",
+    "example_en": "I have an exam tomorrow",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1400"
+  },
+  {
+    "front": "السبت",
+    "back": "Saturday",
+    "transliteration": "elsabt",
+    "fusha_equivalent": "السَّبْت",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "هنروح السوق السبت",
+    "example_en": "We will go to the market on Saturday",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1401"
+  },
+  {
+    "front": "الأحد",
+    "back": "Sunday",
+    "transliteration": "elahad",
+    "fusha_equivalent": "الأَحَد",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأحد الجاي عندي شغل",
+    "example_en": "I have work next Sunday",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1402"
+  },
+  {
+    "front": "الاتنين",
+    "back": "Monday",
+    "transliteration": "eletneen",
+    "fusha_equivalent": "الإثْنَيْن",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "هشوفك الاتنين",
+    "example_en": "I will see you on Monday",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1403"
+  },
+  {
+    "front": "التلات",
+    "back": "Tuesday",
+    "transliteration": "eltalata",
+    "fusha_equivalent": "الثُّلاثَاء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "التلات عندي درس",
+    "example_en": "I have a lesson on Tuesday",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1404"
+  },
+  {
+    "front": "الأربع",
+    "back": "Wednesday",
+    "transliteration": "elarba3",
+    "fusha_equivalent": "الأَرْبِعَاء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الأربع فيه اجتماع",
+    "example_en": "There is a meeting on Wednesday",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1405"
+  },
+  {
+    "front": "الخميس",
+    "back": "Thursday",
+    "transliteration": "elkhamis",
+    "fusha_equivalent": "الخَمِيس",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الخميس هنروح نتمشى",
+    "example_en": "On Thursday we will go for a walk",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1406"
+  },
+  {
+    "front": "الجمعة",
+    "back": "Friday",
+    "transliteration": "elgom3a",
+    "fusha_equivalent": "الجُمُعَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الجمعة هنروح نصلي",
+    "example_en": "We will go to pray on Friday",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1407"
+  },
+  {
+    "front": "كل يوم",
+    "back": "every day",
+    "transliteration": "kol yom",
+    "fusha_equivalent": "كُلّ يَوْم",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "بروح الشغل كل يوم",
+    "example_en": "I go to work every day",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1408"
+  },
+  {
+    "front": "الساعة كام؟",
+    "back": "What time is it?",
+    "transliteration": "elsa3a kam?",
+    "fusha_equivalent": "كَمْ السَّاعَة؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "ممكن تقولي الساعة كام؟",
+    "example_en": "Can you tell me what time it is?",
+    "difficulty": "beginner",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1409"
+  },
+  {
+    "front": "بعد شوية",
+    "back": "after a while",
+    "transliteration": "ba3d shwaya",
+    "fusha_equivalent": "بَعْد قَلِيل",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "هجيلك بعد شوية",
+    "example_en": "I will come to you after a while",
+    "difficulty": "beginner",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1410"
+  },
+  {
+    "front": "لسه",
+    "back": "still/yet",
+    "transliteration": "lessa",
+    "fusha_equivalent": "لَمْ يَزَل",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "لسه مخلصتش شغلي",
+    "example_en": "I haven't finished my work yet",
+    "difficulty": "beginner",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1411"
+  },
+  {
+    "front": "خلص",
+    "back": "finish",
+    "transliteration": "khalas",
+    "fusha_equivalent": "اِنْتَهَى",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "خلصت شغلي",
+    "example_en": "I finished my work",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1417"
+  },
+  {
+    "front": "ابتدى",
+    "back": "begin",
+    "transliteration": "ebtada",
+    "fusha_equivalent": "بَدَأَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الدرس ابتدى",
+    "example_en": "The lesson has begun",
+    "difficulty": "beginner",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1418"
+  },
+  {
+    "front": "فاضل",
+    "back": "remain",
+    "transliteration": "fadhel",
+    "fusha_equivalent": "بَقِيَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "فاضل ساعة على الميعاد",
+    "example_en": "An hour remains until the appointment",
+    "difficulty": "beginner",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1419"
+  },
+  {
+    "front": "يعدي",
+    "back": "pass (time)",
+    "transliteration": "ye3addy",
+    "fusha_equivalent": "يَمُرّ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "الوقت بيعدي بسرعة",
+    "example_en": "Time passes quickly",
+    "difficulty": "beginner",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:time"
+    ],
+    "topic_tags": [
+      "time"
+    ],
+    "id": "eg-1420"
+  },
+  {
+    "front": "أحمر",
+    "back": "Red",
+    "transliteration": "aHmar",
+    "fusha_equivalent": "أَحْمَر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الوردة دي لونها أحمر",
+    "example_en": "This flower is red",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1421"
+  },
+  {
+    "front": "أزرق",
+    "back": "Blue",
+    "transliteration": "azraq",
+    "fusha_equivalent": "أَزْرَق",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "البحر لونه أزرق",
+    "example_en": "The sea is blue",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 2,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1422"
+  },
+  {
+    "front": "أصفر",
+    "back": "Yellow",
+    "transliteration": "aSfar",
+    "fusha_equivalent": "أَصْفَر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الشمس لونها أصفر",
+    "example_en": "The sun is yellow",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1423"
+  },
+  {
+    "front": "أخضر",
+    "back": "Green",
+    "transliteration": "aKhdar",
+    "fusha_equivalent": "أَخْضَر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الشجرة لونها أخضر",
+    "example_en": "The tree is green",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1424"
+  },
+  {
+    "front": "أبيض",
+    "back": "White",
+    "transliteration": "abyaD",
+    "fusha_equivalent": "أَبْيَض",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الحيطة لونها أبيض",
+    "example_en": "The wall is white",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1425"
+  },
+  {
+    "front": "أسود",
+    "back": "Black",
+    "transliteration": "aswad",
+    "fusha_equivalent": "أَسْوَد",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "القطة لونها أسود",
+    "example_en": "The cat is black",
+    "difficulty": "beginner",
+    "frequency_rank": 3,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1426"
+  },
+  {
+    "front": "برتقاني",
+    "back": "Orange",
+    "transliteration": "burtu'aani",
+    "fusha_equivalent": "بُرْتُقَالِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "البرتقال لونها برتقاني",
+    "example_en": "The orange is orange",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1427"
+  },
+  {
+    "front": "بني",
+    "back": "Brown",
+    "transliteration": "bunni",
+    "fusha_equivalent": "بُنِّي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الخشب لونه بني",
+    "example_en": "The wood is brown",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1428"
+  },
+  {
+    "front": "وردي",
+    "back": "Pink",
+    "transliteration": "wardi",
+    "fusha_equivalent": "وَرْدِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الزهرة لونها وردي",
+    "example_en": "The flower is pink",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1429"
+  },
+  {
+    "front": "رمادي",
+    "back": "Gray",
+    "transliteration": "ramaadi",
+    "fusha_equivalent": "رَمَادِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "السماء لونها رمادي",
+    "example_en": "The sky is gray",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1430"
+  },
+  {
+    "front": "بنفسجي",
+    "back": "Purple",
+    "transliteration": "banafsagi",
+    "fusha_equivalent": "بَنَفْسَجِي",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "القميص لونه بنفسجي",
+    "example_en": "The shirt is purple",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1431"
+  },
+  {
+    "front": "مربع",
+    "back": "Square",
+    "transliteration": "murabba'",
+    "fusha_equivalent": "مُرَبَّع",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الصندوق شكله مربع",
+    "example_en": "The box is square",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1432"
+  },
+  {
+    "front": "دائرة",
+    "back": "Circle",
+    "transliteration": "da'ira",
+    "fusha_equivalent": "دَائِرَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الطاولة شكلها دائرة",
+    "example_en": "The table is circular",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1433"
+  },
+  {
+    "front": "مثلث",
+    "back": "Triangle",
+    "transliteration": "mutallath",
+    "fusha_equivalent": "مُثَلَّث",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "العلامة شكلها مثلث",
+    "example_en": "The sign is triangular",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1434"
+  },
+  {
+    "front": "مستطيل",
+    "back": "Rectangle",
+    "transliteration": "mustateel",
+    "fusha_equivalent": "مُسْتَطِيل",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الكتاب شكله مستطيل",
+    "example_en": "The book is rectangular",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1435"
+  },
+  {
+    "front": "أبيض زي التلج",
+    "back": "White as snow",
+    "transliteration": "abyaD zay el-talj",
+    "fusha_equivalent": "أَبْيَض كَالثَّلْج",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "وجهها أبيض زي التلج",
+    "example_en": "Her face is white as snow",
+    "difficulty": "intermediate",
+    "frequency_rank": 25,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1436"
+  },
+  {
+    "front": "لون",
+    "back": "Color",
+    "transliteration": "lawn",
+    "fusha_equivalent": "لَوْن",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "إيه لون الفستان ده؟",
+    "example_en": "What color is this dress?",
+    "difficulty": "beginner",
+    "frequency_rank": 2,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1437"
+  },
+  {
+    "front": "لون فاتح",
+    "back": "Light color",
+    "transliteration": "lawn faateH",
+    "fusha_equivalent": "لَوْن فَاتِح",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "اللون ده فاتح قوي",
+    "example_en": "This color is very light",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1438"
+  },
+  {
+    "front": "لون غامق",
+    "back": "Dark color",
+    "transliteration": "lawn ghaami'",
+    "fusha_equivalent": "لَوْن غَامِق",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "اللون ده غامق شوية",
+    "example_en": "This color is a bit dark",
+    "difficulty": "intermediate",
+    "frequency_rank": 31,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1439"
+  },
+  {
+    "front": "لونه إيه؟",
+    "back": "What color is it?",
+    "transliteration": "lawnuh 'ee?",
+    "fusha_equivalent": "مَا لَوْنُهُ؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "القلم ده لونه إيه؟",
+    "example_en": "What color is this pen?",
+    "difficulty": "intermediate",
+    "frequency_rank": 32,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1440"
+  },
+  {
+    "front": "ألوان",
+    "back": "Colors",
+    "transliteration": "alwaan",
+    "fusha_equivalent": "أَلْوَان",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الألوان دي جميلة",
+    "example_en": "These colors are beautiful",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1441"
+  },
+  {
+    "front": "لونت",
+    "back": "I colored",
+    "transliteration": "lawwint",
+    "fusha_equivalent": "لَوَّنْتُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "لونت الرسمة كلها",
+    "example_en": "I colored the whole drawing",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1443"
+  },
+  {
+    "front": "شفت",
+    "back": "I saw",
+    "transliteration": "shuift",
+    "fusha_equivalent": "شَاهَدْتُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "شفت اللون ده فين؟",
+    "example_en": "Where did you see this color?",
+    "difficulty": "intermediate",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1444"
+  },
+  {
+    "front": "دهن",
+    "back": "Paint",
+    "transliteration": "dahan",
+    "fusha_equivalent": "دَهَنَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "دهن الحيطة باللون الأبيض",
+    "example_en": "He painted the wall white",
+    "difficulty": "intermediate",
+    "frequency_rank": 26,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1445"
+  },
+  {
+    "front": "شكل",
+    "back": "Shape",
+    "transliteration": "shakl",
+    "fusha_equivalent": "شَكْل",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "اللوحة دي شكلها جميل",
+    "example_en": "This painting has a beautiful shape",
+    "difficulty": "beginner",
+    "frequency_rank": 19,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1446"
+  },
+  {
+    "front": "شكلها إيه؟",
+    "back": "What shape is it?",
+    "transliteration": "shaklaha 'ee?",
+    "fusha_equivalent": "مَا شَكْلُهَا؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "العلامة شكلها إيه؟",
+    "example_en": "What shape is the sign?",
+    "difficulty": "intermediate",
+    "frequency_rank": 33,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1447"
+  },
+  {
+    "front": "رسم",
+    "back": "Draw",
+    "transliteration": "rasam",
+    "fusha_equivalent": "رَسَمَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "رسمت شكل جميل",
+    "example_en": "I drew a beautiful shape",
+    "difficulty": "intermediate",
+    "frequency_rank": 27,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:shapes"
+    ],
+    "topic_tags": [
+      "shapes"
+    ],
+    "id": "eg-1448"
+  },
+  {
+    "front": "ملون",
+    "back": "Colored",
+    "transliteration": "malawwan",
+    "fusha_equivalent": "مُلَوَّن",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الكتاب ده ملون",
+    "example_en": "This book is colored",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1449"
+  },
+  {
+    "front": "متعدد الألوان",
+    "back": "Multicolored",
+    "transliteration": "muta'addid al-alwaan",
+    "fusha_equivalent": "مُتَعَدِّد الأَلْوَان",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "الشال ده متعدد الألوان",
+    "example_en": "This scarf is multicolored",
+    "difficulty": "intermediate",
+    "frequency_rank": 29,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:colors"
+    ],
+    "topic_tags": [
+      "colors"
+    ],
+    "id": "eg-1450"
+  },
+  {
+    "front": "غضبان",
+    "back": "angry",
+    "transliteration": "ghadbaan",
+    "fusha_equivalent": "غَاضِب",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "هو غضبان من الموقف",
+    "example_en": "He is angry about the situation",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1456"
+  },
+  {
+    "front": "قلق",
+    "back": "worried",
+    "transliteration": "ala'",
+    "fusha_equivalent": "قَلِق",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "أنا قلقت من الامتحان",
+    "example_en": "I was worried about the exam",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1457"
+  },
+  {
+    "front": "حزن",
+    "back": "sadness",
+    "transliteration": "huzn",
+    "fusha_equivalent": "حُزْن",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الحزن مش كويس للصحة",
+    "example_en": "Sadness is not good for health",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1459"
+  },
+  {
+    "front": "فاجأ",
+    "back": "to surprise",
+    "transliteration": "faaga'",
+    "fusha_equivalent": "أَفَاجَأَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو فاجأني بالهدية",
+    "example_en": "He surprised me with the gift",
+    "difficulty": "intermediate",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1462"
+  },
+  {
+    "front": "اندهاش",
+    "back": "amazement",
+    "transliteration": "indahaash",
+    "fusha_equivalent": "انْدِهَاش",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "كان في اندهاش من النتيجة",
+    "example_en": "There was amazement at the result",
+    "difficulty": "intermediate",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1463"
+  },
+  {
+    "front": "ارتاح",
+    "back": "to relax",
+    "transliteration": "irtaah",
+    "fusha_equivalent": "اسْتَرَاحَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا حارتاح شوية",
+    "example_en": "I will relax a bit",
+    "difficulty": "intermediate",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1464"
+  },
+  {
+    "front": "قلق",
+    "back": "anxiety",
+    "transliteration": "qalq",
+    "fusha_equivalent": "قَلَق",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "القلق مش كويس للصحة",
+    "example_en": "Anxiety is not good for health",
+    "difficulty": "intermediate",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1465"
+  },
+  {
+    "front": "قلق",
+    "back": "to worry",
+    "transliteration": "ala'",
+    "fusha_equivalent": "قَلِقَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "ما تقلقش من الامتحان",
+    "example_en": "Don't worry about the exam",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1466"
+  },
+  {
+    "front": "استمتع",
+    "back": "to enjoy",
+    "transliteration": "istamta'",
+    "fusha_equivalent": "اسْتَمْتَعَ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "استمتعنا بالحفلة",
+    "example_en": "We enjoyed the party",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1467"
+  },
+  {
+    "front": "افتخر",
+    "back": "to be proud",
+    "transliteration": "iftakhar",
+    "fusha_equivalent": "افْتَخَرَ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "أنا فخور بك",
+    "example_en": "I am proud of you",
+    "difficulty": "intermediate",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1468"
+  },
+  {
+    "front": "استغرب",
+    "back": "to wonder",
+    "transliteration": "istaghrab",
+    "fusha_equivalent": "اسْتَغْرَبَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "استغربت من النتيجة",
+    "example_en": "I wondered about the result",
+    "difficulty": "intermediate",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1469"
+  },
+  {
+    "front": "استريح",
+    "back": "to rest",
+    "transliteration": "istariiH",
+    "fusha_equivalent": "اسْتَرَيَحَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا حاستريح بعد الغدا",
+    "example_en": "I will rest after lunch",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1470"
+  },
+  {
+    "front": "شكر",
+    "back": "gratitude",
+    "transliteration": "shukr",
+    "fusha_equivalent": "شُكْر",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الشكر واجب لكل اللي ساعدوني",
+    "example_en": "Gratitude is due to everyone who helped me",
+    "difficulty": "advanced",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1471"
+  },
+  {
+    "front": "افتخار",
+    "back": "pride",
+    "transliteration": "iftikhaar",
+    "fusha_equivalent": "افْتِخَار",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الافتخار بالوطن حاجة جميلة",
+    "example_en": "Pride in the country is a beautiful thing",
+    "difficulty": "advanced",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1472"
+  },
+  {
+    "front": "اندهاش",
+    "back": "astonishment",
+    "transliteration": "indahaash",
+    "fusha_equivalent": "انْدِهَاش",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الاندهاش من المفاجأة كان واضح",
+    "example_en": "The astonishment from the surprise was clear",
+    "difficulty": "advanced",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1473"
+  },
+  {
+    "front": "تعب",
+    "back": "exhaustion",
+    "transliteration": "ta'ab",
+    "fusha_equivalent": "تَعَب",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "التعب واضح على وشه",
+    "example_en": "Exhaustion is clear on his face",
+    "difficulty": "advanced",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1474"
+  },
+  {
+    "front": "يأس",
+    "back": "despair",
+    "transliteration": "ya's",
+    "fusha_equivalent": "يَأْس",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "اليأس مش حل",
+    "example_en": "Despair is not a solution",
+    "difficulty": "advanced",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1475"
+  },
+  {
+    "front": "عياط",
+    "back": "crying",
+    "transliteration": "ayaT",
+    "fusha_equivalent": "بُكَاء",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "العياط مش حيحل المشكلة",
+    "example_en": "Crying won't fix the problem",
+    "difficulty": "advanced",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1476"
+  },
+  {
+    "front": "استغرق في",
+    "back": "to immerse in",
+    "transliteration": "istaghraq fi",
+    "fusha_equivalent": "انْغَمَسَ في",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "استغرق في التفكير",
+    "example_en": "He immersed himself in thought",
+    "difficulty": "advanced",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1478"
+  },
+  {
+    "front": "أشعر بالقلق",
+    "back": "I feel worried",
+    "transliteration": "ash'ur bil-qalaq",
+    "fusha_equivalent": "أَشْعُرُ بِالْقَلَق",
+    "part_of_speech": "phrase",
+    "usage_context": "formal",
+    "example_eg": "أشعر بالقلق من الامتحان",
+    "example_en": "I feel worried about the exam",
+    "difficulty": "advanced",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1479"
+  },
+  {
+    "front": "إيه الإحساس ده؟",
+    "back": "What is this feeling?",
+    "transliteration": "eih il-ihsaas da?",
+    "fusha_equivalent": "مَا هَذَا الإِحْسَاس؟",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "إيه الإحساس ده لما تشوف البحر لأول مرة؟",
+    "example_en": "What is this feeling when you see the sea for the first time?",
+    "difficulty": "advanced",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:emotions"
+    ],
+    "topic_tags": [
+      "emotions"
+    ],
+    "id": "eg-1480"
+  },
+  {
+    "front": "عزومة",
+    "back": "Invitation",
+    "transliteration": "3azouma",
+    "fusha_equivalent": "دَعْوَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "عندي عزومة في البيت بكرة.",
+    "example_en": "I have an invitation at home tomorrow.",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1484"
+  },
+  {
+    "front": "كيكة",
+    "back": "Cake",
+    "transliteration": "keika",
+    "fusha_equivalent": "كَعْكَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "الكيكة في عيد الميلاد كانت لذيذة.",
+    "example_en": "The cake at the birthday was delicious.",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1485"
+  },
+  {
+    "front": "يحتفل",
+    "back": "Celebrate",
+    "transliteration": "yehtafel",
+    "fusha_equivalent": "يَحْتَفِلُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "إحنا بنحتفل بالعيد كل سنة.",
+    "example_en": "We celebrate Eid every year.",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1487"
+  },
+  {
+    "front": "يجيب",
+    "back": "Bring",
+    "transliteration": "yegeeb",
+    "fusha_equivalent": "يُحْضِرُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "أنا حجيب الكيكة للحفلة.",
+    "example_en": "I will bring the cake for the party.",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1488"
+  },
+  {
+    "front": "يهني",
+    "back": "Congratulate",
+    "transliteration": "yehani",
+    "fusha_equivalent": "يُهَنِّئُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "كلنا هنينا العريس والعروسة.",
+    "example_en": "We all congratulated the bride and groom.",
+    "difficulty": "beginner",
+    "frequency_rank": 14,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1489"
+  },
+  {
+    "front": "هداية",
+    "back": "Gift",
+    "transliteration": "hedaya",
+    "fusha_equivalent": "هَدِيَّة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "جبت هداية حلوة للعروسة.",
+    "example_en": "I got a nice gift for the bride.",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1491"
+  },
+  {
+    "front": "يجهز",
+    "back": "Prepare",
+    "transliteration": "yegehhez",
+    "fusha_equivalent": "يُحَضِّرُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "بجهز للأكل للحفلة.",
+    "example_en": "I'm preparing the food for the party.",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1492"
+  },
+  {
+    "front": "يشكر",
+    "back": "Thank",
+    "transliteration": "yeshkor",
+    "fusha_equivalent": "يَشْكُرُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "شكرناهم على العزومة.",
+    "example_en": "We thanked them for the invitation.",
+    "difficulty": "intermediate",
+    "frequency_rank": 21,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1493"
+  },
+  {
+    "front": "تورتة",
+    "back": "Cake (Torte)",
+    "transliteration": "torta",
+    "fusha_equivalent": "تُورْتَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "التورتة دي شكلها جميل.",
+    "example_en": "This cake looks beautiful.",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1494"
+  },
+  {
+    "front": "يتمنى",
+    "back": "Wish",
+    "transliteration": "yetmanna",
+    "fusha_equivalent": "يَتَمَنَّى",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "بتمنى لك عيد ميلاد سعيد.",
+    "example_en": "I wish you a happy birthday.",
+    "difficulty": "intermediate",
+    "frequency_rank": 24,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1495"
+  },
+  {
+    "front": "زينة",
+    "back": "Decoration",
+    "transliteration": "zeina",
+    "fusha_equivalent": "زِينَة",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "حطينا زينة كتير في الحفلة.",
+    "example_en": "We put up a lot of decorations at the party.",
+    "difficulty": "intermediate",
+    "frequency_rank": 26,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1496"
+  },
+  {
+    "front": "ضيوف",
+    "back": "Guests",
+    "transliteration": "duyuuf",
+    "fusha_equivalent": "ضُيُوف",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الضيوف وصلوا الحفلة بدري.",
+    "example_en": "The guests arrived at the party early.",
+    "difficulty": "intermediate",
+    "frequency_rank": 28,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1497"
+  },
+  {
+    "front": "يشارك",
+    "back": "Participate",
+    "transliteration": "yesharek",
+    "fusha_equivalent": "يُشَارِكُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "كلنا شاركنا في تجهيز الحفلة.",
+    "example_en": "We all participated in preparing the party.",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1498"
+  },
+  {
+    "front": "يخيط",
+    "back": "Sew",
+    "transliteration": "yekhayet",
+    "fusha_equivalent": "يَخِيطُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "خيطت الفستان بتاعي للفرح.",
+    "example_en": "I sewed my dress for the wedding.",
+    "difficulty": "intermediate",
+    "frequency_rank": 32,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1499"
+  },
+  {
+    "front": "مناسبة",
+    "back": "Occasion",
+    "transliteration": "monasaba",
+    "fusha_equivalent": "مُنَاسَبَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "المناسبة دي مهمة للعيلة كلها.",
+    "example_en": "This occasion is important for the whole family.",
+    "difficulty": "intermediate",
+    "frequency_rank": 34,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1500"
+  },
+  {
+    "front": "ملابس",
+    "back": "Clothes",
+    "transliteration": "malabis",
+    "fusha_equivalent": "مَلَابِس",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "لبست ملابس جديدة للعيد.",
+    "example_en": "I wore new clothes for Eid.",
+    "difficulty": "intermediate",
+    "frequency_rank": 38,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1502"
+  },
+  {
+    "front": "يحيي",
+    "back": "Greet",
+    "transliteration": "yehayyi",
+    "fusha_equivalent": "يُحَيِّي",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "حييت كل الضيوف لما وصلوا.",
+    "example_en": "I greeted all the guests when they arrived.",
+    "difficulty": "intermediate",
+    "frequency_rank": 40,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1503"
+  },
+  {
+    "front": "يتذكر",
+    "back": "Remember",
+    "transliteration": "yetazakker",
+    "fusha_equivalent": "يَتَذَكَّرُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "لازم نتذكر كل المناسبات السعيدة.",
+    "example_en": "We must remember all the happy occasions.",
+    "difficulty": "advanced",
+    "frequency_rank": 42,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1504"
+  },
+  {
+    "front": "مزينة",
+    "back": "Decorated",
+    "transliteration": "mezayena",
+    "fusha_equivalent": "مُزَيَّنَة",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "القاعة كانت مزينة بشكل جميل.",
+    "example_en": "The hall was beautifully decorated.",
+    "difficulty": "advanced",
+    "frequency_rank": 44,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1505"
+  },
+  {
+    "front": "قاعات",
+    "back": "Halls",
+    "transliteration": "qa'aat",
+    "fusha_equivalent": "قَاعَات",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "حجزنا القاعة للفرح.",
+    "example_en": "We booked the hall for the wedding.",
+    "difficulty": "advanced",
+    "frequency_rank": 46,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1506"
+  },
+  {
+    "front": "يتجمع",
+    "back": "Gather",
+    "transliteration": "yetgama3",
+    "fusha_equivalent": "يَتَجَمَّعُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "اتجمعنا كلنا في البيت.",
+    "example_en": "We all gathered at the house.",
+    "difficulty": "advanced",
+    "frequency_rank": 48,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1507"
+  },
+  {
+    "front": "يشعل",
+    "back": "Light (something)",
+    "transliteration": "yesha3el",
+    "fusha_equivalent": "يُشْعِلُ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "شعلنا الشموع في الحفلة.",
+    "example_en": "We lit the candles at the party.",
+    "difficulty": "advanced",
+    "frequency_rank": 50,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1508"
+  },
+  {
+    "front": "يبالغ",
+    "back": "Exaggerate",
+    "transliteration": "yebaalag",
+    "fusha_equivalent": "يُبَالِغُ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "مبالغتش في تجهيزات الحفلة.",
+    "example_en": "I didn't exaggerate in the party preparations.",
+    "difficulty": "advanced",
+    "frequency_rank": 52,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:celebrations"
+    ],
+    "topic_tags": [
+      "celebrations"
+    ],
+    "id": "eg-1509"
+  },
+  {
+    "front": "بلد",
+    "back": "country",
+    "transliteration": "balad",
+    "fusha_equivalent": "بَلَد",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "مصر بلد جميل.",
+    "example_en": "Egypt is a beautiful country.",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1511"
+  },
+  {
+    "front": "مدينة",
+    "back": "city",
+    "transliteration": "medina",
+    "fusha_equivalent": "مَدِينَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "القاهرة مدينة كبيرة.",
+    "example_en": "Cairo is a big city.",
+    "difficulty": "beginner",
+    "frequency_rank": 2,
+    "sort_position": 2,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1512"
+  },
+  {
+    "front": "جبال",
+    "back": "mountains",
+    "transliteration": "gibaal",
+    "fusha_equivalent": "جِبَال",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الجبل ده عالي قوي.",
+    "example_en": "This mountain is very high.",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1516"
+  },
+  {
+    "front": "جزيرة",
+    "back": "island",
+    "transliteration": "gazira",
+    "fusha_equivalent": "جَزِيرَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "فيه جزيرة صغيرة هناك.",
+    "example_en": "There is a small island over there.",
+    "difficulty": "beginner",
+    "frequency_rank": 8,
+    "sort_position": 8,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1518"
+  },
+  {
+    "front": "شاطئ",
+    "back": "beach",
+    "transliteration": "shati'",
+    "fusha_equivalent": "شَاطِئ",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الشاطئ هناك جميل.",
+    "example_en": "The beach there is beautiful.",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1519"
+  },
+  {
+    "front": "صحراء",
+    "back": "desert",
+    "transliteration": "sahra",
+    "fusha_equivalent": "صَحْرَاء",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الصحراء الغربية واسعة.",
+    "example_en": "The Western Desert is vast.",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1520"
+  },
+  {
+    "front": "أقرب",
+    "back": "closest",
+    "transliteration": "aqrab",
+    "fusha_equivalent": "أَقْرَب",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "فين أقرب محطة مترو؟",
+    "example_en": "Where is the closest metro station?",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1521"
+  },
+  {
+    "front": "جنوب",
+    "back": "south",
+    "transliteration": "ganoub",
+    "fusha_equivalent": "جَنُوب",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الأقصر في جنوب مصر.",
+    "example_en": "Luxor is in the south of Egypt.",
+    "difficulty": "beginner",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1523"
+  },
+  {
+    "front": "غربي",
+    "back": "west",
+    "transliteration": "gharbi",
+    "fusha_equivalent": "غَرْبِي",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الهرم في الجانب الغربي.",
+    "example_en": "The pyramid is on the western side.",
+    "difficulty": "beginner",
+    "frequency_rank": 15,
+    "sort_position": 15,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1525"
+  },
+  {
+    "front": "شرقي",
+    "back": "east",
+    "transliteration": "sharqi",
+    "fusha_equivalent": "شَرْقِي",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الشمس بتطلع من الشرقي.",
+    "example_en": "The sun rises in the east.",
+    "difficulty": "beginner",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1526"
+  },
+  {
+    "front": "عاصمة",
+    "back": "capital",
+    "transliteration": "aasima",
+    "fusha_equivalent": "عَاصِمَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "القاهرة عاصمة مصر.",
+    "example_en": "Cairo is the capital of Egypt.",
+    "difficulty": "beginner",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1527"
+  },
+  {
+    "front": "مساحة",
+    "back": "area",
+    "transliteration": "mesaaha",
+    "fusha_equivalent": "مِسَاحَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "مساحة الأرض دي كبيرة.",
+    "example_en": "The area of this land is big.",
+    "difficulty": "beginner",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1528"
+  },
+  {
+    "front": "حدود",
+    "back": "borders",
+    "transliteration": "hudood",
+    "fusha_equivalent": "حُدُود",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "حدود البلد محمية.",
+    "example_en": "The country's borders are protected.",
+    "difficulty": "beginner",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1529"
+  },
+  {
+    "front": "ساحل",
+    "back": "coast",
+    "transliteration": "sahel",
+    "fusha_equivalent": "سَاحِل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الساحل الشمالي جميل.",
+    "example_en": "The northern coast is beautiful.",
+    "difficulty": "beginner",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1530"
+  },
+  {
+    "front": "محافظة",
+    "back": "governorate",
+    "transliteration": "muhafaza",
+    "fusha_equivalent": "مُحَافَظَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "محافظة الجيزة فيها الأهرامات.",
+    "example_en": "Giza Governorate has the pyramids.",
+    "difficulty": "beginner",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1531"
+  },
+  {
+    "front": "كيلو متر",
+    "back": "kilometer",
+    "transliteration": "kilo mitr",
+    "fusha_equivalent": "كِيلُومِتْر",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "المسافة بين المدينتين مية كيلو متر.",
+    "example_en": "The distance between the two cities is 100 kilometers.",
+    "difficulty": "beginner",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1532"
+  },
+  {
+    "front": "مدخل",
+    "back": "entrance",
+    "transliteration": "madkhal",
+    "fusha_equivalent": "مَدْخَل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "مدخل المدينة هناك.",
+    "example_en": "The entrance to the city is over there.",
+    "difficulty": "beginner",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1533"
+  },
+  {
+    "front": "مسافر",
+    "back": "traveler",
+    "transliteration": "musaafir",
+    "fusha_equivalent": "مُسَافِر",
+    "part_of_speech": "noun",
+    "usage_context": "informal",
+    "example_eg": "أنا مسافر بكرة.",
+    "example_en": "I'm traveling tomorrow.",
+    "difficulty": "beginner",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1534"
+  },
+  {
+    "front": "اكتشف",
+    "back": "discover",
+    "transliteration": "iktashaf",
+    "fusha_equivalent": "اِكْتَشَفَ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "اكتشفنا مكان جديد في الرحلة.",
+    "example_en": "We discovered a new place on the trip.",
+    "difficulty": "beginner",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1536"
+  },
+  {
+    "front": "زور",
+    "back": "visit",
+    "transliteration": "zoor",
+    "fusha_equivalent": "زَارَ",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "عايز أزور الأهرامات.",
+    "example_en": "I want to visit the pyramids.",
+    "difficulty": "beginner",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1537"
+  },
+  {
+    "front": "اتجه",
+    "back": "head to",
+    "transliteration": "ittagah",
+    "fusha_equivalent": "اِتَّجَهَ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "احنا هنتجه للغردقة.",
+    "example_en": "We are heading to Hurghada.",
+    "difficulty": "beginner",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1538"
+  },
+  {
+    "front": "اتجه شمال",
+    "back": "turn north",
+    "transliteration": "ittagah shamaal",
+    "fusha_equivalent": "اِتَّجَهَ شَمَال",
+    "part_of_speech": "phrase",
+    "usage_context": "informal",
+    "example_eg": "لما توصل هنا، اتجه شمال.",
+    "example_en": "When you get here, turn north.",
+    "difficulty": "intermediate",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:geography"
+    ],
+    "topic_tags": [
+      "geography"
+    ],
+    "id": "eg-1540"
+  },
+  {
+    "front": "علم",
+    "back": "science",
+    "transliteration": "3ilm",
+    "fusha_equivalent": "عِلْم",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "العلم نور",
+    "example_en": "Science is light",
+    "difficulty": "beginner",
+    "frequency_rank": 1,
+    "sort_position": 1,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1541"
+  },
+  {
+    "front": "اكتشاف",
+    "back": "discovery",
+    "transliteration": "iktishaf",
+    "fusha_equivalent": "اِكْتِشَاف",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "ده اكتشاف مهم",
+    "example_en": "This is an important discovery",
+    "difficulty": "beginner",
+    "frequency_rank": 3,
+    "sort_position": 3,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1543"
+  },
+  {
+    "front": "يفكر",
+    "back": "to think",
+    "transliteration": "yifakkar",
+    "fusha_equivalent": "يُفَكِّر",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هو بيفكر في حل",
+    "example_en": "He is thinking of a solution",
+    "difficulty": "beginner",
+    "frequency_rank": 4,
+    "sort_position": 4,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1544"
+  },
+  {
+    "front": "يبحث",
+    "back": "to research",
+    "transliteration": "yibaḥaṯ",
+    "fusha_equivalent": "يَبْحَث",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هي بتبحث في الموضوع",
+    "example_en": "She is researching the topic",
+    "difficulty": "beginner",
+    "frequency_rank": 5,
+    "sort_position": 5,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1545"
+  },
+  {
+    "front": "معمل",
+    "back": "laboratory",
+    "transliteration": "ma3mal",
+    "fusha_equivalent": "مَعْمَل",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "المعمل كبير",
+    "example_en": "The laboratory is big",
+    "difficulty": "beginner",
+    "frequency_rank": 6,
+    "sort_position": 6,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1546"
+  },
+  {
+    "front": "طبيعي",
+    "back": "natural",
+    "transliteration": "ṭabīʿī",
+    "fusha_equivalent": "طَبِيعِيّ",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "الظواهر الطبيعية مهمة",
+    "example_en": "Natural phenomena are important",
+    "difficulty": "beginner",
+    "frequency_rank": 7,
+    "sort_position": 7,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1547"
+  },
+  {
+    "front": "كوكب",
+    "back": "planet",
+    "transliteration": "kawkab",
+    "fusha_equivalent": "كَوْكَب",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الأرض كوكب",
+    "example_en": "Earth is a planet",
+    "difficulty": "beginner",
+    "frequency_rank": 9,
+    "sort_position": 9,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1549"
+  },
+  {
+    "front": "فضاء",
+    "back": "space",
+    "transliteration": "faḍa'",
+    "fusha_equivalent": "فَضَاء",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الفضاء كبير جدا",
+    "example_en": "Space is very vast",
+    "difficulty": "beginner",
+    "frequency_rank": 10,
+    "sort_position": 10,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1550"
+  },
+  {
+    "front": "يتعلم",
+    "back": "to learn",
+    "transliteration": "yit3allim",
+    "fusha_equivalent": "يَتَعَلَّم",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "انا بتعلم عربي",
+    "example_en": "I am learning Arabic",
+    "difficulty": "beginner",
+    "frequency_rank": 11,
+    "sort_position": 11,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1551"
+  },
+  {
+    "front": "يفهم",
+    "back": "to understand",
+    "transliteration": "yifham",
+    "fusha_equivalent": "يَفْهَم",
+    "part_of_speech": "verb",
+    "usage_context": "informal",
+    "example_eg": "هي فهمت الدرس",
+    "example_en": "She understood the lesson",
+    "difficulty": "beginner",
+    "frequency_rank": 12,
+    "sort_position": 12,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1552"
+  },
+  {
+    "front": "طور",
+    "back": "to develop",
+    "transliteration": "yṭawwir",
+    "fusha_equivalent": "يُطَوِّر",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "الشركة بتطور تكنولوجيا جديدة",
+    "example_en": "The company is developing new technology",
+    "difficulty": "intermediate",
+    "frequency_rank": 13,
+    "sort_position": 13,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1553"
+  },
+  {
+    "front": "بحث علمي",
+    "back": "scientific research",
+    "transliteration": "baḥth ʿilmi",
+    "fusha_equivalent": "بَحْث عِلْمِي",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "البحث العلمي مهم",
+    "example_en": "Scientific research is important",
+    "difficulty": "intermediate",
+    "frequency_rank": 14,
+    "sort_position": 14,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1554"
+  },
+  {
+    "front": "يدرس",
+    "back": "to study",
+    "transliteration": "yidris",
+    "fusha_equivalent": "يَدْرُس",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "هو بيدرس الطب",
+    "example_en": "He is studying medicine",
+    "difficulty": "intermediate",
+    "frequency_rank": 16,
+    "sort_position": 16,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1556"
+  },
+  {
+    "front": "مخترع",
+    "back": "inventor",
+    "transliteration": "mukhtariʿ",
+    "fusha_equivalent": "مُخْتَرِع",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "توماس إديسون كان مخترع",
+    "example_en": "Thomas Edison was an inventor",
+    "difficulty": "intermediate",
+    "frequency_rank": 17,
+    "sort_position": 17,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1557"
+  },
+  {
+    "front": "ذرة",
+    "back": "atom",
+    "transliteration": "zarrah",
+    "fusha_equivalent": "ذَرَّة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الذرة جزء صغير من المادة",
+    "example_en": "The atom is a small part of matter",
+    "difficulty": "intermediate",
+    "frequency_rank": 18,
+    "sort_position": 18,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1558"
+  },
+  {
+    "front": "يكتشف",
+    "back": "to discover",
+    "transliteration": "yiktishif",
+    "fusha_equivalent": "يَكْتَشِف",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "العلماء اكتشفوا كوكب جديد",
+    "example_en": "Scientists discovered a new planet",
+    "difficulty": "intermediate",
+    "frequency_rank": 19,
+    "sort_position": 19,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1559"
+  },
+  {
+    "front": "نظري",
+    "back": "theoretical",
+    "transliteration": "naẓarī",
+    "fusha_equivalent": "نَظَرِيّ",
+    "part_of_speech": "adjective",
+    "usage_context": "formal",
+    "example_eg": "النظرية دي معقدة",
+    "example_en": "This theory is complicated",
+    "difficulty": "intermediate",
+    "frequency_rank": 20,
+    "sort_position": 20,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1560"
+  },
+  {
+    "front": "كيماوي",
+    "back": "chemical",
+    "transliteration": "kimāwī",
+    "fusha_equivalent": "كِيمَاوِي",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "التفاعل الكيماوي كان سريع",
+    "example_en": "The chemical reaction was fast",
+    "difficulty": "intermediate",
+    "frequency_rank": 21,
+    "sort_position": 21,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1561"
+  },
+  {
+    "front": "طاقة",
+    "back": "energy",
+    "transliteration": "ṭāqa",
+    "fusha_equivalent": "طَاقَة",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "الشمس مصدر للطاقة",
+    "example_en": "The sun is a source of energy",
+    "difficulty": "intermediate",
+    "frequency_rank": 22,
+    "sort_position": 22,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1562"
+  },
+  {
+    "front": "يحلل",
+    "back": "to analyze",
+    "transliteration": "yiḥallil",
+    "fusha_equivalent": "يُحَلِّل",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "الباحث بيحلل البيانات",
+    "example_en": "The researcher is analyzing the data",
+    "difficulty": "intermediate",
+    "frequency_rank": 23,
+    "sort_position": 23,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1563"
+  },
+  {
+    "front": "معقد",
+    "back": "complex",
+    "transliteration": "muʿaqqad",
+    "fusha_equivalent": "مُعَقَّد",
+    "part_of_speech": "adjective",
+    "usage_context": "informal",
+    "example_eg": "النظام ده معقد",
+    "example_en": "This system is complex",
+    "difficulty": "advanced",
+    "frequency_rank": 24,
+    "sort_position": 24,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1564"
+  },
+  {
+    "front": "يقيس",
+    "back": "to measure",
+    "transliteration": "yiqīs",
+    "fusha_equivalent": "يَقِيس",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "العالم بيقيس الضغط",
+    "example_en": "The scientist is measuring the pressure",
+    "difficulty": "advanced",
+    "frequency_rank": 25,
+    "sort_position": 25,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1565"
+  },
+  {
+    "front": "يحفظ",
+    "back": "to memorize",
+    "transliteration": "yiḥfaẓ",
+    "fusha_equivalent": "يَحْفَظ",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "الطالب لازم يحفظ القوانين",
+    "example_en": "The student must memorize the formulas",
+    "difficulty": "advanced",
+    "frequency_rank": 26,
+    "sort_position": 26,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1566"
+  },
+  {
+    "front": "يبتكر",
+    "back": "to innovate",
+    "transliteration": "yibtakir",
+    "fusha_equivalent": "يَبْتَكِر",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "الشركة بتبتكر منتجات جديدة",
+    "example_en": "The company is innovating new products",
+    "difficulty": "advanced",
+    "frequency_rank": 27,
+    "sort_position": 27,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1567"
+  },
+  {
+    "front": "تكنولوجيا",
+    "back": "technology",
+    "transliteration": "tiknulūjiyā",
+    "fusha_equivalent": "تِكْنُولُوجِيَا",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "التكنولوجيا بتتقدم بسرعة",
+    "example_en": "Technology is advancing rapidly",
+    "difficulty": "advanced",
+    "frequency_rank": 28,
+    "sort_position": 28,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1568"
+  },
+  {
+    "front": "فيزيائي",
+    "back": "physicist",
+    "transliteration": "fīziyā'ī",
+    "fusha_equivalent": "فِيزِيَائِي",
+    "part_of_speech": "noun",
+    "usage_context": "formal",
+    "example_eg": "عالم الفيزياء بيشتغل في المعمل",
+    "example_en": "The physicist works in the lab",
+    "difficulty": "advanced",
+    "frequency_rank": 29,
+    "sort_position": 29,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1569"
+  },
+  {
+    "front": "يبتكر",
+    "back": "to innovate",
+    "transliteration": "yabtaker",
+    "fusha_equivalent": "يَبْتَكِر",
+    "part_of_speech": "verb",
+    "usage_context": "formal",
+    "example_eg": "العالم بيبتكر أفكار جديدة",
+    "example_en": "The scientist is innovating new ideas",
+    "difficulty": "advanced",
+    "frequency_rank": 30,
+    "sort_position": 30,
+    "tags": [
+      "dialect",
+      "topic:science"
+    ],
+    "topic_tags": [
+      "science"
+    ],
+    "id": "eg-1570"
   }
 ]

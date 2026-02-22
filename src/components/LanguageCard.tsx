@@ -23,37 +23,42 @@ interface LanguageCardProps {
 
 const colorMap: Record<
   string,
-  { gradient: string; accent: string; bg: string; text: string }
+  { gradient: string; accent: string; bg: string; text: string; patternClass: string }
 > = {
   arabic: {
     gradient: "linear-gradient(135deg, #F59E0B, #D97706)",
     accent: "#F59E0B",
     bg: "#FEF3C7",
     text: "#92400E",
+    patternClass: "lang-pattern-arabic",
   },
   quran: {
     gradient: "linear-gradient(135deg, #14B8A6, #0D9488)",
     accent: "#14B8A6",
     bg: "#CCFBF1",
     text: "#115E59",
+    patternClass: "lang-pattern-arabic",
   },
   spanish: {
     gradient: "linear-gradient(135deg, #F97316, #EA580C)",
     accent: "#F97316",
     bg: "#FFEDD5",
     text: "#9A3412",
+    patternClass: "lang-pattern-spanish",
   },
   egyptian: {
     gradient: "linear-gradient(135deg, #8B5CF6, #7C3AED)",
     accent: "#8B5CF6",
     bg: "#EDE9FE",
     text: "#5B21B6",
+    patternClass: "lang-pattern-egyptian",
   },
   english: {
     gradient: "linear-gradient(135deg, #64748B, #475569)",
     accent: "#64748B",
     bg: "#F1F5F9",
     text: "#334155",
+    patternClass: "",
   },
 };
 
@@ -92,7 +97,8 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
         style={
           {
             "--accent-color": colors.accent,
-            "--glow-color": `${colors.accent}18`,
+            "--glow-color": `${colors.accent}22`,
+            animationDelay: `${-index * 2.3}s`,
           } as React.CSSProperties
         }
         onMouseMove={handleMouseMove}
@@ -109,21 +115,31 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
         )}
 
         <div className={language.comingSoon ? "opacity-30" : ""}>
-          {/* Gradient header with wave divider */}
+          {/* Gradient header with unique language pattern */}
           <div className="relative">
             <div
-              className="h-12 rounded-t-2xl flex items-center justify-between px-4 relative overflow-hidden"
+              className={`h-14 rounded-t-2xl flex items-center justify-between px-4 relative overflow-hidden ${colors.patternClass}`}
               style={{ background: colors.gradient }}
             >
+              {/* Shimmer sweep on header */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 45%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.08) 55%, transparent 60%)",
+                  backgroundSize: "200% 100%",
+                  animation: "shimmerSweep 5s ease-in-out infinite",
+                  animationDelay: `${index * 1.5}s`,
+                }}
+              />
               {/* Hover brighten overlay */}
               <div
                 className="absolute inset-0 bg-white transition-opacity duration-300"
-                style={{ opacity: isHovered ? 0.05 : 0 }}
+                style={{ opacity: isHovered ? 0.08 : 0 }}
               />
-              <span className="text-white font-bold text-lg relative z-[1]">
+              <span className="text-white font-bold text-lg relative z-[1]" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.2)" }}>
                 {language.name.charAt(0)}
               </span>
-              <ArrowUpRight className="w-4 h-4 text-white relative z-[1]" />
+              <ArrowUpRight className="w-4 h-4 text-white relative z-[1]" style={{ opacity: isHovered ? 1 : 0.6, transition: "opacity 0.2s ease" }} />
             </div>
             {/* Wave SVG divider */}
             <svg
@@ -141,7 +157,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
 
           {/* Card body */}
           <div className="p-5">
-            {/* Language name + card count — Stripe typography */}
+            {/* Language name + card count */}
             <div className="mb-4">
               <p
                 className="text-[var(--text-primary)]"
@@ -159,7 +175,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
               </p>
             </div>
 
-            {/* Hero metric: due count — larger and accent-colored */}
+            {/* Hero metric: due count */}
             <div className="mb-4">
               <p
                 style={{
@@ -169,6 +185,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
                   fontVariantNumeric: "tabular-nums",
                   lineHeight: 1,
                   color: colors.accent,
+                  textShadow: `0 0 20px ${colors.accent}30`,
                 }}
               >
                 {language.dueCount}
@@ -202,7 +219,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
                   className="h-full rounded-full"
                   style={{
                     background: colors.gradient,
-                    filter: `drop-shadow(0 0 4px ${colors.accent}40)`,
+                    filter: `drop-shadow(0 0 6px ${colors.accent}50)`,
                   }}
                   initial={{ width: 0 }}
                   animate={{ width: `${progressPercent}%` }}
@@ -215,7 +232,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
               </div>
             </div>
 
-            {/* Stats row with icon badges */}
+            {/* Stats row */}
             <div
               className="flex items-center gap-4 pt-3 border-t"
               style={{ borderColor: "var(--surface-3)" }}
@@ -227,7 +244,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
                     width: "8px",
                     height: "8px",
                     backgroundColor: "#0CBF4C",
-                    boxShadow: "0 0 0 2px #0CBF4C20",
+                    boxShadow: "0 0 6px #0CBF4C40",
                   }}
                 />
                 <span
@@ -251,7 +268,7 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
                     width: "8px",
                     height: "8px",
                     backgroundColor: colors.accent,
-                    boxShadow: `0 0 0 2px ${colors.accent}20`,
+                    boxShadow: `0 0 6px ${colors.accent}40`,
                   }}
                 />
                 <span
@@ -272,5 +289,5 @@ export function LanguageCard({ language, index = 0 }: LanguageCardProps) {
     return <div>{cardContent}</div>;
   }
 
-  return <Link href={`/study/${language.id}`}>{cardContent}</Link>;
+  return <Link href={`/study?lang=${language.id}`}>{cardContent}</Link>;
 }

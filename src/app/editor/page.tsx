@@ -14,7 +14,7 @@
  * - Keyboard shortcuts for efficient workflow
  */
 
-import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -29,9 +29,9 @@ import {
   BookOpen,
   Image as ImageIcon,
 } from "lucide-react";
-import FieldEditor from "./components/FieldEditor";
-import CardPreview from "./components/CardPreview";
-import TagInput from "./components/TagInput";
+import { FieldEditor } from "./components/FieldEditor";
+import { CardPreview } from "./components/CardPreview";
+import { TagInput } from "./components/TagInput";
 
 // ---------------------------------------------------------------------------
 // Types (client-side mirrors of server types)
@@ -154,7 +154,7 @@ const DEFAULT_DECKS: Deck[] = [
 // Component
 // ---------------------------------------------------------------------------
 
-export default function EditorPage() {
+function EditorContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -574,5 +574,19 @@ export default function EditorPage() {
         </AnimatePresence>
       </div>
     </div>
+  );
+}
+
+export default function EditorPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-[calc(100vh-5rem)]">
+          <div className="w-6 h-6 border-2 border-primary-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <EditorContent />
+    </Suspense>
   );
 }

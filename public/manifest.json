@@ -1,7 +1,7 @@
 {
-  "name": "Lughati — My Language",
-  "short_name": "Lughati",
-  "description": "Lughati — a multilingual spaced repetition system for Arabic, Egyptian Arabic, Quranic Arabic, and Spanish.",
+  "name": "Zaytuna — Learn Languages",
+  "short_name": "Zaytuna",
+  "description": "Zaytuna — a multilingual spaced repetition system for Arabic, Quran, Egyptian Arabic, Spanish, and more.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

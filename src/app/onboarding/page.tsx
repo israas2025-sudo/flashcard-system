@@ -201,7 +201,7 @@ export default function OnboardingPage() {
         })),
       };
 
-      localStorage.setItem("lughati-onboarding", JSON.stringify(data));
+      localStorage.setItem("zaytuna-onboarding", JSON.stringify(data));
       router.push("/");
     } catch (error) {
       console.error("Onboarding save failed:", error);
@@ -219,15 +219,16 @@ export default function OnboardingPage() {
       <div className="flex items-center justify-between px-6 h-16 border-b border-[var(--surface-3)]">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-primary-500 flex items-center justify-center">
-            <span
-              className="text-white font-bold text-sm"
-              style={{ fontFamily: "'Amiri', serif" }}
-            >
-              ل
-            </span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C12 2 9 6 7 10C5 14 6 18 8 20C10 22 14 22 16 20C18 18 19 14 17 10C15 6 12 2 12 2Z" fill="rgba(255,255,255,0.9)"/>
+              <path d="M12 2C12 2 11 5 8 5C5 5 3 3 3 3" stroke="rgba(255,255,255,0.7)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+              <path d="M12 5C12 5 13 3 16 3C19 3 21 5 21 5" stroke="rgba(255,255,255,0.7)" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+              <circle cx="7" cy="4" r="1.5" fill="rgba(20,184,166,0.8)"/>
+              <circle cx="17" cy="4" r="1.5" fill="rgba(20,184,166,0.8)"/>
+            </svg>
           </div>
           <span className="font-semibold text-[15px] text-[var(--text-primary)] tracking-tight">
-            Lughati
+            Zaytuna
           </span>
         </div>
 
@@ -391,7 +392,7 @@ function WelcomeStep() {
         className="space-y-3"
       >
         <h1 className="text-4xl font-bold text-[var(--text-primary)]">
-          Welcome to Lughati
+          Welcome to Zaytuna
         </h1>
         <p className="text-lg text-[var(--text-secondary)] max-w-md">
           Master any language with spaced repetition. Let&apos;s set up your
