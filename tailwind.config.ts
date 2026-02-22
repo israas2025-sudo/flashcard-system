@@ -132,14 +132,19 @@ const config: Config = {
         "2xl": "16px",
       },
       boxShadow: {
-        card: "0 2px 5px 0 rgba(0,0,0,0.05), 0 1px 1px 0 rgba(0,0,0,0.03)",
+        card: "0 6px 12px -2px rgba(50,50,93,0.08), 0 3px 7px -3px rgba(0,0,0,0.1)",
         "card-hover":
-          "0 7px 14px 0 rgba(0,0,0,0.07), 0 3px 6px 0 rgba(0,0,0,0.05)",
+          "0 13px 27px -5px rgba(50,50,93,0.15), 0 8px 16px -8px rgba(0,0,0,0.15)",
         elevated:
-          "0 15px 35px 0 rgba(0,0,0,0.1), 0 5px 15px 0 rgba(0,0,0,0.06)",
+          "0 30px 60px -12px rgba(50,50,93,0.15), 0 18px 36px -18px rgba(0,0,0,0.15)",
         button:
-          "0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 1px 0 rgba(0,0,0,0.04)",
-        glow: "0 0 20px rgba(99, 91, 255, 0.3)",
+          "0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08)",
+        glow: "0 0 20px rgba(99, 91, 255, 0.3), 0 0 60px rgba(99, 91, 255, 0.1)",
+        "glow-arabic": "0 0 20px rgba(245, 158, 11, 0.2), 0 0 50px rgba(245, 158, 11, 0.08)",
+        "glow-quran": "0 0 20px rgba(20, 184, 166, 0.2), 0 0 50px rgba(20, 184, 166, 0.08)",
+        "glow-spanish": "0 0 20px rgba(249, 115, 22, 0.2), 0 0 50px rgba(249, 115, 22, 0.08)",
+        "glow-egyptian": "0 0 20px rgba(139, 92, 246, 0.2), 0 0 50px rgba(139, 92, 246, 0.08)",
+        "glow-success": "0 0 20px rgba(12, 191, 76, 0.15), 0 0 50px rgba(12, 191, 76, 0.08)",
         focus: "0 0 0 3px rgba(99, 91, 255, 0.25)",
       },
       animation: {
@@ -149,6 +154,7 @@ const config: Config = {
         "scale-in": "scaleIn 0.2s ease-out",
         shimmer: "shimmer 1.5s ease-in-out infinite",
         "progress-fill": "progressFill 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+        "glow-pulse": "glowPulse 2s ease-in-out infinite alternate",
       },
       keyframes: {
         flicker: {
@@ -175,6 +181,10 @@ const config: Config = {
         progressFill: {
           "0%": { width: "0%" },
           "100%": { width: "var(--progress)" },
+        },
+        glowPulse: {
+          "0%": { boxShadow: "0 0 10px rgba(99, 91, 255, 0.15)" },
+          "100%": { boxShadow: "0 0 25px rgba(99, 91, 255, 0.3)" },
         },
       },
       fontFamily: {

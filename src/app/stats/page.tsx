@@ -1,8 +1,8 @@
 // @ts-nocheck
 "use client";
 
-import React, { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useMemo, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   BarChart3,
   Clock,
@@ -24,7 +24,6 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { CardsPerDayChart } from "./components/CardsPerDayChart";
 import { ReviewForecast } from "./components/ReviewForecast";
 import { CardStateDonut } from "./components/CardStateDonut";
@@ -118,7 +117,6 @@ function generateAccuracyOverTime(days: number) {
 
 function generateHourlyData() {
   return Array.from({ length: 24 }, (_, hour) => {
-    // Simulate more activity during morning/evening hours
     const baseReviews =
       hour >= 7 && hour <= 10
         ? Math.floor(Math.random() * 200) + 100
@@ -226,118 +224,59 @@ const LANGUAGE_CHART_CONFIG = [
 ];
 
 // ---------------------------------------------------------------------------
-// Helper: Time Per Day Line Chart (inline, not a separate component)
+// Inline Charts
 // ---------------------------------------------------------------------------
 
 function TimePerDayChart({ data }: { data: { date: string; value: number }[] }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
   function formatDate(dateStr: string): string {
     const d = new Date(dateStr);
     return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   }
 
+  if (!mounted) {
+    return <div className="w-full" style={{ height: "320px", minHeight: "320px" }} />;
+  }
+
   return (
-    <div className="w-full h-[320px]">
+    <div className="w-full" style={{ height: "320px", minHeight: "320px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 8, right: 8, left: -12, bottom: 0 }}>
-          <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="var(--surface-3)"
-            vertical={false}
-          />
-          <XAxis
-            dataKey="date"
-            tickFormatter={formatDate}
-            tick={{ fontSize: 11, fill: "var(--text-tertiary)" }}
-            axisLine={{ stroke: "var(--surface-3)" }}
-            tickLine={false}
-            interval="preserveStartEnd"
-          />
-          <YAxis
-            tick={{ fontSize: 11, fill: "var(--text-tertiary)" }}
-            axisLine={false}
-            tickLine={false}
-            unit=" min"
-          />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "var(--surface-1)",
-              border: "1px solid var(--surface-3)",
-              borderRadius: "10px",
-              boxShadow: "var(--shadow-elevated)",
-              fontSize: "12px",
-              color: "var(--text-primary)",
-            }}
-            labelFormatter={formatDate}
-            formatter={(value: number) => [`${value} min`, "Study Time"]}
-          />
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#6366f1"
-            strokeWidth={2}
-            dot={false}
-            activeDot={{ r: 4, strokeWidth: 0, fill: "#6366f1" }}
-          />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-3)" vertical={false} />
+          <XAxis dataKey="date" tickFormatter={formatDate} tick={{ fontSize: 11, fill: "var(--text-tertiary)" }} axisLine={{ stroke: "var(--surface-3)" }} tickLine={false} interval="preserveStartEnd" />
+          <YAxis tick={{ fontSize: 11, fill: "var(--text-tertiary)" }} axisLine={false} tickLine={false} unit=" min" />
+          <Tooltip contentStyle={{ backgroundColor: "var(--surface-1)", border: "1px solid var(--surface-3)", borderRadius: "10px", boxShadow: "var(--shadow-elevated)", fontSize: "12px", color: "var(--text-primary)" }} labelFormatter={formatDate} formatter={(value: number) => [`${value} min`, "Study Time"]} />
+          <Line type="monotone" dataKey="value" stroke="#635BFF" strokeWidth={2.5} dot={false} activeDot={{ r: 5, strokeWidth: 0, fill: "#635BFF" }} />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 }
-
-// ---------------------------------------------------------------------------
-// Helper: Accuracy Over Time Line Chart
-// ---------------------------------------------------------------------------
 
 function AccuracyChart({ data }: { data: { date: string; value: number }[] }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
   function formatDate(dateStr: string): string {
     const d = new Date(dateStr);
     return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   }
 
+  if (!mounted) {
+    return <div className="w-full" style={{ height: "320px", minHeight: "320px" }} />;
+  }
+
   return (
-    <div className="w-full h-[300px]">
+    <div className="w-full" style={{ height: "320px", minHeight: "320px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 8, right: 8, left: -12, bottom: 0 }}>
-          <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="var(--surface-3)"
-            vertical={false}
-          />
-          <XAxis
-            dataKey="date"
-            tickFormatter={formatDate}
-            tick={{ fontSize: 11, fill: "var(--text-tertiary)" }}
-            axisLine={{ stroke: "var(--surface-3)" }}
-            tickLine={false}
-            interval="preserveStartEnd"
-          />
-          <YAxis
-            tick={{ fontSize: 11, fill: "var(--text-tertiary)" }}
-            axisLine={false}
-            tickLine={false}
-            domain={[50, 100]}
-            unit="%"
-          />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "var(--surface-1)",
-              border: "1px solid var(--surface-3)",
-              borderRadius: "10px",
-              boxShadow: "var(--shadow-elevated)",
-              fontSize: "12px",
-              color: "var(--text-primary)",
-            }}
-            labelFormatter={formatDate}
-            formatter={(value: number) => [`${value}%`, "Accuracy"]}
-          />
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#22c55e"
-            strokeWidth={2}
-            dot={false}
-            activeDot={{ r: 4, strokeWidth: 0, fill: "#22c55e" }}
-          />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-3)" vertical={false} />
+          <XAxis dataKey="date" tickFormatter={formatDate} tick={{ fontSize: 11, fill: "var(--text-tertiary)" }} axisLine={{ stroke: "var(--surface-3)" }} tickLine={false} interval="preserveStartEnd" />
+          <YAxis tick={{ fontSize: 11, fill: "var(--text-tertiary)" }} axisLine={false} tickLine={false} domain={[50, 100]} unit="%" />
+          <Tooltip contentStyle={{ backgroundColor: "var(--surface-1)", border: "1px solid var(--surface-3)", borderRadius: "10px", boxShadow: "var(--shadow-elevated)", fontSize: "12px", color: "var(--text-primary)" }} labelFormatter={formatDate} formatter={(value: number) => [`${value}%`, "Accuracy"]} />
+          <Line type="monotone" dataKey="value" stroke="#0CBF4C" strokeWidth={2.5} dot={false} activeDot={{ r: 5, strokeWidth: 0, fill: "#0CBF4C" }} />
         </LineChart>
       </ResponsiveContainer>
     </div>
@@ -345,91 +284,244 @@ function AccuracyChart({ data }: { data: { date: string; value: number }[] }) {
 }
 
 // ---------------------------------------------------------------------------
-// Main Statistics Page
+// Chart Card with gradient left border and inner glow
+// ---------------------------------------------------------------------------
+
+function ChartCard({
+  title,
+  description,
+  accentColor,
+  className = "",
+  children,
+}: {
+  title: string;
+  description: string;
+  accentColor?: string;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className={`chart-card ${className}`}
+      style={{
+        padding: "24px 28px",
+        ...(accentColor ? {
+          "--accent-color": accentColor,
+          "--accent-end": accentColor,
+          "--glow-color": `${accentColor}08`,
+        } as React.CSSProperties : {}),
+      }}
+    >
+      <div className="flex items-center justify-between pb-4 border-b border-[var(--surface-3)] mb-5">
+        <div>
+          <div className="flex items-center gap-2.5">
+            {accentColor && (
+              <span
+                className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                style={{
+                  backgroundColor: accentColor,
+                  boxShadow: `0 0 8px ${accentColor}40`,
+                }}
+              />
+            )}
+            <h3 className="text-[15px] font-semibold text-[var(--text-primary)]">
+              {title}
+            </h3>
+          </div>
+          <p className="text-[12px] text-[var(--text-tertiary)] mt-1">{description}</p>
+        </div>
+      </div>
+      <div style={{ minHeight: "280px" }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Main Page
 // ---------------------------------------------------------------------------
 
 export default function StatsPage() {
   const [activePeriod, setActivePeriod] = useState<TimePeriod>("month");
   const [selectedLanguage, setSelectedLanguage] = useState("all");
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  const periodDays =
-    TIME_PERIODS.find((p) => p.key === activePeriod)?.days || 30;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  // Generate data based on active period
-  const cardsPerDay = useMemo(
-    () => generateCardsPerDay(Math.min(periodDays, 365)),
-    [periodDays]
-  );
-  const timePerDay = useMemo(
-    () => generateTimePerDay(Math.min(periodDays, 365)),
-    [periodDays]
-  );
+  const periodDays = TIME_PERIODS.find((p) => p.key === activePeriod)?.days || 30;
+
+  const cardsPerDay = useMemo(() => generateCardsPerDay(Math.min(periodDays, 365)), [periodDays]);
+  const timePerDay = useMemo(() => generateTimePerDay(Math.min(periodDays, 365)), [periodDays]);
   const forecastData = useMemo(() => generateForecast(30), []);
-  const answerDistribution = useMemo(
-    () => generateAnswerDistribution(Math.min(periodDays, 90)),
-    [periodDays]
-  );
-  const accuracyData = useMemo(
-    () => generateAccuracyOverTime(Math.min(periodDays, 365)),
-    [periodDays]
-  );
+  const answerDistribution = useMemo(() => generateAnswerDistribution(Math.min(periodDays, 90)), [periodDays]);
+  const accuracyData = useMemo(() => generateAccuracyOverTime(Math.min(periodDays, 365)), [periodDays]);
   const hourlyData = useMemo(() => generateHourlyData(), []);
   const streakData = useMemo(() => generateStreakData(365), []);
 
-  // Summary stats
   const totalReviewsPeriod = cardsPerDay.reduce((s, d) => s + d.value, 0);
-  const avgPerDay =
-    cardsPerDay.length > 0
-      ? Math.round(totalReviewsPeriod / cardsPerDay.length)
-      : 0;
+  const avgPerDay = cardsPerDay.length > 0 ? Math.round(totalReviewsPeriod / cardsPerDay.length) : 0;
   const totalTimePeriod = timePerDay.reduce((s, d) => s + d.value, 0);
-  const avgTimePeriod =
-    timePerDay.length > 0
-      ? Math.round(totalTimePeriod / timePerDay.length)
-      : 0;
+  const avgTimePeriod = timePerDay.length > 0 ? Math.round(totalTimePeriod / timePerDay.length) : 0;
+
+  const metricTiles = [
+    { label: "Total Reviews", value: totalReviewsPeriod.toLocaleString(), icon: BarChart3, color: "#635BFF" },
+    { label: "Avg Per Day", value: avgPerDay.toString(), icon: TrendingUp, color: "#F59E0B" },
+    { label: "Total Time", value: `${Math.round(totalTimePeriod)} min`, icon: Clock, color: "#14B8A6" },
+    { label: "Avg Time/Day", value: `${avgTimePeriod} min`, icon: Timer, color: "#F97316" },
+  ];
+
+  const chartEntries: {
+    key: string;
+    title: string;
+    description: string;
+    accentColor?: string;
+    className?: string;
+    content: React.ReactNode;
+  }[] = [
+    {
+      key: "cards-per-day",
+      title: "Cards Reviewed Per Day",
+      description: "Daily review count with language breakdown",
+      accentColor: "#635BFF",
+      className: "lg:col-span-2",
+      content: <CardsPerDayChart data={cardsPerDay} languages={selectedLanguage === "all" ? LANGUAGE_CHART_CONFIG : undefined} showTrend />,
+    },
+    {
+      key: "time-per-day",
+      title: "Time Spent Per Day",
+      description: "Minutes spent studying",
+      accentColor: "#14B8A6",
+      content: <TimePerDayChart data={timePerDay} />,
+    },
+    {
+      key: "accuracy",
+      title: "Accuracy Over Time",
+      description: "(Good + Easy) / Total percentage per day",
+      accentColor: "#0CBF4C",
+      content: <AccuracyChart data={accuracyData} />,
+    },
+    {
+      key: "forecast",
+      title: "Review Forecast",
+      description: "Predicted reviews for the next 30 days",
+      accentColor: "#F59E0B",
+      content: <ReviewForecast data={forecastData} />,
+    },
+    {
+      key: "card-state",
+      title: "Card State Breakdown",
+      description: "Distribution of cards by scheduling state",
+      accentColor: "#8B5CF6",
+      content: <CardStateDonut data={MOCK_CARD_STATE} />,
+    },
+    {
+      key: "answer-dist",
+      title: "Answer Distribution",
+      description: "Breakdown of answer buttons pressed per day",
+      accentColor: "#DF1B41",
+      className: "lg:col-span-2",
+      content: <AnswerDistribution data={answerDistribution} />,
+    },
+    {
+      key: "interval",
+      title: "Interval Distribution",
+      description: "Cards grouped by current review interval",
+      accentColor: "#F97316",
+      content: <IntervalHistogram data={MOCK_INTERVAL_DISTRIBUTION} />,
+    },
+    {
+      key: "hourly",
+      title: "Hourly Breakdown",
+      description: "Study activity and performance by hour of day",
+      accentColor: "#3B82F6",
+      content: <HourlyBreakdown data={hourlyData} />,
+    },
+    {
+      key: "language-progress",
+      title: "Language Progress",
+      description: "Per-language cards learned with level breakdown",
+      className: "lg:col-span-2",
+      content: <LanguageProgress data={MOCK_LANGUAGE_STATS} />,
+    },
+    {
+      key: "streak",
+      title: "Study Activity",
+      description: "Study intensity for the last year",
+      accentColor: "#635BFF",
+      className: "lg:col-span-2",
+      content: <StreakCalendar data={streakData} />,
+    },
+  ];
 
   return (
-    <div className="space-y-6">
-      {/* Page Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-xl font-semibold text-[var(--text-primary)]" style={{ letterSpacing: "-0.02em" }}>
-            Statistics
-          </h1>
-          <p className="text-sm text-[var(--text-tertiary)] mt-0.5">
-            Track your progress and study habits
-          </p>
-        </div>
+    <div>
+      {/* Page title */}
+      <div className="flex items-center gap-3 mb-1.5">
+        <h1
+          className="text-[32px] font-bold page-header-gradient"
+          style={{ letterSpacing: "-0.03em" }}
+        >
+          Statistics
+        </h1>
+        <motion.div
+          animate={{ scale: [1, 1.15, 1] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+        >
+          <Activity className="w-5 h-5" style={{ color: "#635BFF" }} />
+        </motion.div>
       </div>
+      <p className="text-[14px] text-[var(--text-tertiary)] mb-8">
+        Track your progress and study habits
+      </p>
 
-      {/* Controls Bar: Time Period Tabs + Language Filter */}
-      <div className="flex items-center justify-between gap-4 flex-wrap">
-        {/* Time Period Tabs */}
-        <div className="flex items-center bg-[var(--surface-1)] border border-[var(--surface-3)] rounded-lg p-1 gap-0.5">
+      {/* Controls row */}
+      <div className="flex items-center justify-between gap-4 flex-wrap mb-10">
+        {/* Period tabs */}
+        <div
+          className="flex items-center gap-1.5 p-1.5 rounded-xl"
+          style={{
+            background: "var(--glass-bg)",
+            border: "1px solid var(--glass-border)",
+            backdropFilter: "var(--glass-blur)",
+          }}
+        >
           {TIME_PERIODS.map((period) => (
             <button
               key={period.key}
               onClick={() => setActivePeriod(period.key)}
-              className={`
-                px-4 py-1.5 rounded-lg text-xs font-medium transition-all duration-150
-                ${
-                  activePeriod === period.key
-                    ? "bg-[var(--surface-0)] text-[var(--text-primary)] shadow-sm"
-                    : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
-                }
-              `}
+              className="relative rounded-lg text-[13px] font-medium transition-all duration-200 cursor-pointer"
+              style={{
+                padding: activePeriod === period.key ? "8px 20px" : "8px 16px",
+                fontWeight: activePeriod === period.key ? 700 : 500,
+                color: activePeriod === period.key ? "white" : "var(--text-tertiary)",
+                background: activePeriod === period.key
+                  ? "linear-gradient(135deg, #635BFF, #7C3AED)"
+                  : "transparent",
+                boxShadow: activePeriod === period.key
+                  ? "0 4px 14px rgba(99,91,255,0.35)"
+                  : "none",
+                letterSpacing: activePeriod === period.key ? "-0.01em" : "0",
+              }}
             >
               {period.label}
             </button>
           ))}
         </div>
 
-        {/* Language Filter Dropdown */}
+        {/* Language filter */}
         <div className="relative">
           <button
             onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
-            className="flex items-center gap-2 px-3 py-1.5 bg-[var(--surface-1)] border border-[var(--surface-3)] rounded-xl text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors btn-spring"
+            style={{
+              background: "var(--glass-bg)",
+              border: "1px solid var(--glass-border)",
+              backdropFilter: "var(--glass-blur)",
+            }}
           >
             <Globe className="w-3.5 h-3.5" />
             {LANGUAGE_OPTIONS.find((l) => l.value === selectedLanguage)?.label}
@@ -437,234 +529,130 @@ export default function StatsPage() {
           </button>
           <AnimatePresence>
             {languageDropdownOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -4, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -4, scale: 0.98 }}
-                transition={{ duration: 0.15 }}
-                className="absolute right-0 top-full mt-1 z-50 bg-[var(--surface-0)] border border-[var(--surface-3)] rounded-xl shadow-elevated overflow-hidden min-w-[180px]"
-              >
-                {LANGUAGE_OPTIONS.map((lang) => (
-                  <button
-                    key={lang.value}
-                    onClick={() => {
-                      setSelectedLanguage(lang.value);
-                      setLanguageDropdownOpen(false);
-                    }}
-                    className={`
-                      w-full text-left px-3 py-2 text-xs transition-colors
-                      ${
+              <>
+                {/* Backdrop to close dropdown */}
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setLanguageDropdownOpen(false)}
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: -4, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -4, scale: 0.98 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute right-0 top-full mt-1 z-50 rounded-lg shadow-elevated overflow-hidden min-w-[200px]"
+                  style={{
+                    background: "var(--surface-1)",
+                    border: "1px solid var(--glass-border)",
+                    boxShadow: "var(--shadow-elevated)",
+                  }}
+                >
+                  {LANGUAGE_OPTIONS.map((lang) => (
+                    <button
+                      key={lang.value}
+                      onClick={() => { setSelectedLanguage(lang.value); setLanguageDropdownOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-[13px] transition-colors ${
                         selectedLanguage === lang.value
-                          ? "bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-medium"
+                          ? "font-semibold"
                           : "text-[var(--text-secondary)] hover:bg-[var(--surface-2)]"
-                      }
-                    `}
-                  >
-                    {lang.label}
-                  </button>
-                ))}
-              </motion.div>
+                      }`}
+                      style={selectedLanguage === lang.value ? {
+                        background: "rgba(99, 91, 255, 0.08)",
+                        color: "#635BFF",
+                      } : undefined}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </motion.div>
+              </>
             )}
           </AnimatePresence>
         </div>
       </div>
 
-      {/* Summary Stats Row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {[
-          {
-            label: "Total Reviews",
-            value: totalReviewsPeriod.toLocaleString(),
-            icon: BarChart3,
-            color: "text-indigo-500",
-          },
-          {
-            label: "Avg Per Day",
-            value: avgPerDay.toString(),
-            icon: TrendingUp,
-            color: "text-green-500",
-          },
-          {
-            label: "Total Time",
-            value: `${Math.round(totalTimePeriod)} min`,
-            icon: Clock,
-            color: "text-amber-500",
-          },
-          {
-            label: "Avg Time/Day",
-            value: `${avgTimePeriod} min`,
-            icon: Timer,
-            color: "text-blue-500",
-          },
-        ].map((stat) => (
-          <Card key={stat.label} variant="default" padding="md">
-            <div className="flex items-center gap-3">
+      {/* Summary metrics */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        {metricTiles.map((stat, i) => {
+          const Icon = stat.icon;
+          return (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+            >
               <div
-                className={`p-2 rounded-lg bg-[var(--surface-2)] ${stat.color}`}
+                className="metric-tile"
+                style={{
+                  "--accent-color": stat.color,
+                  "--accent-end": stat.color,
+                  "--glow-color": `${stat.color}15`,
+                } as React.CSSProperties}
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty("--mouse-x", `${((e.clientX - rect.left) / rect.width) * 100}%`);
+                  e.currentTarget.style.setProperty("--mouse-y", `${((e.clientY - rect.top) / rect.height) * 100}%`);
+                }}
               >
-                <stat.icon className="w-4 h-4" />
-              </div>
-              <div>
-                <p className="text-[11px] text-[var(--text-tertiary)] font-medium">
-                  {stat.label}
-                </p>
-                <p className="text-lg font-semibold text-[var(--text-primary)]">
+                <div className="flex items-center gap-2.5 mb-3">
+                  <div
+                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    style={{
+                      background: `linear-gradient(135deg, ${stat.color}, ${stat.color}cc)`,
+                      boxShadow: `0 4px 14px ${stat.color}30`,
+                    }}
+                  >
+                    <Icon className="w-4.5 h-4.5 text-white" />
+                  </div>
+                  <p className="text-[13px] text-[var(--text-tertiary)] font-medium">
+                    {stat.label}
+                  </p>
+                </div>
+                <p
+                  className="text-[30px] font-bold text-[var(--text-primary)]"
+                  style={{ letterSpacing: "-0.02em", fontVariantNumeric: "tabular-nums" }}
+                >
                   {stat.value}
                 </p>
               </div>
-            </div>
-          </Card>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
 
-      {/* Chart Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Cards Reviewed Per Day */}
-        <Card variant="default" padding="lg" className="lg:col-span-2">
-          <CardHeader>
-            <div>
-              <CardTitle>Cards Reviewed Per Day</CardTitle>
-              <CardDescription>
-                Daily review count with language breakdown
-              </CardDescription>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <BarChart3 className="w-4 h-4 text-[var(--text-tertiary)]" />
-            </div>
-          </CardHeader>
-          <CardsPerDayChart
-            data={cardsPerDay}
-            languages={
-              selectedLanguage === "all" ? LANGUAGE_CHART_CONFIG : undefined
-            }
-            showTrend
-          />
-        </Card>
-
-        {/* Time Spent Per Day */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Time Spent Per Day</CardTitle>
-              <CardDescription>Minutes spent studying</CardDescription>
-            </div>
-            <Clock className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <TimePerDayChart data={timePerDay} />
-        </Card>
-
-        {/* Accuracy Over Time */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Accuracy Over Time</CardTitle>
-              <CardDescription>
-                (Good + Easy) / Total percentage per day
-              </CardDescription>
-            </div>
-            <Target className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <AccuracyChart data={accuracyData} />
-        </Card>
-
-        {/* Review Forecast */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Review Forecast</CardTitle>
-              <CardDescription>
-                Predicted reviews for the next 30 days
-              </CardDescription>
-            </div>
-            <TrendingUp className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <ReviewForecast data={forecastData} />
-        </Card>
-
-        {/* Card State Breakdown */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Card State Breakdown</CardTitle>
-              <CardDescription>
-                Distribution of cards by scheduling state
-              </CardDescription>
-            </div>
-            <PieChartIcon className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <CardStateDonut data={MOCK_CARD_STATE} />
-        </Card>
-
-        {/* Answer Distribution */}
-        <Card variant="default" padding="lg" className="lg:col-span-2">
-          <CardHeader>
-            <div>
-              <CardTitle>Answer Distribution</CardTitle>
-              <CardDescription>
-                Breakdown of answer buttons pressed per day
-              </CardDescription>
-            </div>
-            <Activity className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <AnswerDistribution data={answerDistribution} />
-        </Card>
-
-        {/* Interval Distribution */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Interval Distribution</CardTitle>
-              <CardDescription>
-                Cards grouped by current review interval
-              </CardDescription>
-            </div>
-            <BarChart3 className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <IntervalHistogram data={MOCK_INTERVAL_DISTRIBUTION} />
-        </Card>
-
-        {/* Hourly Breakdown */}
-        <Card variant="default" padding="lg">
-          <CardHeader>
-            <div>
-              <CardTitle>Hourly Breakdown</CardTitle>
-              <CardDescription>
-                Study activity and performance by hour of day
-              </CardDescription>
-            </div>
-            <Timer className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <HourlyBreakdown data={hourlyData} />
-        </Card>
-
-        {/* Language Progress */}
-        <Card variant="default" padding="lg" className="lg:col-span-2">
-          <CardHeader>
-            <div>
-              <CardTitle>Language Progress</CardTitle>
-              <CardDescription>
-                Per-language cards learned with level breakdown
-              </CardDescription>
-            </div>
-            <Globe className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <LanguageProgress data={MOCK_LANGUAGE_STATS} />
-        </Card>
-
-        {/* Streak Calendar */}
-        <Card variant="default" padding="lg" className="lg:col-span-2">
-          <CardHeader>
-            <div>
-              <CardTitle>Study Activity</CardTitle>
-              <CardDescription>
-                Study intensity for the last year
-              </CardDescription>
-            </div>
-            <Flame className="w-4 h-4 text-[var(--text-tertiary)]" />
-          </CardHeader>
-          <StreakCalendar data={streakData} />
-        </Card>
+      {/* Section Divider */}
+      <div className="mb-10">
+        <div
+          className="h-px w-full"
+          style={{
+            background: "linear-gradient(90deg, transparent, var(--surface-3) 20%, var(--surface-3) 80%, transparent)",
+          }}
+        />
       </div>
+
+      {/* Chart grid with staggered entrance */}
+      {mounted && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {chartEntries.map((chart, i) => (
+            <motion.div
+              key={chart.key}
+              className={chart.className || ""}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 + i * 0.06, duration: 0.5 }}
+            >
+              <ChartCard
+                title={chart.title}
+                description={chart.description}
+                accentColor={chart.accentColor}
+              >
+                {chart.content}
+              </ChartCard>
+            </motion.div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

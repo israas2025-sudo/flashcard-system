@@ -83,6 +83,12 @@ const deckTree = [
   },
 ];
 
+const deckColorMap: Record<string, string> = {
+  arabic: "#F59E0B",
+  egyptian: "#8B5CF6",
+  spanish: "#F97316",
+};
+
 interface EditorCard {
   id: string;
   front: string;
@@ -127,19 +133,20 @@ export default function BrowserPage() {
   const handleClearSelection = () => setSelectedCards(new Set());
 
   return (
-    <div className="flex h-[calc(100vh-52px-64px)] -m-8">
+    <div className="flex h-[calc(100vh-64px)] -m-8">
       {/* Left sidebar - Filters */}
-      <div className="w-64 border-r border-[var(--surface-3)] bg-[var(--surface-1)] flex flex-col overflow-hidden">
+      <div className="w-64 border-r border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-xl flex flex-col overflow-hidden">
         {/* View mode toggle */}
-        <div className="p-3 border-b border-[var(--surface-3)]">
-          <div className="flex bg-[var(--surface-2)] rounded-lg p-0.5">
+        <div className="p-3 border-b border-[var(--glass-border)]">
+          <div className="flex bg-[var(--surface-2)] rounded-lg p-0.5 border border-[var(--glass-border)]">
             <button
               onClick={() => setViewMode("cards")}
               className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-md text-xs font-medium transition-all ${
                 viewMode === "cards"
-                  ? "bg-[var(--surface-0)] text-[var(--text-primary)] shadow-sm"
-                  : "text-[var(--text-tertiary)]"
+                  ? "text-white shadow-sm"
+                  : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
               }`}
+              style={viewMode === "cards" ? { background: "linear-gradient(135deg, #635BFF, #7C3AED)" } : undefined}
             >
               <Layers className="w-3.5 h-3.5" />
               Cards
@@ -148,9 +155,10 @@ export default function BrowserPage() {
               onClick={() => setViewMode("notes")}
               className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-md text-xs font-medium transition-all ${
                 viewMode === "notes"
-                  ? "bg-[var(--surface-0)] text-[var(--text-primary)] shadow-sm"
-                  : "text-[var(--text-tertiary)]"
+                  ? "text-white shadow-sm"
+                  : "text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
               }`}
+              style={viewMode === "notes" ? { background: "linear-gradient(135deg, #635BFF, #7C3AED)" } : undefined}
             >
               <FileText className="w-3.5 h-3.5" />
               Notes
@@ -161,7 +169,10 @@ export default function BrowserPage() {
         <div className="flex-1 overflow-y-auto">
           {/* State filters */}
           <div className="p-3">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2">
+            <p
+              className="browser-section-label text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2"
+              style={{ "--accent-color": "#635BFF" } as React.CSSProperties}
+            >
               Status
             </p>
             {stateFilters.map((filter) => (
@@ -170,7 +181,7 @@ export default function BrowserPage() {
                 onClick={() => setStateFilter(filter.key)}
                 className={`w-full flex items-center justify-between px-2 py-1.5 rounded-md text-xs transition-colors ${
                   stateFilter === filter.key
-                    ? "bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400"
+                    ? "browser-filter-active bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400"
                     : "text-[var(--text-secondary)] hover:bg-[var(--surface-2)]"
                 }`}
               >
@@ -183,8 +194,11 @@ export default function BrowserPage() {
           </div>
 
           {/* Flag filters */}
-          <div className="p-3 border-t border-[var(--surface-3)]">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2">
+          <div className="p-3 border-t border-[var(--glass-border)]">
+            <p
+              className="browser-section-label text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2"
+              style={{ "--accent-color": "#DF1B41" } as React.CSSProperties}
+            >
               Flags
             </p>
             <div className="flex gap-1.5 px-2">
@@ -199,73 +213,95 @@ export default function BrowserPage() {
           </div>
 
           {/* Deck tree */}
-          <div className="p-3 border-t border-[var(--surface-3)]">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2">
+          <div className="p-3 border-t border-[var(--glass-border)]">
+            <p
+              className="browser-section-label text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2"
+              style={{ "--accent-color": "#F59E0B" } as React.CSSProperties}
+            >
               Decks
             </p>
-            {deckTree.map((deck) => (
-              <div key={deck.id}>
-                <button
-                  onClick={() => toggleDeck(deck.id)}
-                  className="w-full flex items-center gap-1.5 px-2 py-1.5 rounded-md text-xs text-[var(--text-secondary)] hover:bg-[var(--surface-2)] transition-colors"
-                >
-                  <ChevronDown
-                    className={`w-3 h-3 transition-transform ${
-                      expandedDecks.has(deck.id) ? "" : "-rotate-90"
-                    }`}
-                  />
-                  <span className="font-medium">{deck.name}</span>
-                </button>
-                <AnimatePresence>
-                  {expandedDecks.has(deck.id) && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.15 }}
-                      className="overflow-hidden"
-                    >
-                      {deck.children.map((child) => (
-                        <button
-                          key={child.id}
-                          onClick={() => setSelectedDeck(child.id)}
-                          className={`w-full flex items-center justify-between pl-7 pr-2 py-1.5 rounded-md text-xs transition-colors ${
-                            selectedDeck === child.id
-                              ? "bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400"
-                              : "text-[var(--text-tertiary)] hover:bg-[var(--surface-2)]"
-                          }`}
-                        >
-                          <span>{child.name}</span>
-                          <span className="text-[10px] text-[var(--text-tertiary)]">
-                            {child.count}
-                          </span>
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+            {deckTree.map((deck) => {
+              const deckColor = deckColorMap[deck.id] || "#9CA3AF";
+              return (
+                <div key={deck.id}>
+                  <button
+                    onClick={() => toggleDeck(deck.id)}
+                    className="w-full flex items-center gap-1.5 px-2 py-1.5 rounded-md text-xs text-[var(--text-secondary)] hover:bg-[var(--surface-2)] transition-colors"
+                  >
+                    <ChevronDown
+                      className={`w-3 h-3 transition-transform ${
+                        expandedDecks.has(deck.id) ? "" : "-rotate-90"
+                      }`}
+                    />
+                    <span
+                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: deckColor }}
+                    />
+                    <span className="font-medium">{deck.name}</span>
+                  </button>
+                  <AnimatePresence>
+                    {expandedDecks.has(deck.id) && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                        className="overflow-hidden"
+                      >
+                        {deck.children.map((child) => (
+                          <button
+                            key={child.id}
+                            onClick={() => setSelectedDeck(child.id)}
+                            className={`w-full flex items-center justify-between pl-7 pr-2 py-1.5 rounded-md text-xs transition-colors ${
+                              selectedDeck === child.id
+                                ? "browser-filter-active bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400"
+                                : "text-[var(--text-tertiary)] hover:bg-[var(--surface-2)]"
+                            }`}
+                          >
+                            <div className="flex items-center gap-1.5">
+                              <span
+                                className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                                style={{ backgroundColor: deckColor }}
+                              />
+                              <span>{child.name}</span>
+                            </div>
+                            <span className="text-[10px] text-[var(--text-tertiary)]">
+                              {child.count}
+                            </span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
 
           {/* Tag tree */}
-          <div className="p-3 border-t border-[var(--surface-3)]">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2">
+          <div className="p-3 border-t border-[var(--glass-border)]">
+            <p
+              className="browser-section-label text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2"
+              style={{ "--accent-color": "#14B8A6" } as React.CSSProperties}
+            >
               Tags
             </p>
             <TagTree compact />
           </div>
 
           {/* Saved searches */}
-          <div className="p-3 border-t border-[var(--surface-3)]">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2">
+          <div className="p-3 border-t border-[var(--glass-border)]">
+            <p
+              className="browser-section-label text-[10px] font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-2"
+              style={{ "--accent-color": "#8B5CF6" } as React.CSSProperties}
+            >
               Saved Searches
             </p>
             {savedSearches.map((search) => (
               <button
                 key={search}
                 onClick={() => setSearchQuery(search)}
-                className="w-full text-left px-2 py-1.5 rounded-md text-xs text-[var(--text-tertiary)] hover:bg-[var(--surface-2)] hover:text-[var(--text-secondary)] transition-colors font-mono"
+                className="w-full text-left px-2 py-1.5 rounded-md text-xs text-[var(--text-tertiary)] hover:bg-[var(--surface-2)] hover:text-[var(--text-secondary)] transition-colors font-mono bg-[var(--surface-2)]/50 rounded px-2 py-1.5 mb-1"
               >
                 {search}
               </button>
@@ -276,8 +312,18 @@ export default function BrowserPage() {
 
       {/* Main content area */}
       <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Page header */}
+        <div className="px-6 pt-5 pb-3">
+          <h1 className="text-[24px] font-bold page-header-gradient" style={{ letterSpacing: "-0.03em" }}>
+            Browser
+          </h1>
+          <p className="text-[13px] text-[var(--text-tertiary)] mt-1">
+            Search and manage your flashcard collection
+          </p>
+        </div>
+
         {/* Search bar */}
-        <div className="p-4 border-b border-[var(--surface-3)]">
+        <div className="px-6 py-5 border-b border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-sm">
           <SearchBar value={searchQuery} onChange={setSearchQuery} />
         </div>
 
@@ -298,7 +344,8 @@ export default function BrowserPage() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 60, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="border-t border-[var(--surface-3)] bg-[var(--surface-1)] px-4 py-3 flex items-center justify-between"
+              className="border-t border-[var(--glass-border)] px-4 py-3 flex items-center justify-between"
+              style={{ background: "linear-gradient(90deg, rgba(99,91,255,0.10), rgba(124,58,237,0.05))" }}
             >
               <div className="flex items-center gap-4">
                 <span className="text-sm font-medium text-[var(--text-primary)]">
@@ -328,7 +375,13 @@ export default function BrowserPage() {
                   <Copy className="w-3.5 h-3.5" />
                   Duplicate
                 </button>
-                <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-950/40 transition-colors">
+                <button
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-red-500 transition-colors"
+                  style={{
+                    border: "1px solid rgba(239,68,68,0.3)",
+                    background: "linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.04))",
+                  }}
+                >
                   <Trash2 className="w-3.5 h-3.5" />
                   Delete
                 </button>
@@ -346,11 +399,12 @@ export default function BrowserPage() {
             animate={{ width: 360, opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="border-l border-[var(--surface-3)] bg-[var(--surface-1)] overflow-hidden"
+            className="border-l border-[var(--glass-border)] overflow-hidden"
+            style={{ background: "var(--glass-bg)", backdropFilter: "var(--glass-blur)" }}
           >
             <div className="p-4 w-[360px]">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                <h3 className="text-sm font-semibold page-header-gradient">
                   Edit Card
                 </h3>
                 <button
@@ -437,7 +491,13 @@ export default function BrowserPage() {
               </div>
 
               {/* Save button */}
-              <button className="w-full py-2.5 rounded-xl bg-primary-500 text-white text-sm font-medium hover:bg-primary-600 transition-colors">
+              <button
+                className="w-full py-2.5 rounded-lg text-white text-sm font-medium btn-spring"
+                style={{
+                  background: "linear-gradient(135deg, #635BFF, #7C3AED)",
+                  boxShadow: "0 4px 12px rgba(99,91,255,0.3)",
+                }}
+              >
                 Save Changes
               </button>
             </div>

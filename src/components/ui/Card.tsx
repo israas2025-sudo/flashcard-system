@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
 
 type CardVariant = "default" | "elevated" | "outline" | "glass";
 
-interface CardProps extends Omit<HTMLMotionProps<"div">, "ref"> {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: CardVariant;
   padding?: "none" | "sm" | "md" | "lg";
   hoverable?: boolean;
@@ -16,7 +15,7 @@ const variantStyles: Record<CardVariant, string> = {
   default:
     "bg-[var(--surface-1)] border border-[var(--surface-3)] shadow-card",
   elevated:
-    "bg-[var(--surface-0)] border border-[var(--surface-3)] shadow-elevated",
+    "bg-[var(--surface-1)] border border-[var(--surface-3)] shadow-elevated",
   outline:
     "bg-transparent border border-[var(--surface-3)]",
   glass: "glass",
@@ -38,24 +37,18 @@ export function Card({
   ...props
 }: CardProps) {
   return (
-    <motion.div
-      whileHover={
-        hoverable
-          ? { y: -2, boxShadow: "0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)" }
-          : undefined
-      }
-      transition={{ duration: 0.2 }}
+    <div
       className={`
-        rounded-xl
+        rounded-lg
         ${variantStyles[variant]}
         ${paddingStyles[padding]}
-        ${hoverable ? "cursor-pointer transition-shadow" : ""}
+        ${hoverable ? "cursor-pointer hover:shadow-card-hover transition-shadow duration-150" : ""}
         ${className}
       `}
       {...props}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 

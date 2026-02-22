@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Volume2, BookOpen } from "lucide-react";
+import { Volume2, BookOpen, ChevronDown } from "lucide-react";
 import { useSound } from "@/hooks/useSound";
 
 interface FlashcardProps {
@@ -25,7 +25,7 @@ interface FlashcardProps {
 
 const languageStyles: Record<
   string,
-  { textClass: string; bgAccent: string; fontClass: string; isRTL: boolean; ttsLang: string }
+  { textClass: string; bgAccent: string; fontClass: string; isRTL: boolean; ttsLang: string; accentColor: string; accentBg: string }
 > = {
   arabic: {
     textClass: "text-arabic-600 dark:text-arabic-400",
@@ -33,6 +33,8 @@ const languageStyles: Record<
     fontClass: "arabic-text",
     isRTL: true,
     ttsLang: "ar-SA",
+    accentColor: "#F59E0B",
+    accentBg: "rgba(245,158,11,0.06)",
   },
   quran: {
     textClass: "text-quran-600 dark:text-quran-400",
@@ -40,6 +42,8 @@ const languageStyles: Record<
     fontClass: "quran-text",
     isRTL: true,
     ttsLang: "ar-SA",
+    accentColor: "#14B8A6",
+    accentBg: "rgba(20,184,166,0.06)",
   },
   spanish: {
     textClass: "text-spanish-600 dark:text-spanish-400",
@@ -47,6 +51,8 @@ const languageStyles: Record<
     fontClass: "",
     isRTL: false,
     ttsLang: "es-ES",
+    accentColor: "#F97316",
+    accentBg: "rgba(249,115,22,0.06)",
   },
   egyptian: {
     textClass: "text-egyptian-600 dark:text-egyptian-400",
@@ -54,6 +60,8 @@ const languageStyles: Record<
     fontClass: "arabic-text",
     isRTL: true,
     ttsLang: "ar-EG",
+    accentColor: "#8B5CF6",
+    accentBg: "rgba(139,92,246,0.06)",
   },
 };
 
@@ -86,6 +94,7 @@ export function Flashcard({
   const voicesRef = useRef<SpeechSynthesisVoice[]>([]);
   const recitationRef = useRef<HTMLAudioElement | null>(null);
   const hasAutoPlayed = useRef(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   // Preload voices — Chrome loads them asynchronously
   useEffect(() => {
@@ -110,7 +119,6 @@ export function Flashcard({
         return;
       }
 
-      // Use Web Speech API for TTS
       if (typeof window !== "undefined" && "speechSynthesis" in window) {
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(text);
@@ -118,7 +126,6 @@ export function Flashcard({
         utterance.rate = 0.85;
         utterance.pitch = 1;
 
-        // Use preloaded voices, fall back to fresh fetch
         const voices = voicesRef.current.length > 0
           ? voicesRef.current
           : window.speechSynthesis.getVoices();
@@ -138,7 +145,6 @@ export function Flashcard({
     [audioUrl, style.ttsLang, playSound]
   );
 
-  // Play recitation helper (non-event version for auto-play)
   const playRecitationAuto = useCallback(() => {
     if (!surahNumber || !ayahNumber) return;
     if (recitationRef.current) {
@@ -153,7 +159,6 @@ export function Flashcard({
     audio.play().catch(() => {});
   }, [surahNumber, ayahNumber]);
 
-  // Auto-play when a new card mounts (front side)
   useEffect(() => {
     hasAutoPlayed.current = false;
     const isQA = noteType === "quran-ayah" && surahNumber && ayahNumber;
@@ -171,16 +176,15 @@ export function Flashcard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [front]);
 
-  // Auto-play TTS when card flips to back
   useEffect(() => {
     if (isFlipped) {
+      setShowDetails(false);
       const timer = setTimeout(() => speakText(front), 300);
       return () => clearTimeout(timer);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFlipped]);
 
-  // Cleanup recitation audio on unmount
   useEffect(() => {
     return () => {
       if (recitationRef.current) {
@@ -190,12 +194,10 @@ export function Flashcard({
     };
   }, []);
 
-  // Quran recitation via EveryAyah.com (Mishary Rashid Alafasy)
   const playRecitation = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     if (!surahNumber || !ayahNumber) return;
 
-    // Stop any existing recitation
     if (recitationRef.current) {
       recitationRef.current.pause();
       recitationRef.current = null;
@@ -225,6 +227,7 @@ export function Flashcard({
   const showSentenceButton = !!exampleSentence && noteType !== "quran-ayah";
   const showTransliteration = !!transliteration;
   const showAudioButton = language === "arabic" || language === "quran" || language === "egyptian" || language === "spanish" || !!audioUrl;
+  const hasPattern = !!notes && noteType !== "quran-ayah";
 
   return (
     <motion.div
@@ -259,16 +262,29 @@ export function Flashcard({
               WebkitBackfaceVisibility: "hidden",
             }}
           >
-            {/* Frosted glass edge effect */}
             <div className="absolute inset-0 rounded-2xl overflow-hidden">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             </div>
 
+            {/* Audio button — top right */}
+            {showAudioButton && (
+              <button
+                onClick={handleAudioPlay}
+                className="absolute top-4 right-4 p-2.5 rounded-full hover:bg-[var(--surface-2)] transition-colors z-10"
+                aria-label="Play pronunciation"
+              >
+                <Volume2 className={`w-4 h-4 ${style.textClass}`} />
+              </button>
+            )}
+
             <div className="flex flex-col items-center justify-center h-full p-8">
-              {/* Language badge - subtle dot + muted label */}
+              {/* Language badge */}
               <div className="flex items-center gap-1.5 mb-8">
-                <div className={`w-2 h-2 rounded-full ${style.textClass.includes('arabic') ? 'bg-arabic-500' : style.textClass.includes('quran') ? 'bg-quran-500' : style.textClass.includes('spanish') ? 'bg-spanish-500' : 'bg-egyptian-500'}`} />
+                <div
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: style.accentColor }}
+                />
                 <span className="text-xs text-[var(--text-tertiary)] font-medium">
                   {languageLabels[language]}
                 </span>
@@ -280,7 +296,11 @@ export function Flashcard({
                 dir={style.isRTL ? "rtl" : "ltr"}
               >
                 <p
-                  className={`text-3xl font-semibold text-[var(--text-primary)] ${style.fontClass}`}
+                  className={`font-semibold text-[var(--text-primary)] ${style.fontClass}`}
+                  style={{
+                    fontSize: style.isRTL ? "42px" : "30px",
+                    lineHeight: style.isRTL ? "1.6" : "1.3",
+                  }}
                 >
                   {front}
                 </p>
@@ -293,20 +313,9 @@ export function Flashcard({
                 </p>
               )}
 
-              {/* Audio buttons */}
-              <div className="flex items-center gap-3 mt-6">
-                {showAudioButton && (
-                  <button
-                    onClick={handleAudioPlay}
-                    className="p-3 rounded-full hover:bg-[var(--surface-2)] transition-colors group"
-                    aria-label="Play pronunciation"
-                  >
-                    <Volume2
-                      className={`w-5 h-5 ${style.textClass} group-hover:scale-110 transition-transform`}
-                    />
-                  </button>
-                )}
-                {isQuranAyah && (
+              {/* Quran recitation button */}
+              {isQuranAyah && (
+                <div className="mt-6">
                   <button
                     onClick={playRecitation}
                     className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-quran-50 dark:hover:bg-quran-950/30 transition-colors border border-quran-200 dark:border-quran-800"
@@ -317,8 +326,8 @@ export function Flashcard({
                       Alafasy
                     </span>
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -336,6 +345,17 @@ export function Flashcard({
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
             </div>
 
+            {/* Audio button — top right */}
+            {showAudioButton && (
+              <button
+                onClick={handleAudioPlay}
+                className="absolute top-4 right-4 p-2.5 rounded-full hover:bg-[var(--surface-2)] transition-colors z-10"
+                aria-label="Play pronunciation"
+              >
+                <Volume2 className={`w-4 h-4 ${style.textClass}`} />
+              </button>
+            )}
+
             <div className="flex flex-col h-full p-8 overflow-y-auto">
               {/* Top: Front text at reduced opacity */}
               <motion.div
@@ -345,14 +365,11 @@ export function Flashcard({
                 className={`text-center mb-1 ${style.isRTL ? "direction-rtl" : ""}`}
                 dir={style.isRTL ? "rtl" : "ltr"}
               >
-                <p
-                  className={`text-lg text-[var(--text-secondary)] ${style.fontClass}`}
-                >
+                <p className={`text-lg text-[var(--text-secondary)] ${style.fontClass}`}>
                   {front}
                 </p>
               </motion.div>
 
-              {/* Transliteration on back too */}
               {showTransliteration && (
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -364,7 +381,6 @@ export function Flashcard({
                 </motion.p>
               )}
 
-              {/* Divider */}
               <div className="w-12 h-px bg-[var(--surface-3)] mx-auto mb-4" />
 
               {/* Main answer */}
@@ -379,7 +395,7 @@ export function Flashcard({
                 </p>
               </motion.div>
 
-              {/* Metadata row (part of speech, root) */}
+              {/* Metadata row */}
               {(partOfSpeech || root) && (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -400,13 +416,17 @@ export function Flashcard({
                 </motion.div>
               )}
 
-              {/* Example sentence */}
+              {/* Example sentence — language-tinted */}
               {exampleSentence && (
                 <motion.div
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="bg-[var(--surface-1)] rounded-xl p-4 mb-4 border border-[var(--surface-3)]"
+                  className="rounded-xl p-4 mb-4"
+                  style={{
+                    backgroundColor: style.accentBg,
+                    borderLeft: `2px solid ${style.accentColor}`,
+                  }}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-1.5">
@@ -438,8 +458,31 @@ export function Flashcard({
                 </motion.div>
               )}
 
-              {/* Notes */}
-              {notes && (
+              {/* Collapsible details */}
+              {hasPattern && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.35 }}
+                >
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowDetails(!showDetails); }}
+                    className="flex items-center gap-1.5 text-xs text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] transition-colors mb-2"
+                  >
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform ${showDetails ? "rotate-180" : ""}`}
+                    />
+                    More details
+                  </button>
+                  {showDetails && (
+                    <div className="text-xs text-[var(--text-tertiary)] leading-relaxed px-1">
+                      {notes}
+                    </div>
+                  )}
+                </motion.div>
+              )}
+
+              {notes && !hasPattern && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -452,22 +495,10 @@ export function Flashcard({
                 </motion.div>
               )}
 
-              {/* Spacer + Audio buttons */}
               <div className="flex-1" />
-              <div className="flex items-center justify-center gap-3 mt-4">
-                {showAudioButton && (
-                  <button
-                    onClick={handleAudioPlay}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl hover:bg-[var(--surface-2)] transition-colors border border-[var(--surface-3)]"
-                    aria-label="Play pronunciation"
-                  >
-                    <Volume2 className={`w-4 h-4 ${style.textClass}`} />
-                    <span className="text-xs font-medium text-[var(--text-secondary)]">
-                      Hear word
-                    </span>
-                  </button>
-                )}
-                {isQuranAyah && (
+
+              {isQuranAyah && (
+                <div className="flex items-center justify-center mt-4">
                   <button
                     onClick={playRecitation}
                     className="flex items-center gap-1.5 px-4 py-2 rounded-xl hover:bg-quran-50 dark:hover:bg-quran-950/30 transition-colors border border-quran-200 dark:border-quran-800"
@@ -478,8 +509,8 @@ export function Flashcard({
                       Hear recitation
                     </span>
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>

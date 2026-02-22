@@ -122,7 +122,8 @@ function PresetCard({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12, transition: { duration: 0.15 } }}
-      className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-5 shadow-card hover:shadow-card-hover transition-shadow"
+      className="bg-[var(--surface-1)] rounded-lg border border-[var(--surface-3)] p-5 transition-shadow"
+    style={{ boxShadow: "var(--shadow-card)" }}
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
@@ -434,7 +435,7 @@ function PresetModal({
         initial={{ opacity: 0, scale: 0.95, y: 10 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
-        className="relative w-full max-w-lg bg-[var(--surface-0)] rounded-2xl border border-[var(--surface-3)] shadow-xl overflow-hidden"
+        className="relative w-full max-w-lg bg-[var(--surface-0)] rounded-lg border border-[var(--surface-3)] shadow-xl overflow-hidden"
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--surface-3)]">
@@ -609,7 +610,7 @@ function DeleteConfirmModal({
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="relative w-full max-w-sm bg-[var(--surface-0)] rounded-2xl border border-[var(--surface-3)] shadow-xl p-6"
+        className="relative w-full max-w-sm bg-[var(--surface-0)] rounded-lg border border-[var(--surface-3)] shadow-xl p-6"
       >
         <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
           Delete Preset
@@ -735,42 +736,41 @@ export default function StudyPresetsPage() {
   const unpinnedPresets = presets.filter((p) => !p.isPinned);
 
   return (
-    <div className="space-y-8">
+    <div>
       {/* Page Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="flex items-center justify-between"
-      >
+      <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-semibold text-[var(--text-primary)] flex items-center gap-3">
-            <Sparkles className="w-7 h-7 text-primary-500" />
-            Smart Study
+          <h1
+            className="text-[28px] font-semibold text-[var(--text-primary)]"
+            style={{ letterSpacing: "-0.02em" }}
+          >
+            Study Presets
           </h1>
-          <p className="text-sm text-[var(--text-secondary)] mt-1">
-            Save tag and deck combinations as presets for focused study sessions
+          <p className="text-[13px] text-[var(--text-tertiary)] mt-1">
+            Save tag and deck combinations for focused study sessions
           </p>
         </div>
-        <motion.button
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
+        <button
           onClick={() => {
             setEditingPreset(null);
             setModalOpen(true);
           }}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium shadow-sm transition-colors"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-medium transition-colors"
+          style={{ backgroundColor: "#635BFF", color: "white", boxShadow: "0 1px 3px rgba(50,50,93,0.11), 0 1px 2px rgba(0,0,0,0.08)" }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#5851EB")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#635BFF")}
         >
-          <Plus className="w-4 h-4" />
+          <Plus className="w-3.5 h-3.5" />
           Create Preset
-        </motion.button>
-      </motion.div>
+        </button>
+      </div>
 
       {/* Error Banner */}
       {error && (
         <motion.div
           initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
-          className="px-4 py-3 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm"
+          className="px-4 py-3 rounded-md bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm"
         >
           {error}
         </motion.div>
@@ -782,7 +782,7 @@ export default function StudyPresetsPage() {
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="h-40 rounded-xl bg-[var(--surface-1)] border border-[var(--surface-3)] animate-pulse"
+              className="h-40 rounded-md bg-[var(--surface-1)] border border-[var(--surface-3)] animate-pulse"
             />
           ))}
         </div>
@@ -839,7 +839,7 @@ export default function StudyPresetsPage() {
                 animate={{ opacity: 1 }}
                 className="flex flex-col items-center justify-center py-16 text-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary-50 dark:bg-primary-950/20 flex items-center justify-center mb-4">
+                <div className="w-16 h-16 rounded-lg bg-primary-50 dark:bg-primary-950/20 flex items-center justify-center mb-4">
                   <BookOpen className="w-8 h-8 text-primary-500" />
                 </div>
                 <h3 className="text-lg font-medium text-[var(--text-primary)] mb-1">
@@ -856,7 +856,7 @@ export default function StudyPresetsPage() {
                     setEditingPreset(null);
                     setModalOpen(true);
                   }}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium transition-colors"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   Create Your First Preset

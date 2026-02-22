@@ -166,11 +166,16 @@ function Toggle({
       onClick={() => !disabled && onChange(!checked)}
       disabled={disabled}
       className={`
-        relative inline-flex h-6 w-11 items-center rounded-full transition-colors flex-shrink-0
+        relative inline-flex h-6 w-11 items-center rounded-full transition-all flex-shrink-0
         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
-        ${checked ? "bg-primary-500" : "bg-[var(--surface-3)]"}
         ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
       `}
+      style={checked ? {
+        background: "linear-gradient(135deg, #635BFF, #7C3AED)",
+        boxShadow: "0 2px 8px rgba(99,91,255,0.3)",
+      } : {
+        background: "var(--surface-3)",
+      }}
     >
       <motion.span
         layout
@@ -335,7 +340,8 @@ function ProfileTab({
       <button
         type="button"
         onClick={handleSave}
-        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-primary-500 text-white text-xs font-medium hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-sm"
+        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
+        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -560,7 +566,8 @@ function StudyTab({
       <button
         type="button"
         onClick={handleSave}
-        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-primary-500 text-white text-xs font-medium hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-sm"
+        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
+        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -717,7 +724,8 @@ function LanguagesTab({
       <button
         type="button"
         onClick={handleSave}
-        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-primary-500 text-white text-xs font-medium hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-sm"
+        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
+        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -902,7 +910,8 @@ function AppearanceTab({
       <button
         type="button"
         onClick={handleSave}
-        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-primary-500 text-white text-xs font-medium hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-sm"
+        className="inline-flex items-center gap-2 h-9 px-4 rounded-lg text-white text-xs font-medium btn-spring"
+        style={{ background: "linear-gradient(135deg, #635BFF, #7C3AED)", boxShadow: "0 4px 12px rgba(99,91,255,0.3)" }}
       >
         {saved ? (
           <>
@@ -1210,10 +1219,10 @@ function MoreTab() {
 
       <div className="border-t border-[var(--surface-3)]" />
 
-      {/* Reset Progress */}
-      <div className="space-y-3">
-        <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
-          Reset Progress
+      {/* Reset Progress — Danger Zone */}
+      <div className="space-y-3 p-4 rounded-xl" style={{ border: "1px solid rgba(223,27,65,0.2)", background: "rgba(223,27,65,0.03)" }}>
+        <h4 className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider">
+          Danger Zone
         </h4>
         <p className="text-[10px] text-[var(--text-tertiary)]">
           Clear all saved settings and return to defaults. This cannot be
@@ -1388,30 +1397,33 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div>
       {/* Page Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className="text-2xl font-semibold text-[var(--text-primary)]">
+      <div className="flex items-center gap-3 mb-1">
+        <h1
+          className="text-[28px] font-bold page-header-gradient"
+          style={{ letterSpacing: "-0.03em" }}
+        >
           Settings
         </h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
-          Manage your Lughati account, study preferences, and application
-          configuration.
-        </p>
-      </motion.div>
+        <motion.div
+          animate={{ rotate: [0, 15, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        >
+          <Settings className="w-5 h-5" style={{ color: "#635BFF" }} />
+        </motion.div>
+      </div>
+      <p className="text-[13px] text-[var(--text-tertiary)] mt-1 mb-8">
+        Manage your Lughati account, study preferences, and application
+        configuration.
+      </p>
 
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Sidebar Navigation */}
-        <motion.nav
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 }}
-          className="lg:w-64 flex-shrink-0"
-        >
-          <div className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] overflow-hidden">
+        <nav className="lg:w-64 flex-shrink-0">
+          <div
+            className="glass-card overflow-hidden"
+          >
             {SECTIONS.map((section, index) => {
               const isActive = activeSection === section.id;
 
@@ -1421,41 +1433,38 @@ export default function SettingsPage() {
                   type="button"
                   onClick={() => setActiveSection(section.id)}
                   className={`
-                    w-full flex items-center gap-3 px-4 py-3 text-left transition-all
+                    w-full flex items-center gap-3 px-4 py-3.5 text-left transition-all duration-200
                     ${
                       isActive
-                        ? "bg-primary-50 dark:bg-primary-950/30 border-l-2 border-l-primary-500"
-                        : "hover:bg-[var(--surface-2)] border-l-2 border-l-transparent"
+                        ? "border-l-[3px] border-l-[#635BFF]"
+                        : "hover:bg-[var(--surface-2)] border-l-[3px] border-l-transparent"
                     }
-                    ${index > 0 ? "border-t border-[var(--surface-3)]" : ""}
+                    ${index > 0 ? "border-t border-[var(--glass-border)]" : ""}
                   `}
+                  style={isActive ? {
+                    background: "linear-gradient(90deg, rgba(99,91,255,0.12), transparent)",
+                  } : undefined}
                 >
                   <div
-                    className={`
-                      flex-shrink-0
-                      ${
-                        isActive
-                          ? "text-primary-600 dark:text-primary-400"
-                          : "text-[var(--text-tertiary)]"
-                      }
-                    `}
+                    className="flex-shrink-0"
+                    style={isActive ? {
+                      color: "#635BFF",
+                      filter: "drop-shadow(0 0 4px rgba(99,91,255,0.4))",
+                    } : { color: "var(--text-tertiary)" }}
                   >
                     {section.icon}
                   </div>
                   <div className="min-w-0">
                     <p
-                      className={`
-                        text-xs font-semibold truncate
-                        ${
-                          isActive
-                            ? "text-primary-600 dark:text-primary-400"
-                            : "text-[var(--text-primary)]"
-                        }
-                      `}
+                      className={`text-[13px] font-medium truncate ${
+                        isActive
+                          ? "text-[var(--text-primary)]"
+                          : "text-[var(--text-secondary)]"
+                      }`}
                     >
                       {section.label}
                     </p>
-                    <p className="text-[10px] text-[var(--text-tertiary)] truncate">
+                    <p className="text-[10px] text-[var(--text-tertiary)] truncate hidden lg:block mt-0.5">
                       {section.description}
                     </p>
                   </div>
@@ -1463,29 +1472,24 @@ export default function SettingsPage() {
               );
             })}
           </div>
-        </motion.nav>
+        </nav>
 
         {/* Content Panel */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex-1 min-w-0"
-        >
-          <div className="bg-[var(--surface-1)] rounded-xl border border-[var(--surface-3)] p-6">
+        <div className="flex-1 min-w-0">
+          <div className="glass-card p-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSection}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.15 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2 }}
               >
                 {renderSection()}
               </motion.div>
             </AnimatePresence>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
