@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Search, Mail, Lock } from 'lucide-react';
 import { Input } from './Input';
@@ -16,7 +17,7 @@ const meta: Meta<typeof Input> = {
     fullWidth: { control: 'boolean' },
   },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-sm p-6">
         <Story />
       </div>
@@ -152,7 +153,7 @@ export const FullWidth: Story = {
     fullWidth: true,
   },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-lg p-6">
         <Story />
       </div>

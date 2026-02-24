@@ -10,24 +10,18 @@ import {
   builtInPresets,
   loadPresetsFromStorage,
 } from "@/lib/presets";
-import {
-  allStudyCards,
-  arabicCards,
-  quranAyahCards,
-  spanishCards,
-  egyptianCards,
-} from "@/lib/cards";
+import { allStudyCards } from "@/lib/cards";
 import { LanguageCard } from "@/components/LanguageCard";
 import { TopicGrid } from "@/components/TopicGrid";
 import { getTopicsForLanguage } from "@/lib/topics";
-
-const arabicTotal = arabicCards.length + quranAyahCards.length;
-
-const languages = [
-  { id: "arabic", name: "Arabic (MSA / Quran)", color: "arabic" as const, cards: arabicTotal, due: 52, reviewed: 31, accuracy: 88 },
-  { id: "egyptian", name: "Egyptian Arabic", color: "egyptian" as const, cards: egyptianCards.length, due: 25, reviewed: 8, accuracy: 91 },
-  { id: "spanish", name: "Spanish", color: "spanish" as const, cards: spanishCards.length, due: 35, reviewed: 18, accuracy: 94 },
-];
+import { useUserPreferencesStore } from "@/store/user-preferences-store";
+import { useReviewStore } from "@/store/review-store";
+import { usePathwayStore } from "@/store/pathway-store";
+import {
+  LANGUAGE_DISPLAY,
+  LANGUAGE_CARD_COUNTS,
+  getCardsForLanguage,
+} from "@/lib/language-stats";
 
 const presetColors: Record<string, { color: string; end: string }> = {
   "bi-review-due": { color: "#635BFF", end: "#7C3AED" },
@@ -161,19 +155,29 @@ function TopicSelectionView({ langId }: { langId: string }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
 
-  const lang = languages.find((l) => l.id === langId);
-  const topics = getTopicsForLanguage(langId);
-  const langCards = allStudyCards.filter((c) => {
-    if (langId === "arabic") return c.language === "arabic";
-    return c.language === langId;
-  });
+  const userLanguages = useUserPreferencesStore((s) => s.languages);
+  const reviewStore = useReviewStore();
 
-  const langColorMap: Record<string, string> = {
-    arabic: "#F59E0B",
-    egyptian: "#8B5CF6",
-    spanish: "#F97316",
-  };
-  const accent = langColorMap[langId] || "#635BFF";
+  const display = LANGUAGE_DISPLAY[langId as keyof typeof LANGUAGE_DISPLAY];
+  const cardCount = LANGUAGE_CARD_COUNTS[langId as keyof typeof LANGUAGE_CARD_COUNTS] || 0;
+  const userLang = userLanguages.find((l) => l.id === langId);
+  const langStats = reviewStore.getLanguageStats(langId === "quran" ? "arabic" : langId);
+  const todayReviews = reviewStore.getTodayLanguageReviews(langId === "quran" ? "arabic" : langId);
+
+  const lang = display ? {
+    id: langId,
+    name: display.name,
+    color: display.color,
+    cards: cardCount,
+    due: userLang?.dailyCards || 20,
+    reviewed: todayReviews,
+    accuracy: langStats.accuracy,
+  } : null;
+
+  const topics = getTopicsForLanguage(langId);
+  const langCards = getCardsForLanguage(langId as keyof typeof LANGUAGE_CARD_COUNTS);
+
+  const accent = display?.accent || "#635BFF";
 
   return (
     <motion.div variants={stagger} initial={mounted ? "hidden" : false} animate="show">
@@ -276,6 +280,27 @@ function TopicSelectionView({ langId }: { langId: string }) {
 // ============================================================================
 
 function DefaultStudyView() {
+  const userLanguages = useUserPreferencesStore((s) => s.languages);
+  const reviewStore = useReviewStore();
+
+  // Build dynamic languages array
+  const languages = userLanguages.map((lang) => {
+    const display = LANGUAGE_DISPLAY[lang.id];
+    const cardCount = LANGUAGE_CARD_COUNTS[lang.id];
+    const langStats = reviewStore.getLanguageStats(lang.id === "quran" ? "arabic" : lang.id);
+    const todayReviews = reviewStore.getTodayLanguageReviews(lang.id === "quran" ? "arabic" : lang.id);
+
+    return {
+      id: lang.id,
+      name: display.name,
+      color: display.color,
+      cards: cardCount,
+      due: lang.dailyCards,
+      reviewed: todayReviews,
+      accuracy: langStats.accuracy,
+    };
+  });
+
   const totalCards = allStudyCards.length;
   const totalDue = languages.reduce((s, l) => s + l.due, 0);
   const [presets, setPresets] = useState<StudyPreset[]>([]);
@@ -421,7 +446,7 @@ function DefaultStudyView() {
             Choose a Language
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className={`grid gap-5 ${languages.length <= 2 ? "grid-cols-1 sm:grid-cols-2" : languages.length === 3 ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"}`}>
           {languages.map((lang, i) => (
             <LanguageCard
               key={lang.id}
@@ -580,6 +605,12 @@ function DefaultStudyView() {
 function StudyContent() {
   const searchParams = useSearchParams();
   const langParam = searchParams.get("lang");
+  const sectionParam = searchParams.get("section");
+
+  // If section param is present, show section-filtered study view
+  if (sectionParam && langParam) {
+    return <SectionStudyView langId={langParam} sectionId={sectionParam} />;
+  }
 
   if (langParam) {
     return <TopicSelectionView langId={langParam} />;
@@ -587,6 +618,70 @@ function StudyContent() {
 
   return <DefaultStudyView />;
 }
+
+// ============================================================================
+// Section Study View — filtered to a pathway section's cards
+// ============================================================================
+
+function SectionStudyView({ langId, sectionId }: { langId: string; sectionId: string }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  const pathways = usePathwayStore((s) => s.pathways);
+  const pathway = pathways[langId as keyof typeof pathways];
+  const section = pathway?.sections.find((s) => s.id === sectionId);
+  const display = LANGUAGE_DISPLAY[langId as keyof typeof LANGUAGE_DISPLAY];
+  const accent = display?.accent || "#635BFF";
+
+  if (!section) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[60vh] text-center">
+        <p className="text-[var(--text-tertiary)]">Section not found</p>
+        <Link href="/study" className="text-primary-500 text-sm mt-2">Back to Study</Link>
+      </div>
+    );
+  }
+
+  const sectionCards = getCardsForLanguage(langId as keyof typeof LANGUAGE_CARD_COUNTS)
+    .filter((c) => section.cardIds.includes(c.id));
+
+  return (
+    <motion.div
+      variants={stagger}
+      initial={mounted ? "hidden" : false}
+      animate="show"
+    >
+      <motion.div variants={fadeUp} className="mb-6">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors mb-4">
+          <ArrowLeft className="w-4 h-4" />
+          Back to Dashboard
+        </Link>
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-3 h-3 rounded-full" style={{ background: accent }} />
+          <span className="text-xs font-medium text-[var(--text-tertiary)] uppercase tracking-wider">
+            Section {section.order + 1}
+          </span>
+        </div>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">{section.title}</h1>
+        <p className="text-sm text-[var(--text-secondary)] mt-1">{section.description}</p>
+        <div className="flex items-center gap-4 mt-3 text-xs text-[var(--text-tertiary)]">
+          <span>{sectionCards.length} cards</span>
+          <span>~{section.estimatedMinutes} min</span>
+        </div>
+      </motion.div>
+
+      {/* Card grid */}
+      <motion.div variants={fadeUp}>
+        <TopicGrid
+          languageId={langId}
+          topics={getTopicsForLanguage(langId)}
+          allCards={sectionCards.length > 0 ? sectionCards : allStudyCards}
+        />
+      </motion.div>
+    </motion.div>
+  );
+}
+
 
 export default function StudyLauncher() {
   return (

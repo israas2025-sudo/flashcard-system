@@ -238,6 +238,98 @@
 }
 
 /* ============================================
+   2D Pathway — Particle & Trail Animations
+   ============================================ */
+
+/* Stars twinkling */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* Sand particles drifting horizontally */
+@keyframes sandDrift {
+  0% { transform: translateX(-30px) translateY(0); opacity: 0; }
+  8% { opacity: 0.35; }
+  92% { opacity: 0.3; }
+  100% { transform: translateX(100px) translateY(-15px); opacity: 0; }
+}
+
+/* Golden dust floating */
+@keyframes goldenDrift {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.15; }
+  25% { transform: translateY(-12px) translateX(6px); opacity: 0.6; }
+  50% { transform: translateY(-8px) translateX(-4px); opacity: 0.4; }
+  75% { transform: translateY(-18px) translateX(8px); opacity: 0.55; }
+}
+
+/* Firefly glow pulse + drift */
+@keyframes fireflyGlow {
+  0%, 100% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  15% { opacity: 0.85; transform: translate(3px, -5px) scale(1); }
+  40% { opacity: 0.3; transform: translate(8px, -2px) scale(0.8); }
+  60% { opacity: 0.9; transform: translate(5px, -10px) scale(1.1); }
+  85% { opacity: 0.4; transform: translate(12px, -6px) scale(0.9); }
+}
+
+/* Flower petals falling */
+@keyframes petalFall {
+  0% { transform: translateY(-15px) translateX(0) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.65; }
+  50% { transform: translateY(50px) translateX(15px) rotate(120deg); opacity: 0.5; }
+  92% { opacity: 0.4; }
+  100% { transform: translateY(120px) translateX(25px) rotate(240deg); opacity: 0; }
+}
+
+/* Energy flowing along trail path */
+@keyframes pathFlow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -24; }
+}
+
+/* Orb glow pulse */
+@keyframes orbPulse {
+  0%, 100% { box-shadow: 0 0 8px 2px var(--orb-glow, rgba(99,91,255,0.25)), 0 0 16px 4px var(--orb-glow-outer, rgba(99,91,255,0.08)); }
+  50% { box-shadow: 0 0 16px 6px var(--orb-glow, rgba(99,91,255,0.4)), 0 0 32px 12px var(--orb-glow-outer, rgba(99,91,255,0.15)); }
+}
+
+/* Orbital ring rotation with perspective tilt */
+@keyframes orbitalSpin {
+  0% { transform: rotateX(65deg) rotateZ(0deg); }
+  100% { transform: rotateX(65deg) rotateZ(360deg); }
+}
+
+/* Sun rays slow rotation */
+@keyframes sunRaysRotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Papyrus reed gentle sway */
+@keyframes reedSway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+/* Water shimmer moving highlight */
+@keyframes waterShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Reduced motion — disable all pathway animations */
+@media (prefers-reduced-motion: reduce) {
+  .pathway-particle,
+  .pathway-star,
+  .pathway-firefly,
+  .pathway-petal,
+  .pathway-orb-ring,
+  .pathway-trail-flow {
+    animation: none !important;
+  }
+}
+
+/* ============================================
    Base Styles
    ============================================ */
 @layer base {

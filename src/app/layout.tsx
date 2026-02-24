@@ -3,7 +3,7 @@
 import "./globals.css";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
   BookOpen,
@@ -18,6 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useUIStore } from "@/store/ui-store";
+import { useUserPreferencesStore } from "@/store/user-preferences-store";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard, accent: "#635BFF" },
@@ -301,6 +302,35 @@ function DarkModeProvider({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function OnboardingGuard({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const { onboardingCompleted } = useUserPreferencesStore();
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  // Wait for Zustand rehydration before checking
+  if (!hydrated) return <>{children}</>;
+
+  // Redirect to onboarding if not completed and not already there
+  if (!onboardingCompleted && pathname !== "/onboarding") {
+    // Use effect-based redirect to avoid rendering issues
+    return <OnboardingRedirect />;
+  }
+
+  return <>{children}</>;
+}
+
+function OnboardingRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/onboarding");
+  }, [router]);
+  return null;
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -316,6 +346,7 @@ export default function RootLayout({
 
   const isStudyMode =
     /^\/study\/[^/]+$/.test(pathname) && pathname !== "/study-presets";
+  const isOnboarding = pathname === "/onboarding";
 
   // Use default values during SSR, persisted values after hydration
   const sidebarWidth = mounted ? (sidebarCollapsed ? 64 : 240) : 240;
@@ -331,22 +362,24 @@ export default function RootLayout({
       </head>
       <body className="font-sans">
         <DarkModeProvider>
-          {!isStudyMode && <Sidebar />}
-          {isStudyMode ? (
-            <main className="min-h-screen">{children}</main>
-          ) : (
-            <main
-              className="min-h-screen"
-              style={{
-                marginLeft: sidebarWidth,
-                transition: mounted
-                  ? "margin-left 0.25s cubic-bezier(0.165, 0.84, 0.44, 1)"
-                  : "none",
-              }}
-            >
-              <div className="p-8 max-w-[1080px] mx-auto">{children}</div>
-            </main>
-          )}
+          <OnboardingGuard>
+            {!isStudyMode && !isOnboarding && <Sidebar />}
+            {isStudyMode || isOnboarding ? (
+              <main className="min-h-screen">{children}</main>
+            ) : (
+              <main
+                className="min-h-screen"
+                style={{
+                  marginLeft: sidebarWidth,
+                  transition: mounted
+                    ? "margin-left 0.25s cubic-bezier(0.165, 0.84, 0.44, 1)"
+                    : "none",
+                }}
+              >
+                <div className="p-8 max-w-[1080px] mx-auto">{children}</div>
+              </main>
+            )}
+          </OnboardingGuard>
         </DarkModeProvider>
       </body>
     </html>

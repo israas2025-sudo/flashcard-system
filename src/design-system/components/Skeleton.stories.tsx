@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Skeleton } from './Skeleton';
 
@@ -15,7 +16,7 @@ const meta: Meta<typeof Skeleton> = {
     lines: { control: { type: 'range', min: 1, max: 10, step: 1 } },
   },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-md p-6">
         <Story />
       </div>

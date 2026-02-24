@@ -147,7 +147,7 @@ export const FullWidth: Story = {
     fullWidth: true,
   },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-md">
         <Story />
       </div>

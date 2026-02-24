@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Card } from './Card';
 
@@ -16,7 +17,7 @@ const meta: Meta<typeof Card> = {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-md p-8">
         <Story />
       </div>

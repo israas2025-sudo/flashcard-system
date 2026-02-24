@@ -8,7 +8,7 @@ const meta: Meta<typeof Tabs> = {
   title: 'Design System/Tabs',
   tags: ['autodocs'],
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <div className="max-w-lg p-6">
         <Story />
       </div>

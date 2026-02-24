@@ -7,7 +7,7 @@ const meta: Meta<typeof ToastProvider> = {
   title: 'Design System/Toast',
   tags: ['autodocs'],
   decorators: [
-    (Story) => (
+    (Story: React.ComponentType) => (
       <ToastProvider>
         <Story />
       </ToastProvider>
